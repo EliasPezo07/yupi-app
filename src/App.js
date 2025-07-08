@@ -1932,9 +1932,6 @@ const SubjectPage = ({
   setSelectedLesson, 
   setCurrentSection, 
   userProgress,      
-  setUserAnswer,     
-  setLessonStep,     
-  setCurrentExample, 
   saveProgress       
 }) => (
 
@@ -4757,9 +4754,6 @@ return (
     setSelectedLesson={setSelectedLesson}
     setCurrentSection={setCurrentSection}
     userProgress={userProgress}
-    setUserAnswer={setUserAnswer} // <-- AÑADIDO
-    setLessonStep={setLessonStep} // <-- AÑADIDO
-    setCurrentExample={setCurrentExample} // <-- AÑADIDO
     saveProgress={saveProgress}
   />
  ) : currentSection === 'matematicas' ? ( // NUEVA CONDICIÓN PARA MATEMÁTICAS
