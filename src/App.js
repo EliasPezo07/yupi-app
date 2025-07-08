@@ -1580,11 +1580,12 @@ const matematicasLessons = [
 
  
  // En YupiApp, busca este useEffect:
+
 useEffect(() => {
   // Cargar progreso guardado
   const savedProgress = localStorage.getItem('yupi-progress');
   if (savedProgress) {
-   setUserProgress(JSON.parse(savedProgress));
+    setUserProgress(JSON.parse(savedProgress));
   }
 
   // Cargar entradas del diario emocional
@@ -1605,15 +1606,13 @@ useEffect(() => {
     setRelaxActivities(JSON.parse(savedRelaxActivities));
   }
 
- }, []); // Dependencias vacías para que se ejecute solo al montar el componente
+}, []); // Dependencias vacías para que se ejecute solo al montar el component
 
- const saveProgress = (newProgress) => {
-
+const saveProgress = useCallback((newProgress) => {
   setUserProgress(newProgress);
-
   localStorage.setItem('yupi-progress', JSON.stringify(newProgress));
+}, [setUserProgress]); // <-- `setUserProgress` es la dependencia aquí.
 
- };
 const saveJournalEntries = (entries) => {
   setJournalEntries(entries);
   localStorage.setItem('yupi-journal-entries', JSON.stringify(entries));
