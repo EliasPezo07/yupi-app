@@ -33,43 +33,46 @@ const YupiApp = () => {
   psicologia: { lastVisit: null }
  });
 
- // ¡¡¡CORRECCIÓN CLAVE AQUÍ: DECLARACIÓN DE showAnimation y setShowAnimation!!!
- const [showAnimation, setShowAnimation] = useState(false); 
 
- // Eliminado: const [cognitiveReflectionText, setCognitiveReflectionText] = useState('');
- // Eliminado: const [lessonStep, setLessonStep] = useState('teaching');
- // Eliminado: const [currentExample, setCurrentExample] = useState(1);
- // Eliminado: const [userAnswer, setUserAnswer] = useState('');
+// ¡¡¡CORRECCIÓN CLAVE AQUÍ: DECLARACIÓN DE showAnimation y setShowAnimation!!!
+const [showAnimation, setShowAnimation] = useState(false); 
 
- 
- const [selectedLesson, setSelectedLesson] = useState(null);
- const [psychologyModule, setPsychologyModule] = useState(null);
+// Eliminado: const [cognitiveReflectionText, setCognitiveReflectionText] = useState(''); // Esta sí se puede quedar comentada si no la usas
 
-
- const [journalEntries, setJournalEntries] = useState([]); // Para el Diario Emocional
- const [stressEvents, setStressEvents] = useState([]);   // Para el Registro de Situaciones Estresantes
- const [relaxActivities, setRelaxActivities] = useState([]); // Para la Planificación de Actividades Relajantes
-
- // NUEVO: Estados para el modal de opciones de actividad relajante
- const [showActivityOptionsModal, setShowActivityOptionsModal] = useState(false);
- const [selectedActivityForOptions, setSelectedActivityForOptions] = useState(null);
+// ESTAS TRES LÍNEAS DEBEN ESTAR ACTIVAS (DESCOMENTADAS)
+const [lessonStep, setLessonStep] = useState('teaching'); // teaching, example, practice, evaluation
+const [currentExample, setCurrentExample] = useState(1);
+const [userAnswer, setUserAnswer] = useState('');
 
 
- const [showModal, setShowModal] = useState(false);
- const [modalMessage, setModalMessage] = useState({ text: '', type: 'info' }); 
+const [selectedLesson, setSelectedLesson] = useState(null);
+const [psychologyModule, setPsychologyModule] = useState(null);
+
+
+const [journalEntries, setJournalEntries] = useState([]); // Para el Diario Emocional
+const [stressEvents, setStressEvents] = useState([]);   // Para el Registro de Situaciones Estresantes
+const [relaxActivities, setRelaxActivities] = useState([]); // Para la Planificación de Actividades Relajantes
+
+// NUEVO: Estados para el modal de opciones de actividad relajante
+const [showActivityOptionsModal, setShowActivityOptionsModal] = useState(false);
+const [selectedActivityForOptions, setSelectedActivityForOptions] = useState(null);
+
+
+const [showModal, setShowModal] = useState(false);
+const [modalMessage, setModalMessage] = useState({ text: '', type: 'info' }); 
 
 const [selectedMathLesson, setSelectedMathLesson] = useState(null);
- const [mathStep, setMathStep] = useState('teaching'); // teaching, video, practice
- const [mathAttempts, setMathAttempts] = useState(0);
- const [selectedAnswer, setSelectedAnswer] = useState(null);
+const [mathStep, setMathStep] = useState('teaching'); // teaching, video, practice
+const [mathAttempts, setMathAttempts] = useState(0);
+const [selectedAnswer, setSelectedAnswer] = useState(null);
 
 
- const [testVocacional, setTestVocacional] = useState({
-  currentQuestion: 0,
-  answers: [],
-  showResult: false,
-  result: null
- });
+const [testVocacional, setTestVocacional] = useState({
+ currentQuestion: 0,
+ answers: [],
+ showResult: false,
+ result: null
+});
 
 
 
@@ -4768,18 +4771,18 @@ return (
         showCustomModal={showCustomModal} // <-- PASANDO showCustomModal
       />
     ) : currentSection === 'comunicacion' ? (
-      <SubjectPage
-        subject="comunicacion"
-        lessons={comunicacionLessonsImproved}
-        color="from-blue-500 to-indigo-500"
-        setSelectedLesson={setSelectedLesson}
-        setCurrentSection={setCurrentSection}
-        userProgress={userProgress}
-        setUserAnswer={setUserAnswer}
-        setLessonStep={setLessonStep}
-        setCurrentExample={setCurrentExample}
-        saveProgress={saveProgress}
-      />
+  <SubjectPage
+    subject="comunicacion"
+    lessons={comunicacionLessonsImproved}
+    color="from-blue-500 to-indigo-500"
+    setSelectedLesson={setSelectedLesson}
+    setCurrentSection={setCurrentSection}
+    userProgress={userProgress}
+    setUserAnswer={setUserAnswer} // <-- AÑADIDO
+    setLessonStep={setLessonStep} // <-- AÑADIDO
+    setCurrentExample={setCurrentExample} // <-- AÑADIDO
+    saveProgress={saveProgress}
+  />
  ) : currentSection === 'matematicas' ? ( // NUEVA CONDICIÓN PARA MATEMÁTICAS
       <MathematicsPage
         selectedMathLesson={selectedMathLesson}
