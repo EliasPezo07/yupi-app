@@ -471,10 +471,12 @@ const comunicacionLessonsImproved = [
       },
       {
         text: "El mercado de frutas estaba lleno de colores vivos y aromas frescos.",
-        question: "¿Qué idea principal tiene el fragmento descriptivo?",
+        question: "¿Qué idea principal tiene el fragmento descriptivo?, Puedes agregar el inicio palabras como Mostrar o Presentar para una respuesta mas acertada, ",
         validAnswers: [
           "describir el mercado lleno de frutas y colores",
-  "mostrar como era el mercado de frutas",
+          "Describir el mercado lleno de frutas y colores",
+          "como es el mercado de frutas",
+  "mostrar como es el mercado de frutas",
   "presentar el ambiente del mercado",
   "contar como se veia el mercado de frutas",
   "retratar el lugar donde vendian frutas",
@@ -3226,14 +3228,13 @@ const MathematicsPage = ({
 }) => {
   const contentRef = useRef(null); // Referencia para el contenedor donde se renderizará MathJax
 
-  // useEffect para renderizar MathJax cuando el contenido de la lección cambie
+  // useEffect para renderizar MathJax cuando el contenido de la lección o el paso cambien
   useEffect(() => {
     // Asegúrate de que MathJax esté disponible antes de intentar renderizar
     if (window.MathJax && contentRef.current) {
       // Limpiar el contenido anterior para evitar duplicados o errores de renderizado
-      // y luego renderizar el nuevo contenido.
-      // MathJax.typesetClear() y MathJax.typesetPromise() son métodos de MathJax v3+
       window.MathJax.typesetClear([contentRef.current]);
+      // Renderizar el nuevo contenido.
       window.MathJax.typesetPromise([contentRef.current]).catch(err => console.error("MathJax rendering error:", err));
     }
   }, [selectedMathLesson, mathStep]); // Dependencias: re-renderizar cuando la lección o el paso cambien
@@ -3247,11 +3248,11 @@ const MathematicsPage = ({
 
     if (mathStep === 'teaching') {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-green-500 to-blue-500 p-6">
+        <div className="min-h-screen bg-gradient-to-br from-green-500 to-blue-500 p-6 font-inter">
           <div className="max-w-md mx-auto pt-10">
             <div className="flex items-center mb-7">
               <button
-                onClick={() => setSelectedMathLesson(null)}
+                onClick={() => setSelectedMathLesson(null)} // Volver a la lista de lecciones
                 className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
                 aria-label="Volver a la selección de materias"
               >
@@ -3274,27 +3275,65 @@ const MathematicsPage = ({
                 </div>
               </div>
             </div>
-            {lesson.youtubeLinks && lesson.youtubeLinks.length > 0 && (
-              <div className="mt-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Videos explicativos:</h3>
-                {lesson.youtubeLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:underline block mb-2"
-                  >
-                    Ver video {index + 1}
-                  </a>
-                ))}
-              </div>
-            )}
+            {/* Botón para ir al video explicativo */}
             <button
-              onClick={() => setMathStep('practice')}
+              onClick={() => setMathStep('video')}
               className="w-full bg-white text-gray-900 font-semibold py-4 rounded-2xl shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300 mt-6"
             >
-              Ir a la Práctica <ArrowRight className="inline-block ml-2" size={20} />
+              Ver video explicativo →
+            </button>
+          </div>
+        </div>
+      );
+    }
+    if (mathStep === 'video') {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-purple-500 to-pink-500 p-6 font-inter">
+          <div className="max-w-md mx-auto pt-10">
+            <div className="flex items-center mb-7">
+              <button
+                onClick={() => setMathStep('teaching')} // Volver a la teoría
+                className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                aria-label="Volver a la teoría"
+              >
+                <ArrowLeft className="text-white" size={24} />
+              </button>
+              <h1 className="text-2xl font-bold text-white ml-4">Video Explicativo</h1>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg mb-7">
+              <div className="flex items-center mb-5">
+                <Eye className="text-red-500 mr-2" size={26} />
+                <h2 className="text-lg font-bold text-gray-800">Aprende con este video</h2>
+              </div>
+              <div className="bg-red-50 p-4 rounded-lg border border-red-200 mb-5">
+                <p className="text-red-800 text-sm mb-3">
+                  <strong>📺 Video recomendado:</strong> Este video te ayudará a entender mejor el tema {lesson.subject === 'algebra' ? 'de álgebra' : 'de geometría'}.
+                </p>
+                {/* Usar el primer link del array youtubeLinks */}
+                {lesson.youtubeLinks && lesson.youtubeLinks[0] && (
+                  <a
+                    href={lesson.youtubeLinks[0]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300 text-sm"
+                  >
+                    <span className="mr-2">🎬</span>
+                    Ver en YouTube
+                  </a>
+                )}
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <p className="text-blue-800 text-sm">
+                  💡 <strong>Consejo:</strong> Tómate tu tiempo para ver el video completo. Puedes pausarlo y repetir las partes que necesites.
+                </p>
+              </div>
+            </div>
+            {/* Botón para ir a la práctica */}
+            <button
+              onClick={() => setMathStep('practice')}
+              className="w-full bg-white text-gray-900 font-semibold py-4 rounded-2xl shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-300"
+            >
+              Continuar al ejercicio →
             </button>
           </div>
         </div>
@@ -3302,13 +3341,13 @@ const MathematicsPage = ({
     }
     if (mathStep === 'practice') {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-500 to-red-500 p-6">
+        <div className="min-h-screen bg-gradient-to-br from-orange-500 to-red-500 p-6 font-inter">
           <div className="max-w-md mx-auto pt-10">
             <div className="flex items-center mb-7">
               <button
-                onClick={() => setMathStep('teaching')}
+                onClick={() => setMathStep('video')} // Volver al video
                 className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
-                aria-label="Volver a la teoría"
+                aria-label="Volver al video"
               >
                 <ArrowLeft className="text-white" size={24} />
               </button>
@@ -3352,6 +3391,7 @@ const MathematicsPage = ({
                       newProgress.matematicas.completedLessons.push(currentLessonIndex);
                     }
 
+                    // Avanzar a la siguiente lección solo si no es la última
                     if (currentLessonIndex + 1 < matematicasLessons.length) {
                       newProgress.matematicas.currentLesson = currentLessonIndex + 1;
                     }
@@ -3361,22 +3401,29 @@ const MathematicsPage = ({
                     setShowAnimation(true);
                     setTimeout(() => setShowAnimation(false), 3000);
 
+                    // Volver a la lista de lecciones para que el usuario vea el progreso
                     setSelectedMathLesson(null);
-                    setMathStep('teaching');
+                    setMathStep('teaching'); // Resetear el paso para la próxima vez que entre
                     setMathAttempts(0);
                     setSelectedAnswer(null);
                   } else {
                     setMathAttempts(prev => prev + 1);
-                    showCustomModal(
-                      `Respuesta incorrecta. ${result.explanation}\n\n` +
-                      `La respuesta correcta es: ${result.correctAnswer}\n\n` +
-                      `Te recomendamos ver el video nuevamente y repasar la explicación.`
-                    );
-                    setMathStep('teaching'); // Volver a la enseñanza para repasar
+                    // Si falla, y hay un segundo video, se sugiere verlo
+                    let feedbackMessage = `Respuesta incorrecta. ${result.explanation}\n\n`;
+                    if (lesson.youtubeLinks && lesson.youtubeLinks.length > 1 && mathAttempts === 0) { // Si es el primer intento fallido y hay un segundo video
+                      feedbackMessage += `Te recomendamos ver el segundo video explicativo para un enfoque diferente.`;
+                    } else {
+                      feedbackMessage += `La respuesta correcta es: ${result.correctAnswer}\n\nTe recomendamos repasar la explicación y el video.`;
+                    }
+
+                    showCustomModal(feedbackMessage, "error");
+
+                    // Volver al paso de video para que pueda ver el video nuevamente o el segundo video
+                    setMathStep('video');
                     setSelectedAnswer(null);
                   }
                 } else {
-                  showCustomModal('Por favor, selecciona una respuesta');
+                  showCustomModal('Por favor, selecciona una respuesta', "warning");
                 }
               }}
               disabled={!selectedAnswer}
@@ -3393,9 +3440,9 @@ const MathematicsPage = ({
       );
     }
   }
-  // Vista principal de matemáticas
+  // Vista principal de matemáticas (selección de lección)
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-500 to-teal-500 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-green-500 to-teal-500 p-6 font-inter">
       <div className="max-w-md mx-auto pt-10">
         <div className="flex items-center mb-8">
           <button
@@ -3476,7 +3523,6 @@ const MathematicsPage = ({
     </div>
   );
 };
-
 
 
 
