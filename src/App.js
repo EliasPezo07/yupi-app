@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import {
  Heart,
  Brain,
@@ -38,11 +37,6 @@ const YupiApp = () => {
 const [showAnimation, setShowAnimation] = useState(false); 
 
 // Eliminado: const [cognitiveReflectionText, setCognitiveReflectionText] = useState(''); // Esta sí se puede quedar comentada si no la usas
-
-// ESTAS TRES LÍNEAS DEBEN ESTAR ACTIVAS (DESCOMENTADAS)
-const [lessonStep, setLessonStep] = useState('teaching'); // teaching, example, practice, evaluation
-const [currentExample, setCurrentExample] = useState(1);
-const [userAnswer, setUserAnswer] = useState('');
 
 
 const [selectedLesson, setSelectedLesson] = useState(null);
@@ -1988,9 +1982,7 @@ const SubjectPage = ({
     onClick={() => {
       if (!isLocked) {
         setSelectedLesson(lesson); 
-        setUserAnswer('');      
-        setLessonStep('teaching'); 
-        setCurrentExample(1);   
+
       }
     }}
 
@@ -3479,32 +3471,19 @@ const CustomModal = ({ message, onClose }) => {
 
 
 
-  const fruitTypes = [
-
+  const fruitTypes = useMemo(() => [
    { name: 'apple', emoji: '🍎', color: '#ef4444', points: 10, critical: false },
-
    { name: 'orange', emoji: '🍊', color: '#f97316', points: 15, critical: false },
-
    { name: 'banana', emoji: '🍌', color: '#eab308', points: 12, critical: false },
-
    { name: 'watermelon', emoji: '🍉', color: '#22c55e', points: 20, critical: false },
-
    { name: 'grape', emoji: '🍇', color: '#8b5cf6', points: 18, critical: false },
-
    { name: 'strawberry', emoji: '🍓', color: '#ec4899', points: 25, critical: false },
-
    { name: 'golden_apple', emoji: '🍏', color: '#fbbf24', points: 50, critical: true },
-
    { name: 'bomb', emoji: '💣', color: '#1f2937', points: -100, critical: false },
-
    { name: 'clock', emoji: '⏰', color: '#3b82f6', points: 30, critical: false },
-
    { name: 'heart', emoji: '❤️', color: '#ef4444', points: 0, critical: false },
-
    { name: 'skull', emoji: '💀', color: '#6b7280', points: 40, critical: false }
-
-  ];
-
+], []);
 
 
   const createFruitWave = useCallback(() => {
