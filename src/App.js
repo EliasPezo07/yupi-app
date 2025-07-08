@@ -6,7 +6,6 @@ import {
  BookOpen,
  Calculator,
  Smile,
- Award,
  Star,
  ArrowRight,
  ArrowLeft,
@@ -16,12 +15,10 @@ import {
  Edit3,
  Target,
  Lightbulb,
- Users,
  MessageCircle,
  Calendar,
  Eye,
  Briefcase,
- Music,
  VolumeX,
  Volume2
 } from 'lucide-react';
@@ -39,21 +36,14 @@ const YupiApp = () => {
  // ¡¡¡CORRECCIÓN CLAVE AQUÍ: DECLARACIÓN DE showAnimation y setShowAnimation!!!
  const [showAnimation, setShowAnimation] = useState(false); 
 
-  const [cognitiveReflectionText, setCognitiveReflectionText] = useState(''); // Nuevo estado para el textarea del módulo cognitivo
-
- const [selectedLesson, setSelectedLesson] = useState(null);
-
- const [lessonStep, setLessonStep] = useState('teaching'); // teaching, example, practice, evaluation
-
- const [currentExample, setCurrentExample] = useState(1);
-
- const [userAnswer, setUserAnswer] = useState('');
+ // Eliminado: const [cognitiveReflectionText, setCognitiveReflectionText] = useState('');
+ // Eliminado: const [lessonStep, setLessonStep] = useState('teaching');
+ // Eliminado: const [currentExample, setCurrentExample] = useState(1);
+ // Eliminado: const [userAnswer, setUserAnswer] = useState('');
 
  
-
+ const [selectedLesson, setSelectedLesson] = useState(null);
  const [psychologyModule, setPsychologyModule] = useState(null);
-
-
 
 
  const [journalEntries, setJournalEntries] = useState([]); // Para el Diario Emocional
@@ -65,11 +55,7 @@ const YupiApp = () => {
  const [selectedActivityForOptions, setSelectedActivityForOptions] = useState(null);
 
 
-
-
-
  const [showModal, setShowModal] = useState(false);
-
  const [modalMessage, setModalMessage] = useState({ text: '', type: 'info' }); 
 
 const [selectedMathLesson, setSelectedMathLesson] = useState(null);
@@ -79,155 +65,90 @@ const [selectedMathLesson, setSelectedMathLesson] = useState(null);
 
 
  const [testVocacional, setTestVocacional] = useState({
-
   currentQuestion: 0,
-
   answers: [],
-
   showResult: false,
-
   result: null
-
  });
 
 
 
  // ESTADOS Y REF PARA EL SONIDO DE FONDO (GLOBAL)
-
  const audioRef = useRef(null);
-
  const [isPlaying, setIsPlaying] = useState(false);
-
  const [volume, setVolume] = useState(0.5);
-
  const [currentSongIndex, setCurrentSongIndex] = useState(0);
-
  const playlist = [
-
   '/beach-cushions.mp3',
-
   '/decompression.mp3',
-
   '/sunday-in-bed.mp3',
-
   '/moonlight-poolside.mp3',
-
   '/home-town-easy.mp3',
-
   '/no-smoking.mp3',
-
   '/tarantula.mp3',
-
   '/dirty-harry-no-rap.mp3',
-
   '/19-2000.mp3',
-
  ];
 
 
 
  // EFECTO PARA CONTROLAR EL VOLUMEN DEL AUDIO
-
  useEffect(() => {
-
   if (audioRef.current) {
-
    audioRef.current.volume = volume;
-
   }
-
  }, [volume]);
 
 
 
  // EFECTO PARA REPRODUCIR LA CANCIÓN AUTOMÁTICAMENTE AL CAMBIAR EL ÍNDICE
-
  useEffect(() => {
-
   if (audioRef.current) {
-
    if (isPlaying) {
-
     audioRef.current.load(); // Carga la nueva fuente
-
     audioRef.current.play().catch(error => {
-
      console.error("Error al reproducir automáticamente la nueva canción:", error);
-
     });
-
    }
-
   }
-
  }, [currentSongIndex, isPlaying]);
 
 
 
  // FUNCIONES PARA CONTROLAR LA MÚSICA
-
  const toggleMusic = () => {
-
   if (audioRef.current) {
-
    if (isPlaying) {
-
     audioRef.current.pause();
-
    } else {
-
     audioRef.current.play().catch(error => {
-
      console.error("Error al intentar reproducir el audio:", error);
-
     });
-
    }
-
    setIsPlaying(!isPlaying);
-
   }
-
  };
 
 
 
  const handleVolumeChange = (e) => {
-
   setVolume(parseFloat(e.target.value));
-
  };
 
 
 
  const playNextSong = () => {
-
   setCurrentSongIndex((prevIndex) => (prevIndex + 1) % playlist.length);
-
  };
 
 
 
  const playPreviousSong = () => {
-
   setCurrentSongIndex((prevIndex) => (prevIndex - 1 + playlist.length) % playlist.length);
-
  };
-
   // Referencia para el foco en textareas
-
- const inputRef = useRef(null);
-
- useEffect(() => {
-
-  if (inputRef.current) {
-
-   inputRef.current.focus();
-
-  }
-  
- }, [cognitiveReflectionText]); // Solo deja cognitiveReflectionText si es necesario para inputRef
-
+ // Eliminado: const inputRef = useRef(null);
+ // Eliminado: useEffect(() => { if (inputRef.current) { inputRef.current.focus(); } }, [cognitiveReflectionText]);
 
 
  // Función para mostrar el modal personalizado
@@ -238,7 +159,6 @@ const [selectedMathLesson, setSelectedMathLesson] = useState(null);
 
 
   // Lecciones de Comunicación
-
  const synonymsDictionary = {
   // Verbos de descripción
   'describir': ['narrar', 'contar', 'relatar', 'presentar', 'mostrar', 'exponer', 'explicar', 'detallar', 'describir', 'presentar', 'mostrar', 'caracterizar', 'retratar', 'explicar'],
@@ -627,7 +547,7 @@ function evaluateAnswer(userAnswer, exampleData) {
   }
   const userAnswerLower = userAnswer.toLowerCase().trim();
 // Handle manual evaluation cases
-      if (exampleData.minKeyWords === 0 && exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cuento con inicio, nudo y desenlace.") ||
+      if (exampleData.minKeyWords === 0 && (exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cuento con inicio, nudo y desenlace.") ||
           exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un relato con descripción y diálogo.") ||
           exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un artículo con la estructura solicitada y datos sobre reciclaje.") ||
           exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un texto que defina volcanes, explique sus procesos y mencione ejemplos.") ||
@@ -638,7 +558,7 @@ function evaluateAnswer(userAnswer, exampleData) {
           exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan argumentos a favor y en contra y una refutación.") ||
           exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan al menos tres argumentos convincentes.") ||
           exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cartel con los elementos clave de promoción.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un informe con la estructura y datos solicitados.")) {
+          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un informe con la estructura y datos solicitados."))) { // <--- CORRECCIÓN DE PARÉNTESIS AQUÍ
         return {
           isCorrect: false, // Default to false, as it's manual
           score: 0,
@@ -1648,7 +1568,6 @@ const matematicasLessons = [
  ];
 
  
-
  // MODIFICADO: Lógica de useEffect para dailyMessage más robusta
 useEffect(() => {
   // Cargar progreso guardado
@@ -1713,15 +1632,6 @@ const handleActivityComplete = (id) => {
  };
 
 
-
-
- // La función triggerAnimation ya no es necesaria si usamos setShowAnimation directamente
- // const triggerAnimation = () => {
- //  setShowAnimation(true);
- //  setTimeout(() => setShowAnimation(false), 2000);
- // };
-
-
  // Función para completar la lección (para comunicación)
  // Esta función es utilizada por LessonPage para la sección de Comunicación.
  const completeLesson = useCallback((subject) => {
@@ -1755,16 +1665,7 @@ const handleActivityComplete = (id) => {
   };
  };
 
- const restartLesson = () => {
-
-  setLessonStep('teaching');
-
-  setCurrentExample(1);
-
-  setUserAnswer('');
-
- };
-
+ // Eliminado: const restartLesson = () => { /* ... */ };
 
 
  // HomePage ahora recibe props para los controles de música
@@ -2201,7 +2102,7 @@ const LessonPage = ({ subject, lesson, lessonIndex, setSelectedLesson, completeL
   const [lessonStep, setLessonStep] = useState('teaching'); // teaching, example, practice, evaluation
   const [currentExample, setCurrentExample] = useState(1); // 1-indexed example number
   const [userAnswer, setUserAnswer] = useState(''); // Nuevo estado para la respuesta del usuario
-  const [evaluationResult, setEvaluationResult] = useState(null); // Nuevo estado para guardar el resultado de la evaluación
+  // Eliminado: const [evaluationResult, setEvaluationResult] = useState(null);
     
   const currentExampleData = lesson.examples[currentExample - 1];
 
@@ -2209,7 +2110,7 @@ const LessonPage = ({ subject, lesson, lessonIndex, setSelectedLesson, completeL
     setLessonStep('teaching');
     setCurrentExample(1);
     setUserAnswer('');
-    setEvaluationResult(null);
+    // Eliminado: setEvaluationResult(null);
   }, [lessonIndex, subject]);
 
     if (lessonStep === 'teaching') {
@@ -3160,11 +3061,6 @@ const CustomModal = ({ message, onClose }) => {
   // En el renderizado de YupiApp, CustomModal ya recibe 'onClose' que actualiza 'showModal'.
   // Por lo tanto, no necesitamos una prop 'showModal' explícita aquí,
   // ya que la visibilidad se controla desde el padre.
-
-  // Si el modal está oculto, no renderizar nada.
-  // Nota: La lógica de `if (!showModal) return null;` se manejará en el componente padre
-  // que renderiza CustomModal. Aquí, CustomModal siempre se renderiza si es llamado,
-  // y su visibilidad se gestiona por el padre.
   // Eliminaré la verificación `if (!showModal) return null;` de aquí para evitar
   // que dependa de una prop que no recibe explícitamente en su firma.
 
@@ -3240,8 +3136,6 @@ const CustomModal = ({ message, onClose }) => {
   const handleAnswer = (selectedOption) => {
 
    const newAnswers = [...testVocacional.answers, selectedOption];
-
-
 
 
 
@@ -3567,8 +3461,7 @@ const CustomModal = ({ message, onClose }) => {
 
   const gameAreaRef = useRef(null);
 
-  const animationRef = useRef(null);
-
+  // Eliminado: const animationRef = useRef(null);
   const gameLoopRef = useRef(null);
 
 
@@ -3579,7 +3472,7 @@ const CustomModal = ({ message, onClose }) => {
 
   const FRUIT_LIFETIME = 5000; // 5 seconds on screen (faster paced)
 
-  const ITEMS_PER_WAVE = 5; // 5 items max per wave
+  // Eliminado: const ITEMS_PER_WAVE = 5; // 5 items max per wave
 
 
 
@@ -3771,7 +3664,7 @@ const CustomModal = ({ message, onClose }) => {
 
    return newFruits;
 
-  }, [cursedEffect]);
+  }, [cursedEffect, fruitTypes]); // <-- AÑADIDO 'fruitTypes' AQUÍ
 
 
 
@@ -3991,7 +3884,7 @@ const CustomModal = ({ message, onClose }) => {
 
    ));
 
-  }, [createParticles, combo, cursedEffect, slowMotionEffect]);
+  }, [createParticles, combo, cursedEffect, setLives, setScore, setCombo, setGameState]); // <-- AÑADIDO setLives, setScore, setCombo, setGameState para dependencias de sliceFruit
 
 
 
@@ -4076,9 +3969,7 @@ const handleTouchMove = useCallback((e) => {
         setTimeout(() => setIsSlashing(false), 150);
       }
     });
-  }, [fruits, gameState, sliceFruit]);
-
-
+  }, [fruits, gameState, sliceFruit]); // <-- ELIMINADO slowMotionEffect de aquí, ya no es una dependencia
 
 
 
@@ -4121,7 +4012,6 @@ const handleTouchMove = useCallback((e) => {
    // Determinar velocidad según efectos
 
    const speedMultiplier = slowMotionEffect?.active ? 0.3 :
-
                cursedEffect?.active ? 0.7 : 1.0;
 
 
@@ -4302,7 +4192,7 @@ const handleTouchMove = useCallback((e) => {
 
    setFruitSpawnTimer(prev => prev + 1);
 
-  }, [gameState, slowMotionEffect, cursedEffect]);
+  }, [gameState, slowMotionEffect, cursedEffect, setLives, setMissedFruits, setGameState, setCombo, setParticles, setFruitSpawnTimer, setSlowMotionEffect, setCursedEffect]); // <-- AÑADIDO setLives, setMissedFruits, setGameState, setCombo, setParticles, setFruitSpawnTimer, setSlowMotionEffect, setCursedEffect
 
 
 
@@ -4326,7 +4216,7 @@ const handleTouchMove = useCallback((e) => {
 
    }
 
-  }, [gameState, fruitSpawnTimer, fruits.length, createFruitWave]);
+  }, [gameState, fruitSpawnTimer, fruits.length, createFruitWave, setFruits, setFruitSpawnTimer]); // <-- AÑADIDO setFruits, setFruitSpawnTimer
 
 
 
@@ -4356,17 +4246,12 @@ const handleTouchMove = useCallback((e) => {
 
 
 
-  const endGame = () => {
-
+  const endGame = useCallback(() => { // <-- ENVUELTO EN useCallback
    setGameState('gameOver');
-
    setHighScore(prev => Math.max(prev, score));
-
    setFruits([]);
-
    setParticles([]);
-
-  };
+  }, [setGameState, setHighScore, score, setFruits, setParticles]); // <-- AÑADIDO DEPENDENCIAS
 
 
 
@@ -4434,9 +4319,7 @@ const handleTouchMove = useCallback((e) => {
 
    }
 
-
-
-  }, [gameState, score]);
+  }, [gameState, endGame]); // <-- AÑADIDO 'endGame' AQUÍ
 
 
 
@@ -4695,27 +4578,16 @@ const handleTouchMove = useCallback((e) => {
        opacity: fruit.sliced ? 0.3 : 1,
 
        filter: fruit.type.name === 'bomb'
-
         ? 'drop-shadow(0 0 15px red)'
-
         : fruit.critical
-
          ? 'drop-shadow(0 0 15px gold) brightness(1.2)'
-
          : fruit.type.name === 'clock'
-
           ? 'drop-shadow(0 0 15px cyan)'
-
           : fruit.type.name === 'heart'
-
            ? 'drop-shadow(0 0 15px pink)'
-
            : fruit.type.name === 'skull'
-
             ? 'drop-shadow(0 0 15px purple)'
-
             : 'none'
-
       }}
 
      >
@@ -4926,7 +4798,7 @@ return (
         handleMathAnswer={handleMathAnswer}     // Pasa la función de evaluación
         setCurrentSection={setCurrentSection}   // Para volver a la home
       />
-      ) : currentSection === 'psicologia' ? (
+      ) : (currentSection === 'psychology' || currentSection === 'psychologyModule') ? ( // <--- CORRECCIÓN DE PARÉNTESIS AQUÍ
       <PsychologyPage 
         showCustomModal={showCustomModal}
         journalEntries={journalEntries}
