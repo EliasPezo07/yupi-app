@@ -543,17 +543,14 @@ function evaluateAnswer(userAnswer, exampleData) {
     };
   }
 
-  const userAnswerLower = userAnswer.toLowerCase().trim();
+ const userAnswerLower = userAnswer.toLowerCase().trim();
 
-  // VALIDACIÓN DE LONGITUD MÍNIMA:
-  // Si la respuesta NO es para evaluación manual (minKeyWords !== 0)
-  // Y la longitud de la respuesta es menor a 8 caracteres,
-  // entonces se considera incorrecta y se da un feedback específico.
-  if (exampleData.minKeyWords !== 0 && userAnswerLower.length < 12) { // <-- ¡ESTA LÍNEA!
+  // Esta es la validación de 12 caracteres que debería estar así:
+  if (exampleData.minKeyWords !== 0 && userAnswerLower.length < 12) { // <-- ¡VERIFICA QUE ESTÉ EN 12!
       return {
           isCorrect: false,
           score: 0,
-          feedback: "Tu respuesta es demasiado corta. Por favor, sé más específico."
+          feedback: "Tu respuesta es demasiado corta. Por favor, sé más específico y elabora tu idea (mínimo 12 caracteres)." // <-- Mensaje de feedback claro
       };
   }
 
@@ -1647,20 +1644,21 @@ const handleActivityComplete = (id) => {
     const newProgress = { ...prevProgress };
     const currentLessonIndex = newProgress[subject].currentLesson;
 
+    // ¡¡¡CORRECCIÓN CLAVE AQUÍ: CAMBIAR 'completedCompletedLessons' a 'completedLessons'!!!
     if (!newProgress[subject].completedLessons.includes(currentLessonIndex)) {
-      newProgress[subject].completedCompletedLessons.push(currentLessonIndex); // Typo corrected: completedCompletedLessons -> completedLessons
+      newProgress[subject].completedLessons.push(currentLessonIndex); // <-- ¡CORREGIDO!
     }
-
+    // El resto de la lógica para avanzar a la siguiente lección
     if (subject === 'comunicacion' && currentLessonIndex + 1 < comunicacionLessonsImproved.length) {
       newProgress[subject].currentLesson = currentLessonIndex + 1;
     }
-    // AÑADIDO: Llamar a saveProgress con el nuevo estado
-    saveProgress(newProgress); // <-- ¡ESTA ES LA LÍNEA CLAVE!
+    saveProgress(newProgress);
     return newProgress;
   });
   setShowAnimation(true);
   setTimeout(() => setShowAnimation(false), 3000);
-}, [comunicacionLessonsImproved.length, setShowAnimation, saveProgress]); // <-- AÑADIDO `saveProgress` a las dependencias
+}, [comunicacionLessonsImproved.length, setShowAnimation, saveProgress]);
+
 
  
 
