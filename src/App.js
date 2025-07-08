@@ -156,60 +156,6 @@ const [testVocacional, setTestVocacional] = useState({
 
 
   // Lecciones de Comunicación
- const synonymsDictionary = {
-  // Verbos de descripción
-  'describir': ['narrar', 'contar', 'relatar', 'presentar', 'mostrar', 'exponer', 'explicar', 'detallar', 'describir', 'presentar', 'mostrar', 'caracterizar', 'retratar', 'explicar'],
-  'cubren': ['ocupan', 'abarcan', 'se extienden', 'comprenden', 'incluyen', 'representan'],
-  'regulan': ['controlan', 'mantienen', 'equilibran', 'estabilizan', 'manejan', 'gobiernan'],
-  'explicar': ['aclarar', 'definir', 'exponer', 'describir', 'detallar', 'interpretar'],
-  'identificar': ['reconocer', 'determinar', 'señalar', 'encontrar', 'localizar', 'detectar'],
-  'inferir': ['deducir', 'concluir', 'suponer', 'asumir', 'interpretar', 'entender'],
-  'termina': ['finaliza', 'concluye', 'acaba', 'cierra'],
-  'comienza': ['inicia', 'empieza', 'arranca', 'abre'],
-
-  // Adjetivos descriptivos
-  'hermoso': ['bonito', 'bello', 'agradable', 'lindo', 'precioso', 'encantador', 'atractivo', 'soleado'],
-  'principal': ['central', 'importante', 'fundamental', 'esencial', 'básico', 'primordial'],
-  'importante': ['relevante', 'significativo', 'fundamental', 'esencial', 'crucial', 'vital'],
-  'grande': ['enorme', 'gigante', 'inmenso', 'vasto', 'extenso', 'amplio'],
-  'pequeño': ['diminuto', 'minúsculo', 'chico', 'reducido', 'mínimo', 'tiny'],
-  'rápido': ['veloz', 'acelerado', 'ágil', 'ligero', 'presto'],
-  'triste': ['melancólico', 'deprimido', 'apenado', 'doliente', 'afligido'],
-  'feliz': ['alegre', 'contento', 'jovial', 'gozoso', 'dichoso', 'satisfecho'],
-  'brillante': ['resplandeciente', 'luminoso', 'radiante', 'reluciente', 'brilloso', 'espléndido'],
-  'nervioso': ['inquieto', 'ansioso', 'preocupado', 'agitado', 'intranquilo'],
-  'misterioso': ['enigmático', 'extraño', 'raro', 'desconocido', 'oculto', 'secreto'],
-
-  // Sustantivos
-  'día': ['jornada', 'fecha', 'momento', 'tiempo', 'período'],
-  'clima': ['tiempo', 'ambiente', 'condiciones', 'temperatura', 'atmósfera'],
-  'tierra': ['planeta', 'mundo', 'superficie', 'globo', 'suelo'],
-  'agua': ['líquido', 'fluido', 'recurso hídrico'],
-  'carta': ['mensaje', 'nota', 'comunicación', 'correspondencia', 'documento'],
-  'problema': ['conflicto', 'dificultad', 'obstáculo', 'inconveniente', 'complicación', 'misterio', 'enigma', 'secreto', 'tensión'],
-  'solución': ['respuesta', 'resolución', 'salida', 'alternativa', 'medida'],
-  'tema': ['asunto', 'tópico', 'materia', 'cuestión', 'punto'],
-  'personaje': ['protagonista', 'persona', 'individuo', 'figura', 'carácter', 'héroe'],
-  'ambiente': ['entorno', 'atmósfera', 'contexto', 'escenario', 'medio'],
-  'beneficio': ['ventaja', 'provecho', 'ganancia', 'utilidad', 'conveniencia', 'ventajas', 'efectos positivos'],
-  'efecto': ['consecuencia', 'resultado', 'impacto', 'repercusión', 'influencia', 'efectos'],
-  'causa': ['motivo', 'razón', 'origen', 'fuente', 'factor', 'causas'],
-  'lectura': ['leer'],
-  'lluvia': ['mojó', 'empapó'],
-  'paraguas': ['roto', 'dañó', 'averió', 'falló'],
-  'visita': ['inspección', 'inesperada', 'imprevista', 'no programada'],
-  'narrador': ['primera persona', 'tercera persona', 'omnisciente', 'yo', 'protagonista', 'interno', 'personaje'],
-  'sobrenatural': ['paranormal', 'misterioso', 'extraño', 'inexplicable'],
-  'miedo': ['temor', 'terror', 'suspenso', 'inquietud'],
-  'estructura': ['introducción', 'desarrollo', 'conclusión'],
-  'argumentos': ['tesis', 'evidencia', 'ejemplos'],
-
-  // Adverbios
-  'velozmente': ['rápidamente', 'aceleradamente', 'ágilmente', 'presto', 'ligero'],
-  'intensamente': ['fuertemente', 'vigorosamente', 'enérgicamente', 'profundamente']
-};
-
-// 2. RESPUESTAS MÚLTIPLES VÁLIDAS CON PALABRA/S CLAVE
 const comunicacionLessonsImproved = [
   {
     title: "Lectura y comprensión de textos",
@@ -219,29 +165,216 @@ const comunicacionLessonsImproved = [
         text: "El sol brillaba intensamente mientras María caminaba por el parque. Los niños jugaban alegremente y las flores mostraban sus colores vibrantes.",
         question: "¿Cuál es la idea principal del texto?",
         validAnswers: [
-          "Describir un día hermoso en el parque",
-          "Narrar un día soleado en el parque",
-          "Contar sobre un día bonito en el parque",
-          "Relatar una escena hermosa del parque",
-          "Presentar un día agradable en el parque",
-          "Mostrar un momento bello en el parque"
-        ],
-        keyWords: ['describir', 'narrar', 'contar', 'relatar', 'presentar', 'mostrar', 'día', 'hermoso', 'bonito', 'bello', 'agradable', 'soleado', 'parque', 'escena', 'momento'],
-        minKeyWords: 2
+          "Describe un día bonito en el parque",
+  "Cuenta cómo estaba el parque ese día",
+  "Relata un momento en el parque",
+  "Narra cómo era el ambiente del parque",
+  "Presenta un día soleado en el parque",
+  "Muestra lo que pasaba en el parque",
+  "Describe la escena del parque",
+  "Explica cómo estaba el parque ese día",
+  "Cuenta que el parque estaba alegre",
+  "Narra un día feliz en el parque",
+  "Cuenta sobre María en el parque",
+  "Describe lo que María veía en el parque",
+  "Pinta una imagen de un parque alegre",
+  "Relata un paseo por el parque",
+  "Nos muestra un parque bonito",
+  "Cuenta cómo era el clima en el parque",
+  "Muestra lo bonito que era el parque",
+  "Habla de un parque lleno de vida",
+  "Relata un parque lleno de color",
+  "Cuenta un momento alegre en el parque",
+  "Describe una escena tranquila en el parque",
+  "Cuenta cómo brillaba el sol en el parque",
+  "Narra cómo los niños jugaban",
+  "Describe un lugar alegre con flores",
+  "Muestra un ambiente alegre y soleado",
+  "Cuenta lo que pasaba ese día en el parque",
+  "Habla de un parque donde todos son felices",
+  "Cuenta que el parque estaba muy bonito",
+  "Narra una caminata de María en el parque",
+  "Describe cómo se sentía estar en el parque",
+  "describe un dia bonito en el parque",
+  "cuenta como estaba el parque ese dia",
+  "relata un momento en el parque",
+  "narra como era el ambiente del parque",
+  "presenta un dia soleado en el parque",
+  "muestra lo que pasaba en el parque",
+  "describe la escena del parque",
+  "explica como estaba el parque ese dia",
+  "cuenta que el parque estaba alegre",
+  "narra un dia feliz en el parque",
+  "cuenta sobre maria en el parque",
+  "describe lo que maria veia en el parque",
+  "pinta una imagen de un parque alegre",
+  "relata un paseo por el parque",
+  "nos muestra un parque bonito",
+  "cuenta como era el clima en el parque",
+  "muestra lo bonito que era el parque",
+  "habla de un parque lleno de vida",
+  "relata un parque lleno de color",
+  "cuenta un momento alegre en el parque",
+  "describe una escena tranquila en el parque",
+  "cuenta como brillaba el sol en el parque",
+  "narra como los niños jugaban",
+  "describe un lugar alegre con flores",
+  "muestra un ambiente alegre y soleado",
+  "cuenta lo que pasaba ese dia en el parque",
+  "habla de un parque donde todos son felices",
+  "cuenta que el parque estaba muy bonito",
+  "narra una caminata de maria en el parque",
+  "describe como se sentia estar en el parque",
+  "describe un dia bonito en el parque",
+  "narra una escena alegre en el parque",
+  "presenta un dia soleado y tranquilo",
+  "muestra como estaba el parque ese dia",
+  "relata un paseo en el parque",
+  "retrata un momento feliz en el parque",
+  "pinta una imagen de un parque soleado",
+  "muestra como brillaba el sol y jugaban los niños",
+  "explica como se sentia estar en el parque",
+  "cuenta como era un dia lindo en el parque",
+  "describe una escena natural y tranquila",
+  "presenta un lugar lleno de alegria",
+  "relata un instante hermoso en el parque",
+  "pinta un paisaje lleno de color y vida",
+  "cuenta como jugaban los niños en un dia soleado",
+  "retrata un dia feliz con flores y sol",
+  "describe el ambiente agradable del parque",
+  "muestra un momento comun pero especial",
+  "narra un dia con clima ideal para pasear",
+  "presenta un entorno alegre al aire libre",
+  "cuenta un dia lleno de color en el parque",
+  "retrata una tarde tranquila con naturaleza",
+  "muestra una escena llena de paz",
+  "describe lo que se ve y se siente en el parque",
+  "relata un lugar lleno de vida y colores",
+  "pinta una escena simple pero bella",
+  "cuenta un instante alegre con niños y flores",
+  "describe como la naturaleza esta viva",
+  "retrata la belleza de un dia en el parque",
+  "muestra como el sol ilumina el parque",
+  "presenta una escena de felicidad simple",
+  "relata un paisaje lleno de energia y luz",
+  "narra un dia soleado con alegria",
+  "explica como se vive un momento al aire libre",
+  "describe una escena natural con calma",
+  "pinta el parque como un lugar hermoso",
+  "cuenta como el sol y las flores alegran el parque",
+  "presenta un escenario lleno de emociones suaves",
+  "retrata la tranquilidad de un espacio natural",
+  "muestra una descripcion alegre del parque",
+
+
+
+        ]
       },
       {
         text: "Los océanos cubren el 71% de la superficie terrestre y contienen el 97% del agua del planeta. Son fundamentales para regular el clima global.",
         question: "¿Cuál es el dato más importante sobre los océanos?",
         validAnswers: [
-          "Cubren la mayor parte de la Tierra y regulan el clima",
-          "Ocupan la mayor parte del planeta y controlan el clima",
-          "Se extienden por gran parte del planeta y mantienen el equilibrio climático",
-          "Abarcan casi toda la superficie terrestre y controlan las condiciones climáticas",
-          "Representan la mayor extensión del planeta y regulan el tiempo",
-          "Comprenden la mayoría de la superficie y equilibran el clima"
-        ],
-        keyWords: ['cubren', 'ocupan', 'abarcan', 'se extienden', 'representan', 'mayor', 'parte', 'planeta', 'tierra', 'superficie', 'regulan', 'controlan', 'mantienen', 'equilibran', 'clima', 'tiempo', 'condiciones'],
-        minKeyWords: 3
+          "cubren la mayor parte del planeta y ayudan al clima",
+  "ocupan gran parte de la tierra y regulan el clima",
+  "los oceanos tienen casi toda el agua del planeta",
+  "los oceanos cubren la mayoria del planeta",
+  "regulan el clima del mundo",
+  "tienen el 97 por ciento del agua del mundo",
+  "estan en casi toda la superficie del planeta",
+  "controlan el clima de la tierra",
+  "los oceanos cubren el 71 por ciento de la tierra",
+  "ayudan a mantener el clima estable",
+  "los oceanos son los que equilibran el clima",
+  "ocupan gran parte del planeta y son clave para el clima",
+  "son fundamentales para el clima del mundo",
+  "los oceanos tienen casi toda el agua y regulan el clima",
+  "son la mayor parte del planeta y afectan el clima",
+  "los oceanos son importantes para el clima global",
+  "cubren mucho del planeta y hacen que el clima se mantenga",
+  "regulan el clima y tienen la mayor parte del agua",
+  "los oceanos cubren la tierra y ayudan con el clima",
+  "los oceanos tienen muchisima agua y cuidan el clima",
+  "la mayor parte del planeta esta cubierta por oceanos",
+  "los oceanos dominan el planeta y regulan el clima",
+  "ocupan gran parte del mundo y hacen que el clima funcione",
+  "los oceanos mantienen el clima estable",
+  "los oceanos tienen la mayor parte del agua y del clima",
+  "cubren casi todo el planeta y son importantes para el clima",
+  "los oceanos ayudan a controlar el tiempo del mundo",
+  "están en casi todo el planeta y afectan el clima",
+  "cubren la tierra y ayudan a que el clima sea estable",
+  "los oceanos tienen un rol clave en el clima del planeta",
+   "Cubren la mayor parte del planeta y ayudan al clima",
+  "Ocupan gran parte de la Tierra y regulan el clima",
+  "Los océanos tienen casi toda el agua del planeta",
+  "Los océanos cubren la mayoría del planeta",
+  "Regulan el clima del mundo",
+  "Tienen el 97 por ciento del agua del mundo",
+  "Están en casi toda la superficie del planeta",
+  "Controlan el clima de la Tierra",
+  "Los océanos cubren el 71 por ciento de la Tierra",
+  "Ayudan a mantener el clima estable",
+  "Los océanos son los que equilibran el clima",
+  "Ocupan gran parte del planeta y son clave para el clima",
+  "Son fundamentales para el clima del mundo",
+  "Los océanos tienen casi toda el agua y regulan el clima",
+  "Son la mayor parte del planeta y afectan el clima",
+  "Los océanos son importantes para el clima global",
+  "Cubren mucho del planeta y hacen que el clima se mantenga",
+  "Regulan el clima y tienen la mayor parte del agua",
+  "Los océanos cubren la Tierra y ayudan con el clima",
+  "Los océanos tienen muchísima agua y cuidan el clima",
+  "La mayor parte del planeta está cubierta por océanos",
+  "Los océanos dominan el planeta y regulan el clima",
+  "Ocupan gran parte del mundo y hacen que el clima funcione",
+  "Los océanos mantienen el clima estable",
+  "Los océanos tienen la mayor parte del agua y del clima",
+  "Cubren casi todo el planeta y son importantes para el clima",
+  "Los océanos ayudan a controlar el tiempo del mundo",
+  "Están en casi todo el planeta y afectan el clima",
+  "Cubren la Tierra y ayudan a que el clima sea estable",
+  "Los océanos tienen un rol clave en el clima del planeta",
+   "indica que los oceanos cubren gran parte del planeta",
+  "describe como los oceanos regulan el clima",
+  "presenta el rol de los oceanos en el equilibrio climatico",
+  "muestra que los oceanos ocupan el 71 por ciento del planeta",
+  "explica que los oceanos contienen casi toda el agua",
+  "señala que los oceanos tienen el 97 por ciento del agua",
+  "relata como los oceanos afectan el clima global",
+  "informa sobre la importancia climatica de los oceanos",
+  "describe la funcion de los oceanos en el planeta",
+  "muestra el papel de los oceanos en la Tierra",
+  "indica que los oceanos controlan el clima del mundo",
+  "presenta los oceanos como reguladores climaticos",
+  "explica la magnitud de agua que hay en los oceanos",
+  "cuenta como los oceanos equilibran el planeta",
+  "describe la extension de los oceanos",
+  "muestra el poder natural de los oceanos",
+  "explica que los oceanos tienen un rol vital",
+  "resalta la influencia de los oceanos en el clima",
+  "indica que los oceanos dominan la superficie terrestre",
+  "cuenta como el mar regula la temperatura global",
+  "presenta el agua de los oceanos como fuente vital",
+  "explica la relacion entre oceano y clima",
+  "informa que los oceanos cubren la mayor parte del mundo",
+  "muestra el vinculo entre oceanos y vida en la Tierra",
+  "describe el volumen de agua en los oceanos",
+  "relata como los oceanos sostienen el planeta",
+  "cuenta que los oceanos tienen funciones esenciales",
+  "presenta el mar como base del equilibrio natural",
+  "explica que sin oceanos no habria estabilidad climatica",
+  "indica que los oceanos tienen una enorme superficie",
+  "muestra el impacto global de los oceanos",
+  "describe la conexion entre agua, oceano y clima",
+  "presenta los oceanos como sistema de control climatico",
+  "explica que el oceano es clave en el planeta",
+  "cuenta que los oceanos son fuente de vida",
+  "informa que el agua del planeta esta en los oceanos",
+  "describe los oceanos como termostato del mundo",
+  "muestra que los oceanos son inmensos y vitales",
+  "explica como los oceanos ayudan al equilibrio natural",
+  "indica que los oceanos cubren casi todo el planeta"
+        ]
       }
     ]
   },
@@ -251,30 +384,256 @@ const comunicacionLessonsImproved = [
     examples: [
       {
         text: "Narrativo: Juan salió de su casa sin saber que aquel día cambiaría su vida para siempre. Descriptivo: La montaña se alzaba imponente con nieve en su cima y pinos verdes a su alrededor. Expositivo: La fotosíntesis es el proceso por el cual las plantas transforman la luz solar en energía.",
-        question: "Identifica la idea principal de cada fragmento.",
+        question: "Identifica la idea principal de cada fragmento, recuerda seguir el ejemplo anterior y no saltarte los 2 puntos : ni el punto al inicio de otra oracion.",
         validAnswers: [
-          "Narrativo: El día que cambia la vida de Juan. Descriptivo: Características de la montaña. Expositivo: Explicación breve de lo que es la fotosíntesis.",
-          "Narrativo: Un día transformador para Juan. Descriptivo: Descripción de la montaña. Expositivo: Definición de fotosíntesis.",
-          "Narrativo: El momento decisivo de Juan. Descriptivo: Rasgos de la montaña. Expositivo: Concepto de fotosíntesis.",
-          "Narrativo: El día importante de Juan. Descriptivo: Aspecto de la montaña. Expositivo: Proceso de fotosíntesis.",
-          "Narrativo: Cambio en la vida de Juan. Descriptivo: Imagen de la montaña. Expositivo: Funcionamiento de la fotosíntesis."
-        ],
-        keyWords: ['narrativo', 'día', 'cambia', 'transforma', 'vida', 'juan', 'descriptivo', 'características', 'descripción', 'rasgos', 'montaña', 'expositivo', 'explicación', 'definición', 'concepto', 'fotosíntesis', 'proceso'],
-        minKeyWords: 4
+    "narrativo: juan vive un dia que cambia su vida. descriptivo: como es la montaña. expositivo: que es la fotosintesis.",
+  "narrativo: un dia importante para juan. descriptivo: descripcion de la montaña. expositivo: explicacion de la fotosintesis.",
+  "narrativo: el cambio en la vida de juan. descriptivo: detalles sobre la montaña. expositivo: como funciona la fotosintesis.",
+  "narrativo: juan tiene un dia que lo marca. descriptivo: como luce la montaña. expositivo: informacion sobre la fotosintesis.",
+  "narrativo: algo pasa que cambia a juan. descriptivo: rasgos de la montaña. expositivo: como es la fotosintesis.",
+  "narrativo: un suceso cambia a juan. descriptivo: imagen de la montaña. expositivo: que hacen las plantas con la luz.",
+  "narrativo: dia que cambia la vida de juan. descriptivo: aspecto de la montaña. expositivo: uso de la luz por las plantas.",
+  "narrativo: la historia de un cambio. descriptivo: descripcion de un paisaje. expositivo: proceso que hacen las plantas.",
+  "narrativo: el dia especial de juan. descriptivo: como es el lugar. expositivo: como las plantas usan la luz.",
+  "narrativo: dia diferente para juan. descriptivo: descripcion de un lugar natural. expositivo: energia de las plantas.",
+  "narrativo: un momento que cambia todo. descriptivo: paisaje montañoso. expositivo: energia a partir del sol.",
+  "narrativo: algo le pasa a juan. descriptivo: paisaje con nieve y pinos. expositivo: funcion de la fotosintesis.",
+  "narrativo: una decision que cambia a juan. descriptivo: como se ve la montaña. expositivo: uso de la energia solar.",
+  "narrativo: dia inolvidable para juan. descriptivo: lugar con nieve. expositivo: proceso natural de las plantas.",
+  "narrativo: evento importante en la vida de juan. descriptivo: lugar frio y verde. expositivo: como transforman la luz.",
+  "narrativo: juan tiene un dia inesperado. descriptivo: paisaje descrito. expositivo: uso de la luz solar.",
+  "narrativo: la vida de juan cambia. descriptivo: como era la montaña. expositivo: que hacen las hojas.",
+  "narrativo: juan enfrenta algo nuevo. descriptivo: descripcion de un entorno natural. expositivo: proceso en las plantas.",
+  "narrativo: dia diferente para juan. descriptivo: lugar con pinos. expositivo: uso de la luz por las plantas.",
+  "narrativo: historia de un cambio personal. descriptivo: elementos del paisaje. expositivo: energia para vivir.",
+  "narrativo: dia especial de juan. descriptivo: montaña alta con nieve. expositivo: que es la fotosintesis.",
+  "narrativo: el dia clave para juan. descriptivo: entorno montañoso. expositivo: como crean energia las plantas.",
+  "narrativo: algo que cambia a juan. descriptivo: una montaña nevada. expositivo: proceso vital en plantas.",
+  "narrativo: suceso impactante para juan. descriptivo: descripcion visual de la montaña. expositivo: mecanismo de energia vegetal.",
+  "narrativo: momento que cambia la vida. descriptivo: paisaje natural. expositivo: explicacion cientifica de un proceso.",
+  "narrativo: cambio en la historia de juan. descriptivo: caracteristicas del paisaje. expositivo: fotosintesis resumida.",
+  "narrativo: un dia que marca a juan. descriptivo: lugar con pinos y nieve. expositivo: proceso solar de las plantas.",
+  "narrativo: historia de un cambio en juan. descriptivo: detalles de la montaña. expositivo: energia solar en plantas.",
+  "narrativo: un dia diferente. descriptivo: como era la montaña. expositivo: proceso natural.",
+  "narrativo: historia de un cambio. descriptivo: paisaje detallado. expositivo: energia para la planta.",
+  "narrativo: dia que cambia todo. descriptivo: vista de la montaña. expositivo: transformacion de luz en energia.",
+  "narrativo: cambio importante. descriptivo: lugar nevado. expositivo: luz solar usada por plantas.",
+  "narrativo: vida de juan cambia. descriptivo: descripcion de naturaleza. expositivo: energia vegetal.",
+  "narrativo: algo inesperado le pasa a juan. descriptivo: montaña con nieve. expositivo: uso de la luz solar.",
+  "narrativo: nueva etapa de juan. descriptivo: paisaje de montaña. expositivo: funcion de la fotosintesis.",
+  "narrativo: juan no sabia que ese dia lo cambiaria. descriptivo: la montaña se describe. expositivo: explicacion sobre fotosintesis.",
+  "narrativo: juan vive algo que le cambia. descriptivo: paisaje nevado. expositivo: que es la fotosintesis.",
+  "narrativo: suceso que transforma a juan. descriptivo: montaña con detalles. expositivo: proceso solar de energia.",
+  "narrativo: cambio inesperado. descriptivo: naturaleza en la montaña. expositivo: fotosintesis en plantas.",
+  "narrativo: historia de juan y su cambio. descriptivo: lugar con pinos y nieve. expositivo: explicacion del proceso en plantas.",
+  "Narrativo: Juan vive un día que cambia su vida. Descriptivo: Cómo es la montaña. Expositivo: Qué es la fotosíntesis.",
+  "Narrativo: Un día importante para Juan. Descriptivo: Descripción de la montaña. Expositivo: Explicación de la fotosíntesis.",
+  "Narrativo: El cambio en la vida de Juan. Descriptivo: Detalles sobre la montaña. Expositivo: Cómo funciona la fotosíntesis.",
+  "Narrativo: Juan tiene un día que lo marca. Descriptivo: Cómo luce la montaña. Expositivo: Información sobre la fotosíntesis.",
+  "Narrativo: Algo pasa que cambia a Juan. Descriptivo: Rasgos de la montaña. Expositivo: Cómo es la fotosíntesis.",
+  "Narrativo: Un suceso cambia a Juan. Descriptivo: Imagen de la montaña. Expositivo: Qué hacen las plantas con la luz.",
+  "Narrativo: Día que cambia la vida de Juan. Descriptivo: Aspecto de la montaña. Expositivo: Uso de la luz por las plantas.",
+  "Narrativo: La historia de un cambio. Descriptivo: Descripción de un paisaje. Expositivo: Proceso que hacen las plantas.",
+  "Narrativo: El día especial de Juan. Descriptivo: Cómo es el lugar. Expositivo: Cómo las plantas usan la luz.",
+  "Narrativo: Día diferente para Juan. Descriptivo: Descripción de un lugar natural. Expositivo: Energía de las plantas.",
+  "Narrativo: Un momento que cambia todo. Descriptivo: Paisaje montañoso. Expositivo: Energía a partir del sol.",
+  "Narrativo: Algo le pasa a Juan. Descriptivo: Paisaje con nieve y pinos. Expositivo: Función de la fotosíntesis.",
+  "Narrativo: Una decisión que cambia a Juan. Descriptivo: Cómo se ve la montaña. Expositivo: Uso de la energía solar.",
+  "Narrativo: Día inolvidable para Juan. Descriptivo: Lugar con nieve. Expositivo: Proceso natural de las plantas.",
+  "Narrativo: Evento importante en la vida de Juan. Descriptivo: Lugar frío y verde. Expositivo: Cómo transforman la luz.",
+  "Narrativo: Juan tiene un día inesperado. Descriptivo: Paisaje descrito. Expositivo: Uso de la luz solar.",
+  "Narrativo: La vida de Juan cambia. Descriptivo: Cómo era la montaña. Expositivo: Qué hacen las hojas.",
+  "Narrativo: Juan enfrenta algo nuevo. Descriptivo: Descripción de un entorno natural. Expositivo: Proceso en las plantas.",
+  "Narrativo: Día diferente para Juan. Descriptivo: Lugar con pinos. Expositivo: Uso de la luz por las plantas.",
+  "Narrativo: Historia de un cambio personal. Descriptivo: Elementos del paisaje. Expositivo: Energía para vivir.",
+  "Narrativo: Día especial de Juan. Descriptivo: Montaña alta con nieve. Expositivo: Qué es la fotosíntesis.",
+  "Narrativo: El día clave para Juan. Descriptivo: Entorno montañoso. Expositivo: Cómo crean energía las plantas.",
+  "Narrativo: Algo que cambia a Juan. Descriptivo: Una montaña nevada. Expositivo: Proceso vital en plantas.",
+  "Narrativo: Suceso impactante para Juan. Descriptivo: Descripción visual de la montaña. Expositivo: Mecanismo de energía vegetal.",
+  "Narrativo: Momento que cambia la vida. Descriptivo: Paisaje natural. Expositivo: Explicación científica de un proceso.",
+  "Narrativo: Cambio en la historia de Juan. Descriptivo: Características del paisaje. Expositivo: Fotosíntesis resumida.",
+  "Narrativo: Un día que marca a Juan. Descriptivo: Lugar con pinos y nieve. Expositivo: Proceso solar de las plantas.",
+  "Narrativo: Historia de un cambio en Juan. Descriptivo: Detalles de la montaña. Expositivo: Energía solar en plantas.",
+  "Narrativo: Un día diferente. Descriptivo: Cómo era la montaña. Expositivo: Proceso natural.",
+  "Narrativo: Historia de un cambio. Descriptivo: Paisaje detallado. Expositivo: Energía para la planta.",
+  "Narrativo: Día que cambia todo. Descriptivo: Vista de la montaña. Expositivo: Transformación de luz en energía.",
+  "Narrativo: Cambio importante. Descriptivo: Lugar nevado. Expositivo: Luz solar usada por plantas.",
+  "Narrativo: Vida de Juan cambia. Descriptivo: Descripción de naturaleza. Expositivo: Energía vegetal.",
+  "Narrativo: Algo inesperado le pasa a Juan. Descriptivo: Montaña con nieve. Expositivo: Uso de la luz solar.",
+  "Narrativo: Nueva etapa de Juan. Descriptivo: Paisaje de montaña. Expositivo: Función de la fotosíntesis.",
+  "Narrativo: Juan no sabía que ese día lo cambiaría. Descriptivo: La montaña se describe. Expositivo: Explicación sobre fotosíntesis.",
+  "Narrativo: Juan vive algo que le cambia. Descriptivo: Paisaje nevado. Expositivo: Qué es la fotosíntesis.",
+  "Narrativo: Suceso que transforma a Juan. Descriptivo: Montaña con detalles. Expositivo: Proceso solar de energía.",
+  "Narrativo: Cambio inesperado. Descriptivo: Naturaleza en la montaña. Expositivo: Fotosíntesis en plantas.",
+  "Narrativo: Historia de Juan y su cambio. Descriptivo: Lugar con pinos y nieve. Expositivo: Explicación del proceso en plantas."
+  
+        ]
       },
       {
-        text: "Carla encontró una carta olvidada en un cajón, contenía un secreto familiar. Descriptivo: El mercado de frutas estaba lleno de colores vivos y aromas frescos. Expositivo: El sistema solar está compuesto por ocho planetas que orbitan alrededor del Sol.",
+        text: "El mercado de frutas estaba lleno de colores vivos y aromas frescos.",
         question: "¿Qué idea principal tiene el fragmento descriptivo?",
         validAnswers: [
-          "Describir el ambiente del mercado de frutas",
-          "Presentar el entorno del mercado de frutas",
-          "Mostrar cómo es el mercado de frutas",
-          "Caracterizar el mercado de frutas",
-          "Retratar la atmósfera del mercado",
-          "Explicar el aspecto del mercado de frutas"
-        ],
-        keyWords: ['describir', 'presentar', 'mostrar', 'caracterizar', 'retratar', 'explicar', 'ambiente', 'entorno', 'atmósfera', 'aspecto', 'mercado', 'frutas'],
-        minKeyWords: 2
+          "describir el mercado lleno de frutas y colores",
+  "mostrar como era el mercado de frutas",
+  "presentar el ambiente del mercado",
+  "contar como se veia el mercado de frutas",
+  "retratar el lugar donde vendian frutas",
+  "explicar como lucia el mercado",
+  "dar detalles del mercado de frutas",
+  "describir el aspecto del mercado con frutas",
+  "pintar una imagen del mercado lleno de colores",
+  "mostrar los colores y aromas del mercado",
+  "presentar el mercado con sus colores vivos",
+  "contar como olia y se veia el mercado",
+  "enseñar como era el ambiente del mercado",
+  "narrar la descripcion del mercado de frutas",
+  "contar como se sentia estar en el mercado",
+  "explicar la apariencia del mercado",
+  "detallar el mercado de frutas",
+  "hablar de los colores y olores del mercado",
+  "describir el lugar donde vendian frutas frescas",
+  "mostrar el mercado lleno de vida",
+  "explicar el ambiente lleno de frutas",
+  "narrar como estaba el mercado de frutas",
+  "presentar un mercado lleno de aromas",
+  "contar como era el mercado lleno de colores",
+  "dar una imagen del mercado de frutas",
+  "mostrar como se ve el mercado de frutas",
+  "describir el ambiente colorido del mercado",
+  "presentar el lugar con frutas y colores",
+  "detallar como era el mercado lleno de frutas",
+  "explicar como estaba el mercado",
+  "describir la atmosfera del mercado",
+  "mostrar el mercado lleno de colores y olores",
+  "hablar de un mercado con frutas frescas",
+  "contar como lucia el mercado de frutas",
+  "pintar como era el mercado",
+  "describir como se sentia en el mercado",
+  "dar detalles del ambiente del mercado",
+  "explicar que aspecto tenia el mercado",
+  "narrar el lugar con frutas frescas",
+  "mostrar el mercado con colores vivos",
+  "Describir el mercado lleno de frutas y colores",
+  "Mostrar cómo era el mercado de frutas",
+  "Presentar el ambiente del mercado",
+  "Contar cómo se veía el mercado de frutas",
+  "Retratar el lugar donde vendían frutas",
+  "Explicar cómo lucía el mercado",
+  "Dar detalles del mercado de frutas",
+  "Describir el aspecto del mercado con frutas",
+  "Pintar una imagen del mercado lleno de colores",
+  "Mostrar los colores y aromas del mercado",
+  "Presentar el mercado con sus colores vivos",
+  "Contar cómo olía y se veía el mercado",
+  "Enseñar cómo era el ambiente del mercado",
+  "Narrar la descripción del mercado de frutas",
+  "Contar cómo se sentía estar en el mercado",
+  "Explicar la apariencia del mercado",
+  "Detallar el mercado de frutas",
+  "Hablar de los colores y olores del mercado",
+  "Describir el lugar donde vendían frutas frescas",
+  "Mostrar el mercado lleno de vida",
+  "Explicar el ambiente lleno de frutas",
+  "Narrar cómo estaba el mercado de frutas",
+  "Presentar un mercado lleno de aromas",
+  "Contar cómo era el mercado lleno de colores",
+  "Dar una imagen del mercado de frutas",
+  "Mostrar cómo se ve el mercado de frutas",
+  "Describir el ambiente colorido del mercado",
+  "Presentar el lugar con frutas y colores",
+  "Detallar cómo era el mercado lleno de frutas",
+  "Explicar cómo estaba el mercado",
+  "Describir la atmósfera del mercado",
+  "Mostrar el mercado lleno de colores y olores",
+  "Hablar de un mercado con frutas frescas",
+  "Contar cómo lucía el mercado de frutas",
+  "Pintar cómo era el mercado",
+  "Describir cómo se sentía en el mercado",
+  "Dar detalles del ambiente del mercado",
+  "Explicar qué aspecto tenía el mercado",
+  "Narrar el lugar con frutas frescas",
+  "Mostrar el mercado con colores vivos",
+  "describe el mercado lleno de frutas y colores",
+  "muestra como era el mercado de frutas",
+  "presenta el ambiente del mercado",
+  "relata como se veia el mercado de frutas",
+  "retrata el lugar donde vendian frutas",
+  "explica como lucia el mercado",
+  "da detalles del mercado de frutas",
+  "describe el aspecto del mercado con frutas",
+  "pinta una imagen del mercado lleno de colores",
+  "muestra los colores y aromas del mercado",
+  "presenta el mercado con sus colores vivos",
+  "relata como olia y se veia el mercado",
+  "enseña como era el ambiente del mercado",
+  "narra la descripcion del mercado de frutas",
+  "relata como se sentia estar en el mercado",
+  "explica la apariencia del mercado",
+  "detalla el mercado de frutas",
+  "habla de los colores y olores del mercado",
+  "describe el lugar donde vendian frutas frescas",
+  "muestra el mercado lleno de vida",
+  "explica el ambiente lleno de frutas",
+  "narra como estaba el mercado de frutas",
+  "presenta un mercado lleno de aromas",
+  "relata como era el mercado lleno de colores",
+  "da una imagen del mercado de frutas",
+  "muestra como se ve el mercado de frutas",
+  "describe el ambiente colorido del mercado",
+  "presenta el lugar con frutas y colores",
+  "detalla como era el mercado lleno de frutas",
+  "explica como estaba el mercado",
+  "describe la atmosfera del mercado",
+  "muestra el mercado lleno de colores y olores",
+  "habla de un mercado con frutas frescas",
+  "relata como lucia el mercado de frutas",
+  "pinta como era el mercado",
+  "describe como se sentia en el mercado",
+  "da detalles del ambiente del mercado",
+  "explica que aspecto tenia el mercado",
+  "narra el lugar con frutas frescas",
+  "muestra el mercado con colores vivos",
+  "Describe el mercado con frutas y colores",
+  "Muestra cómo era el mercado de frutas",
+  "Presenta el ambiente del mercado",
+  "Relata cómo se veía el mercado de frutas",
+  "Retrata el lugar donde vendían frutas",
+  "Explica cómo lucía el mercado",
+  "Da detalles del mercado de frutas",
+  "Describe el aspecto del mercado con frutas",
+  "Pinta una imagen del mercado lleno de colores",
+  "Muestra los colores y aromas del mercado",
+  "Presenta el mercado con sus colores vivos",
+  "Relata cómo olía y se veía el mercado",
+  "Enseña cómo era el ambiente del mercado",
+  "Narra la descripción del mercado de frutas",
+  "Relata cómo se sentía estar en el mercado",
+  "Explica la apariencia del mercado",
+  "Detalla el mercado de frutas",
+  "Habla de los colores y olores del mercado",
+  "Describe el lugar donde vendían frutas frescas",
+  "Muestra el mercado lleno de vida",
+  "Explica el ambiente lleno de frutas",
+  "Narra cómo estaba el mercado de frutas",
+  "Presenta un mercado lleno de aromas",
+  "Relata cómo era el mercado lleno de colores",
+  "Da una imagen del mercado de frutas",
+  "Muestra cómo se ve el mercado de frutas",
+  "Describe el ambiente colorido del mercado",
+  "Presenta el lugar con frutas y colores",
+  "Detalla cómo era el mercado lleno de frutas",
+  "Explica cómo estaba el mercado",
+  "Describe la atmósfera del mercado",
+  "Muestra el mercado lleno de colores y olores",
+  "Habla de un mercado con frutas frescas",
+  "Relata cómo lucía el mercado de frutas",
+  "Pinta cómo era el mercado",
+  "Describe cómo se sentía en el mercado",
+  "Da detalles del ambiente del mercado",
+  "Explica qué aspecto tenía el mercado",
+  "Narra el lugar con frutas frescas",
+  "Muestra el mercado con colores vivos"
+        ]
       }
     ]
   },
@@ -284,29 +643,106 @@ const comunicacionLessonsImproved = [
     examples: [
       {
         text: "Introducción: El cambio climático es un desafío global. Desarrollo: El aumento de gases de efecto invernadero provoca el derretimiento de glaciares y fenómenos meteorológicos extremos. Conclusión: Para mitigar sus efectos, necesitamos energías renovables y reducir la huella de carbono.",
-        question: "Señala la introducción, el desarrollo y la conclusión.",
+        question: "Señala la introducción, el desarrollo y la conclusión,  tal y como en el ejmplo de arriba.",
         validAnswers: [
           "Introducción: Presentación del cambio climático. Desarrollo: Explicación de sus causas y efectos. Conclusión: Propuesta de soluciones.",
           "Introducción: Introducción al cambio climático. Desarrollo: Causas y consecuencias. Conclusión: Soluciones propuestas.",
           "Introducción: Planteamiento del problema. Desarrollo: Análisis de efectos. Conclusión: Medidas sugeridas.",
           "Introducción: Tema del cambio climático. Desarrollo: Efectos y causas. Conclusión: Alternativas de solución.",
-          "Introducción: Problema climático. Desarrollo: Consecuencias del problema. Conclusión: Propuestas para solucionarlo."
-        ],
-        keyWords: ['introducción', 'presentación', 'planteamiento', 'tema', 'cambio', 'climático', 'desarrollo', 'explicación', 'causas', 'efectos', 'consecuencias', 'análisis', 'conclusión', 'propuesta', 'soluciones', 'medidas', 'alternativas'],
-        minKeyWords: 4
+          "Introducción: Problema climático. Desarrollo: Consecuencias del problema. Conclusión: Propuestas para solucionarlo.",
+          "introduccion: presenta el cambio climatico. desarrollo: explica causas y efectos. conclusion: propone soluciones posibles",
+  "introduccion: plantea el tema del cambio climatico. desarrollo: describe sus consecuencias. conclusion: sugiere acciones",
+  "introduccion: introduce el problema ambiental. desarrollo: detalla los impactos. conclusion: muestra posibles salidas",
+  "introduccion: muestra el problema del clima. desarrollo: analiza las causas. conclusion: indica como actuar",
+  "introduccion: relata que el clima esta cambiando. desarrollo: expone los efectos. conclusion: da medidas concretas",
+  "introduccion: da una idea general del tema. desarrollo: desarrolla causas y consecuencias. conclusion: da recomendaciones",
+  "introduccion: menciona el cambio climatico. desarrollo: profundiza en los daños. conclusion: plantea alternativas",
+  "introduccion: presenta el desafio ambiental. desarrollo: analiza el aumento de gases. conclusion: propone energias limpias",
+  "introduccion: describe un problema global. desarrollo: cuenta como afecta al planeta. conclusion: recomienda soluciones",
+  "introduccion: muestra la problematica. desarrollo: detalla los fenomenos que produce. conclusion: ofrece acciones concretas",
+  "introduccion: plantea el tema. desarrollo: desarrolla los efectos negativos. conclusion: da posibles respuestas",
+  "introduccion: introduce el desafio. desarrollo: explica lo que lo causa. conclusion: propone usar energias limpias",
+  "introduccion: resume el problema. desarrollo: muestra sus consecuencias. conclusion: da formas de mitigar el impacto",
+  "introduccion: inicia con el cambio climatico. desarrollo: desarrolla lo que ocurre. conclusion: concluye con ideas de solucion",
+  "introduccion: abre el tema global. desarrollo: expone la situacion actual. conclusion: concluye con medidas necesarias",
+  "introduccion: presenta un problema ambiental. desarrollo: explica sus consecuencias. conclusion: propone actuar",
+  "introduccion: introduce el tema. desarrollo: explica el calentamiento. conclusion: propone cambios energeticos",
+  "introduccion: menciona el reto global. desarrollo: explica el origen. conclusion: da ideas para mejorar",
+  "introduccion: señala el tema. desarrollo: muestra lo que esta pasando. conclusion: recomienda cambiar habitos",
+  "introduccion: plantea una preocupacion. desarrollo: relata efectos graves. conclusion: impulsa soluciones",
+  "introduccion: explica el tema a tratar. desarrollo: desarrolla causas y efectos. conclusion: propone reducir huella",
+  "introduccion: informa del cambio climatico. desarrollo: describe su avance. conclusion: sugiere reducir contaminacion",
+  "introduccion: abre con el tema ambiental. desarrollo: muestra consecuencias reales. conclusion: impulsa energias limpias",
+  "introduccion: habla sobre el cambio del clima. desarrollo: analiza por que pasa. conclusion: propone soluciones claras",
+  "introduccion: presenta el topico. desarrollo: desarrolla la idea central. conclusion: sugiere acciones humanas",
+  "introduccion: plantea el fenomeno. desarrollo: explica como nos afecta. conclusion: propone actuar desde ahora",
+  "introduccion: relata que hay un problema. desarrollo: lo detalla. conclusion: recomienda energia renovable",
+  "introduccion: describe un tema global. desarrollo: da detalles cientificos. conclusion: indica que hacer",
+  "introduccion: plantea el problema del clima. desarrollo: detalla sus consecuencias. conclusion: menciona acciones",
+  "introduccion: muestra la preocupacion mundial. desarrollo: explica los fenomenos. conclusion: propone cambiar habitos",
+  "introduccion: introduce el tema del clima. desarrollo: muestra como afecta. conclusion: presenta alternativas",
+  "introduccion: habla del cambio. desarrollo: detalla lo que provoca. conclusion: sugiere actuar juntos",
+  "introduccion: senala un reto actual. desarrollo: analiza el problema. conclusion: sugiere soluciones practicas",
+  "introduccion: explica la situacion global. desarrollo: menciona lo que provoca. conclusion: da ideas utiles",
+  "introduccion: comienza con el tema. desarrollo: desarrolla el contenido. conclusion: da recomendaciones directas",
+  "introduccion: abre con una alerta climatica. desarrollo: describe el impacto. conclusion: concluye con medidas",
+  "introduccion: presenta el problema. desarrollo: lo desarrolla con ejemplos. conclusion: propone formas de actuar",
+  "introduccion: menciona el cambio. desarrollo: describe causas y efectos. conclusion: sugiere reducir emisiones",
+  "introduccion: indica el topico principal. desarrollo: narra los efectos. conclusion: propone alternativas",
+  "introduccion: presenta la situacion global. desarrollo: profundiza en el tema. conclusion: concluye con acciones"
+        ]
       },
       {
         text: "Introducción: La lectura diaria mejora la concentración. Desarrollo: Estudios muestran que leer antes de dormir ayuda a reducir el estrés y fortalecer la memoria. Conclusión: Incorporar la lectura en la rutina diaria trae múltiples beneficios.",
-        question: "¿Dónde termina el desarrollo y empieza la conclusión?",
+        question: "¿Dónde termina el desarrollo y empieza la conclusión?, tu respuesta debe iniciar con la palabra: El desarrollo termina, El desarrollo finaliza... etc",
         validAnswers: [
           "El desarrollo termina al mencionar los beneficios, y la conclusión comienza al sugerir incorporar la lectura en la rutina.",
           "El desarrollo finaliza con los beneficios, la conclusión inicia con la sugerencia de leer diariamente.",
           "El desarrollo concluye con las ventajas, la conclusión empieza con la recomendación de leer.",
           "El desarrollo acaba con los efectos positivos, la conclusión arranca con la propuesta de rutina.",
-          "El desarrollo se cierra con los beneficios, la conclusión se abre con la idea de leer habitualmente."
-        ],
-        keyWords: ['desarrollo', 'termina', 'finaliza', 'concluye', 'acaba', 'beneficios', 'ventajas', 'efectos', 'conclusión', 'comienza', 'inicia', 'empieza', 'sugerir', 'incorporar', 'rutina', 'lectura', 'leer'],
-        minKeyWords: 3
+          "El desarrollo se cierra con los beneficios, la conclusión se abre con la idea de leer habitualmente.",
+          "el desarrollo termina al mencionar los beneficios, la conclusion empieza cuando se recomienda leer diariamente",
+  "el desarrollo acaba cuando se habla del estres y la memoria, la conclusion inicia al hablar de habitos",
+  "el desarrollo finaliza al mostrar los efectos, la conclusion arranca con la propuesta de rutina",
+  "el desarrollo concluye al destacar los beneficios, la conclusion empieza con la sugerencia de leer",
+  "el desarrollo termina con las ventajas, la conclusion empieza al recomendar leer todos los dias",
+  "el desarrollo se cierra al hablar del estres, la conclusion se abre con los beneficios generales",
+  "el desarrollo termina con los resultados, la conclusion inicia con la idea de incorporar lectura diaria",
+  "el desarrollo concluye con datos sobre la memoria, la conclusion propone incluir la lectura",
+  "el desarrollo finaliza al mostrar efectos positivos, la conclusion arranca con la recomendacion",
+  "el desarrollo termina tras los beneficios, la conclusion empieza al hablar de la rutina lectora",
+  "el desarrollo acaba con el efecto en el estres, la conclusion arranca con una propuesta de cambio",
+  "el desarrollo finaliza al explicar como ayuda la lectura, la conclusion empieza al proponer un habito",
+  "el desarrollo concluye al mostrar los impactos, la conclusion inicia con la sugerencia de leer seguido",
+  "el desarrollo termina con la evidencia cientifica, la conclusion abre con consejos",
+  "el desarrollo cierra con resultados positivos, la conclusion arranca con una recomendacion practica",
+  "el desarrollo termina con el impacto en la memoria, la conclusion comienza con habitos lectores",
+  "el desarrollo finaliza tras mostrar beneficios mentales, la conclusion da una propuesta de accion",
+  "el desarrollo concluye con datos del estudio, la conclusion comienza con una sugerencia util",
+  "el desarrollo acaba cuando se explican los efectos, la conclusion empieza al recomendar una rutina",
+  "el desarrollo termina con beneficios personales, la conclusion propone incluir lectura en la rutina",
+  "el desarrollo finaliza al tratar el estres, la conclusion arranca con consejos aplicables",
+  "el desarrollo concluye tras describir los efectos, la conclusion sugiere nuevos habitos",
+  "el desarrollo se cierra con los efectos positivos, la conclusion plantea acciones concretas",
+  "el desarrollo termina con la evidencia de mejoras, la conclusion invita a leer mas",
+  "el desarrollo acaba tras mostrar cambios en la memoria, la conclusion propone leer antes de dormir",
+  "el desarrollo concluye con beneficios cientificos, la conclusion sugiere lectura cotidiana",
+  "el desarrollo cierra con el impacto positivo, la conclusion empieza con una propuesta de rutina diaria",
+  "el desarrollo finaliza con efectos comprobados, la conclusion abre con una invitacion a leer",
+  "el desarrollo termina al resaltar beneficios, la conclusion propone habitos saludables",
+  "el desarrollo concluye al mencionar el efecto en el estres, la conclusion recomienda seguir leyendo",
+  "el desarrollo se completa con la informacion sobre el cerebro, la conclusion invita a practicar la lectura diaria",
+  "el desarrollo cierra tras mencionar ventajas, la conclusion comienza con la propuesta de habito",
+  "el desarrollo termina con los resultados del estudio, la conclusion promueve el uso de lectura diaria",
+  "el desarrollo concluye al detallar mejoras mentales, la conclusion inicia con consejos de aplicacion",
+  "el desarrollo acaba cuando se ven los efectos, la conclusion propone aplicarlos a la vida diaria",
+  "el desarrollo termina con las razones, la conclusion invita a la accion lectora",
+  "el desarrollo cierra con datos cientificos, la conclusion da una pauta para la rutina",
+  "el desarrollo concluye al mencionar los efectos, la conclusion promueve el habito lector",
+  "el desarrollo termina tras ver los beneficios, la conclusion comienza con una aplicacion directa",
+  "el desarrollo concluye cuando se presentan beneficios, la conclusion abre con una propuesta concreta",
+  "el desarrollo termina con los puntos clave, la conclusion empieza con un llamado a la lectura"
+        ]
       }
     ]
   },
@@ -316,17 +752,44 @@ const comunicacionLessonsImproved = [
     examples: [
       {
         text: "Escribe un sinónimo de brillante y un antónimo de triste.",
-        question: "Sinónimo de brillante: resplandeciente. Antónimo de triste: feliz.",
+        question: "Sinónimo de brillante: resplandeciente. Antónimo de triste: feliz, coloca tu respues de la esta forma: Resplandeciente / Feliz",
         validAnswers: [
-          "Resplandeciente / Feliz",
+
           "Luminoso / Alegre",
           "Radiante / Contento",
           "Brilloso / Jovial",
           "Reluciente / Dichoso",
-          "Espléndido / Satisfecho"
-        ],
-        keyWords: ['resplandeciente', 'luminoso', 'radiante', 'brilloso', 'reluciente', 'espléndido', 'feliz', 'alegre', 'contento', 'jovial', 'dichoso', 'satisfecho'],
-        minKeyWords: 2
+          "Espléndido / Satisfecho",
+          "Cintilante / Contento",
+  "Fulgurosa / Animado",
+  "Centelleante / Eufórico",
+  "Claro / Feliz",
+  "Deslumbrante / Satisfecho",
+  "Lumínico / Alegre",
+  "Radioso / Optimista",
+  "Refulgente / Gozoso",
+  "Fulgente / Entusiasmado",
+  "Relumbrante / Exultante",
+  "Luminoso / Alegre",
+  "Radiante / Contento",
+  "Brilloso / Jovial",
+  "Reluciente / Dichoso",
+  "Espléndido / Satisfecho",
+  "Centelleante / Animado",
+  "Brillante / Entusiasmado",
+  "Claro / Optimista",
+  "Resplandor / Eufórico",
+  "Vivaz / Sonriente",
+  "Chispeante / Animoso",
+  "Fulgurosa / Encantado",
+  "Luciente / Emocionado",
+  "Destellante / Pleno",
+  "Centellante / Positivo",
+  "Brilloso / Risueño",
+  "Lumínico / Contentísimo",
+  "Resplandor / Conformado",
+  "Destacado / Bienhumorado"
+        ]
       },
       {
         text: "Identifica en el siguiente texto un sinónimo de rápido y un antónimo de grande: \"El avión surcó el cielo velozmente sobre la diminuta isla.\"",
@@ -337,10 +800,38 @@ const comunicacionLessonsImproved = [
           "Aceleradamente / Minúscula",
           "Ágilmente / Chica",
           "Presto / Reducida",
-          "Ligero / Mínima"
-        ],
-        keyWords: ['velozmente', 'rápidamente', 'aceleradamente', 'ágilmente', 'presto', 'ligero', 'diminuta', 'pequeña', 'minúscula', 'chica', 'reducida', 'mínima'],
-        minKeyWords: 2
+          "Ligero / Mínima",
+          "Raudo / Pequeña",
+  "Pronto / Chica",
+  "Ligero / Menuda",
+  "Rápido / Pequeñita",
+  "Ágil / Exigua",
+  "Velóz / Pequeña",
+  "Prontamente / Minúscula",
+  "Apresurado / Diminuta",
+  "Lesto / Breve",
+  "Prestamente / Reducida",
+  "Velozmente / Diminuta",
+  "Rápidamente / Pequeña",
+  "Aceleradamente / Minúscula",
+  "Ágilmente / Chica",
+  "Presto / Reducida",
+  "Ligero / Mínima",
+  "Apresuradamente / Cortita",
+  "Raudo / Pequeñita",
+  "Con rapidez / Breve",
+  "Con agilidad / Angosta",
+  "Con prisa / Limitada",
+  "Ágil / Pequeña",
+  "De prisa / Baja",
+  "Rápida / Breve",
+  "Veloz / Minúscula",
+  "Apurado / Chiquita",
+  "Rápido / Pequeñita",
+  "Exprés / Compacta",
+  "Con velocidad / Encogida",
+  "Fulgurante / Baja"
+        ]
       }
     ]
   },
@@ -357,10 +848,33 @@ const comunicacionLessonsImproved = [
           "Se empapó porque el paraguas no funcionó bajo la lluvia.",
           "La lluvia la mojó al romperse su paraguas.",
           "Llovió y el paraguas de Laura se averió.",
-          "El paraguas falló y Laura se mojó con la lluvia."
-        ],
-        keyWords: ['laura', 'lluvia', 'paraguas', 'rompió', 'dañó', 'averió', 'falló', 'mojó', 'empapó', 'estuvo', 'bajo'],
-        minKeyWords: 3
+          "El paraguas falló y Laura se mojó con la lluvia.",
+           "Que Laura estuvo bajo la lluvia y su paraguas se rompió.",
+  "Laura se mojó por la lluvia porque se le dañó el paraguas.",
+  "Se empapó porque el paraguas no funcionó bajo la lluvia.",
+  "La lluvia la mojó al romperse su paraguas.",
+  "Llovió y el paraguas de Laura se averió.",
+  "El paraguas falló y Laura se mojó con la lluvia.",
+  "Estuvo lloviendo y el paraguas de Laura no la protegió.",
+  "Laura caminó bajo la lluvia sin buena protección.",
+  "Salió con lluvia y su paraguas no sirvió.",
+  "Fue sorprendida por la lluvia y su paraguas no resistió.",
+  "Estuvo bajo una lluvia fuerte con un paraguas roto.",
+  "El clima la sorprendió y acabó empapada.",
+  "La lluvia la sorprendió camino a clase.",
+  "El paraguas no aguantó la lluvia fuerte.",
+  "El viento o la lluvia dañaron su paraguas.",
+  "La lluvia la alcanzó antes de entrar a clases.",
+  "Iba por la calle cuando se le rompió el paraguas.",
+  "Llegó mojada por culpa de la lluvia inesperada.",
+  "Salió con paraguas, pero igual se mojó.",
+  "El mal clima afectó su llegada a clase.",
+  "La lluvia fue tan fuerte que rompió su paraguas.",
+  "Estuvo expuesta al agua de lluvia por el paraguas roto.",
+  "No se pudo cubrir bien por el mal estado del paraguas.",
+  "Se nota que llovía y no tuvo cómo protegerse bien.",
+  "Llovió mientras ella iba al colegio, pero el paraguas no ayudó."
+        ]
       },
       {
         text: "Al oír el timbre, Marcos guardó rápidamente su cuaderno en la mochila y adoptó una postura seria. La profesora acababa de anunciar la visita sorpresa.",
@@ -371,113 +885,388 @@ const comunicacionLessonsImproved = [
           "Se puso ansioso por la visita inesperada.",
           "No estaba listo para la inspección sorpresa.",
           "Se sintió preocupado por la visita imprevista.",
-          "Estaba intranquilo ante la visita no programada."
-        ],
-        keyWords: ['nervioso', 'inquieto', 'ansioso', 'preocupado', 'intranquilo', 'preparado', 'listo', 'visita', 'sorpresa', 'inesperada', 'imprevista', 'inspección'],
-        minKeyWords: 2
+          "Estaba intranquilo ante la visita no programada.",
+            "Que estaba nervioso o no preparado para la visita sorpresa.",
+  "Estaba inquieto porque no esperaba la visita.",
+  "Se puso ansioso por la visita inesperada.",
+  "No estaba listo para la inspección sorpresa.",
+  "Se sintió preocupado por la visita imprevista.",
+  "Estaba intranquilo ante la visita no programada.",
+  "Parecía tenso al enterarse de la visita.",
+  "Cambió su actitud por temor a la sorpresa.",
+  "Se puso serio al escuchar lo de la visita.",
+  "Intentó parecer más responsable al saber de la visita.",
+  "Quiso dar una buena impresión al saber que alguien venía.",
+  "Dejó de hacer lo que hacía por miedo a ser visto.",
+  "Guardó rápido sus cosas porque no estaba haciendo lo correcto.",
+  "El anuncio lo tomó por sorpresa y se puso nervioso.",
+  "Mostró incomodidad ante la noticia inesperada.",
+  "Se preocupó por lo que pudiera pasar en la visita.",
+  "Su actitud cambió porque no se sentía preparado.",
+  "Parecía temer que lo descubrieran haciendo algo indebido.",
+  "Reaccionó con incomodidad frente al anuncio.",
+  "Su cambio de postura muestra que no estaba tranquilo.",
+  "Mostró seriedad porque quería evitar problemas.",
+  "La noticia lo hizo actuar con más cuidado.",
+  "Intentó disimular algo al saber de la visita.",
+  "Se alarmó con el anuncio y quiso parecer ordenado.",
+  "Tuvo una reacción de nervios por lo inesperado."
+        ]
+      }
+    ]
+  },
+ {
+    title: "Uso de Conectores Lógicos",
+    teaching: "Los conectores lógicos son palabras o frases que unen ideas, oraciones o párrafos, dando coherencia y cohesión al texto. Hay conectores de adición (y, además), contraste (pero, sin embargo), causa (porque, debido a), consecuencia (por lo tanto, así que), entre otros.",
+    examples: [
+      {
+        text: "Estudié mucho para el examen, ___ aprobé con buena nota.",
+        question: "Completa la oración con un conector de consecuencia.",
+        validAnswers: [
+          "por lo tanto",
+          "por consiguiente",
+          "en consecuencia",
+          "así que",
+          "de modo que",
+          "por ende",
+           "por lo tanto",
+  "por consiguiente",
+  "en consecuencia",
+  "así que",
+  "de modo que",
+  "por ende",
+  "de manera que",
+  "por esta razón",
+  "entonces",
+  "de ahí que",
+  "con lo cual",
+  "por tal motivo",
+  "de resultas",
+  "por eso",
+  "de ahí la razón",
+  "por dicha razón",
+  "por ese motivo",
+  "como resultado",
+  "a consecuencia de ello",
+  "con lo que",
+  "de tal forma que",
+  "por lo que"
+        ]
+      },
+      {
+        text: "Me gusta mucho leer, ___ no tengo tiempo para hacerlo.",
+        question: "Completa la oración con un conector de contraste.",
+        validAnswers: [
+          "pero",
+          "sin embargo",
+          "no obstante",
+          "mas",
+          "aunque",
+          "pero",
+  "sin embargo",
+  "no obstante",
+  "mas",
+  "aunque",
+  "a pesar de eso",
+  "con todo",
+  "aun así",
+  "empero",
+  "sin embargo de ello",
+  "en cambio",
+  "al contrario",
+  "por el contrario",
+  "no por eso",
+  "aunque eso sí",
+  "sin embargo no obstante",
+  "pese a ello",
+  "por más que",
+  "aunque aún así",
+  "no obstante lo anterior"
+        ]
+      },
+      {
+        text: "No pude ir a la fiesta ___ estaba enfermo.",
+        question: "Completa la oración con un conector de causa.",
+        validAnswers: [
+          "porque",
+          "ya que",
+          "debido a que",
+          "puesto que",
+          "a causa de que",
+           "porque",
+  "ya que",
+  "debido a que",
+  "puesto que",
+  "a causa de que",
+  "como",
+  "en vista de que",
+  "visto que",
+  "dado que",
+  "por el hecho de que",
+  "considerando que",
+  "por cuanto",
+  "gracias a que",
+  "teniendo en cuenta que",
+  "motivo por el cual",
+  "pues",
+  "por razón de que",
+  "en razón de que",
+  "con motivo de que",
+  "debido a ello"
+        ]
+      }
+    ]
+  },
+ 
+    {
+    title: "Identificación de Sujeto y Predicado",
+    teaching: "En una oración, el Sujeto es la persona, animal o cosa que realiza la acción o de quien se dice algo. El Predicado es la acción que realiza el sujeto y todo lo que se dice de él. El núcleo del sujeto es el sustantivo y el del predicado es el verbo.",
+    examples: [
+      {
+        text: "El perro ladra fuertemente en el jardín.",
+        question: "¿Cuál es el sujeto de la oración?",
+        validAnswers: [
+          "El perro",
+          "el perro",
+          "El perro",
+  "el perro",
+  "El perro.",
+  "el perro.",
+  "Sujeto: el perro",
+  "Sujeto: El perro",
+  "el sujeto es el perro",
+  "el sujeto: el perro",
+  "sujeto: el perro",
+  "el que ladra es el perro",
+  "se habla del perro",
+  "de quien se habla: el perro",
+  "Sujeto, el perro",
+  "Sujeto, El perro",
+  "el sujeto es el perro",
+  "el sujeto, el perro",
+  "sujeto, el perro",
+  "el que ladra es el perro",
+  "se habla del perro",
+  "de quien se habla, el perro"
+        ]
+      },
+      {
+        text: "Los niños juegan alegremente en el parque.",
+        question: "¿Cuál es el predicado de la oración?",
+        validAnswers: [
+          "juegan alegremente en el parque",
+          "juegan alegremente en el parque.",
+          "juegan alegremente en el parque",
+  "juegan alegremente en el parque.",
+  "Predicado: juegan alegremente en el parque",
+  "Predicado: juegan alegremente en el parque.",
+  "el predicado es juegan alegremente en el parque",
+  "juegan en el parque alegremente",
+  "acción: juegan alegremente en el parque",
+  "todo lo que se dice del sujeto: juegan alegremente en el parque",
+  "lo que hacen: juegan alegremente en el parque",
+  "parte verbal: juegan alegremente en el parque",
+  "juegan alegremente en el parque",
+  "juegan alegremente en el parque.",
+  "Predicado, juegan alegremente en el parque",
+  "Predicado, juegan alegremente en el parque.",
+  "el predicado es juegan alegremente en el parque",
+  "juegan en el parque alegremente",
+  "acción, juegan alegremente en el parque",
+  "todo lo que se dice del sujeto, juegan alegremente en el parque",
+  "lo que hacen, juegan alegremente en el parque",
+  "parte verbal, juegan alegremente en el parque"
+        ]
+      },
+      {
+        text: "Mi hermana mayor estudia medicina en la universidad.",
+        question: "¿Cuál es el núcleo del sujeto?",
+        validAnswers: [
+          "hermana",
+          "Hermana",
+          "hermana",
+  "Hermana",
+  "el núcleo es hermana",
+  "núcleo: hermana",
+  "sustantivo: hermana",
+  "palabra principal: hermana",
+  "núcleo del sujeto: hermana",
+  "la palabra hermana",
+  "hermana (porque es el sustantivo)",
+  "hermana, porque es de quien se habla",
+  "la que hace la acción es hermana",
+  "el núcleo es hermana",
+  "núcleo, hermana",
+  "sustantivo, hermana",
+  "palabra principal, hermana",
+  "núcleo del sujeto, hermana",
+  "la palabra hermana",
+  "hermana porque es el sustantivo",
+  "hermana, porque es de quien se habla",
+  "la que hace la acción es hermana"
+  
+        ]
       }
     ]
   },
   {
-    title: "Redacción de textos narrativos: escribir relatos y cuentos breves",
-    teaching: "Para escribir un buen relato, piensa en personajes, un conflicto, un escenario y una secuencia de eventos con inicio, nudo y desenlace. Usa descripciones y diálogos para hacerlo vívido.",
+    title: "Tipos de Oraciones según la Intención del Hablante",
+    teaching: "Las oraciones pueden clasificarse según lo que el hablante quiere expresar: Declarativas (afirman o niegan algo), Interrogativas (hacen preguntas), Exclamativas (expresan emoción), Imperativas (dan órdenes o consejos), Dubitativas (expresan duda) y Desiderativas (expresan deseo).",
     examples: [
       {
-        text: "Escribe un cuento breve sobre un animal que habla y su aventura en la ciudad.",
-        question: "Redacta tu cuento, cuidando la estructura narrativa.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se espera un cuento con inicio, nudo y desenlace."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
+        text: "Hoy es un día soleado y perfecto para salir.",
+        question: "¿Qué tipo de oración es?",
+        validAnswers: [
+          "Declarativa",
+          "Afirmativa",
+          "declarativa",
+          "afirmativa",
+           "Declarativa",
+  "Afirmativa",
+  "declarativa",
+  "afirmativa",
+  "oración afirmativa",
+  "oración declarativa",
+  "es una oración afirmativa",
+  "es una oración declarativa",
+  "se está afirmando algo",
+  "afirma algo",
+  "se da una información",
+  "es una afirmación",
+  "expresa una idea",
+  "dice algo",
+  "tipo afirmativo",
+  "tipo declarativo",
+  "da un mensaje",
+  "se dice algo con certeza",
+  "una frase afirmativa",
+  "una frase declarativa",
+  "Declarativa",
+  "Afirmativa",
+  "declarativa",
+  "afirmativa",
+  "oracion afirmativa",
+  "oracion declarativa",
+  "es una oracion afirmativa",
+  "es una oracion declarativa",
+  "se esta afirmando algo",
+  "afirma algo",
+  "se da una informacion",
+  "es una afirmacion",
+  "expresa una idea",
+  "dice algo",
+  "tipo afirmativo",
+  "tipo declarativo",
+  "da un mensaje",
+  "se dice algo con certeza",
+  "una frase afirmativa",
+  "una frase declarativa"
+
+        ]
       },
       {
-        text: "Crea un relato de no más de 100 palabras sobre un encuentro inesperado con un objeto mágico.",
-        question: "Redacta el relato con descripción del encuentro y diálogo breve.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se espera un relato con descripción y diálogo."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
+        text: "¿Has terminado tu tarea para mañana?",
+        question: "¿Qué tipo de oración es?",
+        validAnswers: [
+          "Interrogativa",
+          "De pregunta",
+          "interrogativa",
+          "de pregunta",
+          "Interrogativa",
+  "interrogativa",
+  "De pregunta",
+  "de pregunta",
+  "es una pregunta",
+  "tipo interrogativo",
+  "tipo de pregunta",
+  "oración interrogativa",
+  "oración de pregunta",
+  "se está preguntando algo",
+  "se formula una pregunta",
+  "es una frase interrogativa",
+  "se busca una respuesta",
+  "pregunta directa",
+  "plantea una duda",
+  "quiere saber algo",
+  "pregunta si hizo algo",
+  "están preguntando",
+  "se hace una pregunta",
+  "se pide información",
+  "se pide informacion",
+   "Interrogativa",
+  "interrogativa",
+  "De pregunta",
+  "de pregunta",
+  "es una pregunta",
+  "tipo interrogativo",
+  "tipo de pregunta",
+  "oracion interrogativa",
+  "oracion de pregunta",
+  "se esta preguntando algo",
+  "se formula una pregunta",
+  "es una frase interrogativa",
+  "se busca una respuesta",
+  "pregunta directa",
+  "plantea una duda",
+  "quiere saber algo",
+  "pregunta si hizo algo",
+  "estan preguntando",
+  "se hace una pregunta"
+        ]
+      },
+      {
+        text: "¡Qué sorpresa tan agradable verte aquí!",
+        question: "¿Qué tipo de oración es?",
+        validAnswers: [
+          "Exclamativa",
+          "De exclamación",
+          "exclamativa",
+          "de exclamación",
+           "Exclamativa",
+  "exclamativa",
+  "De exclamación",
+  "de exclamación",
+  "es una exclamación",
+  "tipo exclamativo",
+  "expresa emoción",
+  "se expresa alegría",
+  "oración exclamativa",
+  "frase exclamativa",
+  "transmite sorpresa",
+  "transmite emoción",
+  "es una expresión fuerte",
+  "se dice con emoción",
+  "emoción al ver a alguien",
+  "habla con entusiasmo",
+  "se exclama algo",
+  "se expresa una reacción",
+  "es un sentimiento expresado",
+  "se muestra alegría",
+  "Exclamativa",
+  "exclamativa",
+  "De exclamacion",
+  "de exclamacion",
+  "es una exclamacion",
+  "tipo exclamativo",
+  "expresa emocion",
+  "se expresa alegria",
+  "oracion exclamativa",
+  "frase exclamativa",
+  "transmite sorpresa",
+  "transmite emocion",
+  "es una expresion fuerte",
+  "se dice con emocion",
+  "emocion al ver a alguien",
+  "habla con entusiasmo",
+  "se exclama algo",
+  "se expresa una reaccion",
+  "es un sentimiento expresado",
+  "se muestra alegria"
+        ]
       }
     ]
   },
-  {
-    title: "Redacción de textos expositivos: estructurar un ensayo o artículo breve",
-    teaching: "Un texto expositivo informa de manera clara y objetiva. Debe tener una introducción, desarrollo (con datos y explicaciones) y una conclusión que resuma la información.",
-    examples: [
-      {
-        text: "Investiga sobre la importancia del reciclaje y escribe un artículo breve.",
-        question: "Estructura tu artículo con introducción, desarrollo (datos, beneficios) y conclusión.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se espera un artículo con la estructura solicitada y datos sobre reciclaje."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
-      },
-      {
-        text: "Escribe un texto explicativo sobre los volcanes.",
-        question: "Incluye definiciones, procesos y ejemplos de volcanes famosos.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se espera un texto que defina volcanes, explique sus procesos y mencione ejemplos."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
-      }
-    ]
-  },
-  {
-    title: "Escritura y redacción avanzada: redactar cartas, ensayos y composiciones",
-    teaching: "Dominar diferentes tipos de textos escritos te permite comunicar eficazmente en diversas situaciones. Cada formato (carta, ensayo) tiene sus propias reglas y propósito.",
-    examples: [
-      {
-        text: "Redacta una carta formal solicitando información sobre un curso de tu interés.",
-        question: "Incluye saludo, cuerpo con motivos y despedida formal.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se espera una carta con formato formal."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
-      },
-      {
-        text: "Escribe un ensayo de opinión sobre el uso de la tecnología en la educación.",
-        question: "Presenta introducción, argumentos a favor, argumentos en contra y conclusión.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se espera un ensayo con argumentos a favor y en contra y una conclusión."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
-      }
-    ]
-  },
-  {
-    title: "Redacción de textos argumentativos: organizar y expresar argumentos de manera lógica",
-    teaching: "Un texto argumentativo busca convencer. Debe tener una tesis clara, argumentos sólidos respaldados por evidencia y una conclusión que refuerce tu punto de vista.",
-    examples: [
-      {
-        text: "Escribe un texto argumentando por qué el trabajo en equipo es crucial.",
-        question: "Incluye tesis, evidencia de trabajo en equipo y conclusión.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se espera un texto argumentativo con tesis, evidencia y conclusión."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
-      },
-      {
-        text: "Argumenta a favor o en contra de los deberes escolares.",
-        question: "Desarrolla al menos dos argumentos con ejemplos y cierra con conclusión.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se esperan al menos dos argumentos con ejemplos y una conclusión."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
-      }
-    ]
-  },
-  {
-    title: "Debates y discusiones: aprender a argumentar y defender puntos de vista",
-    teaching: "Participar en debates mejora la capacidad de argumentación y el pensamiento crítico. Es vital escuchar, refutar y defender tus puntos con respeto y lógica.",
-    examples: [
-      {
-        text: "Piensa en un debate sobre el uso de plásticos. ¿Cuáles serían los argumentos principales de ambos equipos y cómo los refutarías?",
-        question: "Escribe los argumentos principales de ambos equipos y una refutación breve.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se esperan argumentos a favor y en contra y una refutación."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
-      },
-      {
-        text: "Prepara un argumento para persuadir a tus amigos de la importancia de leer más libros.",
-        question: "Incluye al menos tres argumentos por cada lado.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se esperan al menos tres argumentos convincentes."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
-      }
-    ]
-  },
+   
   {
     title: "Identificación de temas centrales y elementos literarios (personajes, conflictos, narradores)",
     teaching: "Al leer un texto literario, identifica el tema central (mensaje principal), los personajes (protagonista, antagonista), el conflicto (lo que impulsa la historia) y el narrador (primera persona, tercera persona, omnisciente).",
@@ -490,50 +1279,188 @@ const comunicacionLessonsImproved = [
           "Protagonista: María. Conflicto: El misterio de la carta. Narrador: Tercera persona.",
           "Personaje principal: María. Problema: La carta desconocida. Narrador: Externa limitada.",
           "Protagonista: María. Conflicto: La carta enigmática. Narrador: Tercera persona que conoce los sentimientos de María.",
-          "Héroe: María. Tensión: El contenido misterioso. Narrador: Tercera persona."
-        ],
-        keyWords: ['protagonista', 'personaje', 'principal', 'héroe', 'maría', 'conflicto', 'problema', 'tensión', 'carta', 'misteriosa', 'misterio', 'desconocida', 'enigmática', 'narrador', 'tercera', 'persona', 'limitada', 'externa'],
-        minKeyWords: 4
+          "Héroe: María. Tensión: El contenido misterioso. Narrador: Tercera persona.",
+           "Protagonista: María. Conflicto: El misterio de la carta. Narrador: Tercera persona limitada.",
+  "Protagonista: María. Conflicto: Descubrir lo que dice la carta. Narrador: Tercera persona.",
+  "Protagonista: María. Problema: La carta que cambia su vida. Narrador: Externo.",
+  "Personaje principal: María. Conflicto: El contenido inesperado de la carta. Narrador: Externo limitado.",
+  "Protagonista: María. Conflicto: El destino oculto en una carta. Narrador: Tercera persona omnisciente parcial.",
+  "Héroe: María. Conflicto: Qué contiene la carta. Narrador: Narrador externo con acceso a emociones.",
+  "María es el personaje principal. Conflicto: Entender el mensaje de la carta. Narrador: Tercera persona subjetiva.",
+  "Protagonista: María. Dilema: El impacto de una carta desconocida. Narrador: Externo que conoce sus emociones.",
+  "Protagonista: María. Tensión: Qué hará al leer la carta. Narrador: Tercera persona desde su perspectiva.",
+  "Personaje central: María. Problema: La carta misteriosa. Narrador: Tercera persona que narra sus emociones.",
+  "María es el foco del texto. Conflicto: El contenido revelador de una carta. Narrador: Tercera persona.",
+  "Protagonista: María. Conflicto: Lo que se revela en la carta. Narrador: Narrador externo limitado.",
+  "Protagonista: María. Conflicto: Qué cambia su destino. Narrador: Narrador en tercera persona.",
+  "Personaje principal: María. Conflicto: Carta inesperada. Narrador: Tercera persona limitada.",
+  "Protagonista: María. Problema: Se enfrenta a un cambio por una carta. Narrador: Externo parcial.",
+  "Protagonista: María. Conflicto: El giro que causa una carta. Narrador: Tercera con punto de vista cercano.",
+  "Protagonista: María. Conflicto: Su reacción al leer la carta. Narrador: Tercera persona subjetiva.",
+  "María es la protagonista. Conflicto: Un misterio que llega por escrito. Narrador: Externo limitado.",
+  "Protagonista: María. Dilema: Una carta cambia su camino. Narrador: Tercera persona centrada en ella.",
+  "Personaje central: María. Conflicto: Se revela algo oculto. Narrador: Tercera persona cercana.",
+  "Protagonista: María. Problema: Lo que contiene la carta. Narrador: Externo con enfoque en ella.",
+  "Protagonista: María. Conflicto: Misterio no anunciado. Narrador: Tercera persona limitada.",
+  "Protagonista: María. Tensión: Qué cambia con la carta. Narrador: Observador con acceso a emociones.",
+  "María es quien vive el conflicto. Problema: Qué contiene el mensaje. Narrador: Externo cercano.",
+  "Protagonista: María. Conflicto: La carta inesperada. Narrador: Tercera persona con enfoque emocional.",
+  "Personaje principal: María. Conflicto: Una carta transforma todo. Narrador: Tercera persona parcial.",
+  "Protagonista: María. Problema: El mensaje secreto. Narrador: Tercera persona focalizada.",
+  "Personaje principal: María. Conflicto: Se entera de algo fuerte. Narrador: Narrador limitado externo.",
+  "Protagonista: María. Conflicto: Enfrenta algo desconocido. Narrador: Externo parcial.",
+  "María: Protagonista. Conflicto: Una carta que impacta. Narrador: Tercera persona que siente con ella.",
+  "Protagonista: María. Conflicto: Saber lo que hay en la carta. Narrador: Tercera persona emocional.",
+  "Protagonista: María. Conflicto: Sorpresa que cambia su rumbo. Narrador: Narrador externo desde su punto de vista.",
+  "Protagonista: María. Problema: Qué cambia con la carta. Narrador: Externo que narra emociones.",
+  "Protagonista: María. Conflicto: Reacción frente a una carta. Narrador: Tercera persona.",
+  "Personaje principal: María. Conflicto: Algo cambia con esa carta. Narrador: Tercera persona cercana.",
+  "Protagonista: María. Conflicto: Conocer su destino. Narrador: Tercera persona.",
+  "Protagonista: María. Conflicto: Misterio que se revela. Narrador: Narrador parcial.",
+  "Protagonista: María. Problema: Una noticia que impacta. Narrador: Observador subjetivo.",
+  "Personaje principal: María. Problema: Descubrir un secreto. Narrador: Tercera persona cercana.",
+  "Protagonista: María. Conflicto: Enfrenta un giro en su vida. Narrador: Externo focalizado.",
+  "Protagonista: María. Conflicto: Lo que pasa después de abrir la carta. Narrador: Tercera persona parcial.",
+  "Personaje principal: María. Problema: Lo que representa la carta. Narrador: Tercera persona centrada en ella.",
+  "Protagonista: María. Conflicto: Descubre algo inesperado. Narrador: Narrador externo limitado.",
+  "Protagonista: María. Problema: Lo que siente al abrir la carta. Narrador: Tercera persona que observa emociones.",
+  "Protagonista: María. Conflicto: Su vida cambia por algo escrito. Narrador: Tercera persona subjetiva.",
+  "Personaje principal: María. Conflicto: Algo oculto en la carta. Narrador: Externo que sigue su experiencia.",
+  "Protagonista: María. Problema: Qué dice la carta. Narrador: Tercera persona que sabe lo que siente.",
+  "María es el centro. Conflicto: Un mensaje inesperado. Narrador: Narrador externo con enfoque emocional.",
+  "Protagonista: María. Conflicto: Qué pasa con la carta. Narrador: Tercera limitada.",
+  "María es el foco del relato. Problema: Lo que oculta la carta. Narrador: Observador con emociones."
+        ]
       },
       {
         text: "Fragmento de cuento: \"Yo siempre supe que algo extraño ocurría en la casa vieja. Nadie más lo notaba, pero yo escuchaba susurros en los pasillos.\"",
-        question: "¿Qué tipo de narrador se utiliza y cuál podría ser el tema central?",
+        question: "¿Qué tipo de narrador se utiliza y cuál podría ser el tema central?, escribe tu respuesta como este ejemplo: Narrador: Yo. Tema: Miedo a lo desconocido.",
         validAnswers: [
           "Narrador: Primera persona. Tema central: Lo sobrenatural o el miedo a lo desconocido.",
           "Narrador: Yo. Tema: Lo paranormal o el temor a lo misterioso.",
           "Narrador: Primera persona. Tema: Lo extraño o el miedo.",
           "Narrador: Protagonista. Tema: Fenómenos sobrenaturales o terror.",
           "Narrador: Interno. Tema: Lo inexplicable o la inquietud.",
-          "Narrador: Personaje. Tema: Misterio o suspenso."
-        ],
-        keyWords: ['narrador', 'primera', 'persona', 'yo', 'protagonista', 'interno', 'personaje', 'tema', 'sobrenatural', 'paranormal', 'extraño', 'misterioso', 'inexplicable', 'miedo', 'temor', 'terror', 'suspenso'],
-        minKeyWords: 3
+          "Narrador: Personaje. Tema: Misterio o suspenso.",
+          "Narrador: Primera persona. Tema central: Lo sobrenatural.",
+  "Narrador: Yo. Tema: Miedo a lo no conocido.",
+  "Narrador: Protagonista. Tema: El misterio de la casa.",
+  "Narrador: Interno. Tema: Lo inexplicable.",
+  "Narrador: Personaje. Tema: Terror o suspenso.",
+  "Narrador: Primera persona. Tema: Lo paranormal.",
+  "Narrador: Yo. Tema: La inquietud de lo oculto.",
+  "Narrador: Personaje principal. Tema: Lo extraño y misterioso.",
+  "Narrador: Interno. Tema: Sospechas de algo raro.",
+  "Narrador: Protagonista. Tema: La sospecha de sucesos ocultos.",
+  "Narrador: Testigo. Tema: El miedo a lo invisible.",
+  "Narrador: Primera persona. Tema: Escuchar cosas inexplicables.",
+  "Narrador: Yo. Tema: La sensación de que algo pasa.",
+  "Narrador: Interno. Tema: El ambiente extraño en la casa.",
+  "Narrador: Personaje. Tema: Lo que no se puede explicar.",
+  "Narrador: Protagonista. Tema: Presencias en la casa vieja.",
+  "Narrador: Primera persona. Tema: Susto o presencia sobrenatural.",
+  "Narrador: Yo. Tema: Percepción personal del terror.",
+  "Narrador: Interno. Tema: El miedo de estar solo.",
+  "Narrador: Protagonista. Tema: Sospechas paranormales.",
+  "Narrador: Yo. Tema: El misterio de los pasillos.",
+  "Narrador: Testigo. Tema: Ruidos en la oscuridad.",
+  "Narrador: Primera persona. Tema: Sentir que algo no está bien.",
+  "Narrador: Interno. Tema: Presencias invisibles.",
+  "Narrador: Personaje. Tema: El miedo en la casa vieja.",
+  "Narrador: Yo. Tema: Algo raro está pasando.",
+  "Narrador: Primera persona. Tema: Sospechas que nadie más nota.",
+  "Narrador: Protagonista. Tema: El temor a lo que se escucha.",
+  "Narrador: Interno. Tema: Lo que ocurre en secreto.",
+  "Narrador: Yo. Tema: Una casa con secretos.",
+  "Narrador: Primera persona. Tema: Lo que no se puede ver.",
+  "Narrador: Protagonista. Tema: Sentimientos de miedo.",
+  "Narrador: Yo. Tema: Sospechas sin pruebas.",
+  "Narrador: Interno. Tema: Lo oculto en la casa.",
+  "Narrador: Personaje. Tema: Ruidos que no tienen explicación.",
+  "Narrador: Yo. Tema: Lo que se percibe en silencio.",
+  "Narrador: Testigo. Tema: El miedo dentro del hogar.",
+  "Narrador: Protagonista. Tema: Lo raro que solo él nota.",
+  "Narrador: Interno. Tema: Algo extraño que solo él siente.",
+  "Narrador: Yo. Tema: Misterio entre pasillos.",
+  "Narrador: Primera persona. Tema: Lo que nadie más oye.",
+  "Narrador: Personaje. Tema: El miedo solitario.",
+  "Narrador: Yo. Tema: Algo vive en la casa.",
+  "Narrador: Interno. Tema: El terror desde la experiencia personal.",
+  "Narrador: Yo. Tema: Sentir que algo lo observa.",
+  "Narrador: Primera persona. Tema: Vivir con miedo.",
+  "Narrador: Protagonista. Tema: Las voces que nadie más escucha.",
+  "Narrador: Yo. Tema: La incertidumbre de lo que pasa.",
+  "Narrador: Testigo. Tema: Siente que la casa no está vacía.",
+  "Narrador: Interno. Tema: El temor constante.",
+  "Narrador: Personaje. Tema: Algo lo sigue en la casa."
+        ]
       }
     ]
   },
   {
-    title: "Redacción de artículos de opinión, carteles, folletos o informes",
-    teaching: "Redactar diferentes tipos de textos informativos o persuasivos requiere adaptar el lenguaje y la estructura al propósito. Ya sea un cartel, un folleto o un informe, la claridad es clave.",
+    title: "Uso de Signos de Puntuación Básicos",
+    teaching: "Los signos de puntuación nos ayudan a organizar las ideas y dar sentido a lo que escribimos. La coma (,) indica una pausa breve; el punto (.) marca el final de una oración; y los signos de interrogación (¿?) y exclamación (¡!) se usan para preguntas y expresiones de emoción.",
     examples: [
       {
-        text: "Diseña un cartel para promocionar un taller de lectura en tu escuela.",
-        question: "Incluye título llamativo, breve descripción del taller y datos de inscripción.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se espera un cartel con los elementos clave de promoción."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
+        text: "Compré pan leche y huevos",
+        question: "Añade la coma donde sea necesario.",
+        validAnswers: [
+          "Compré pan, leche y huevos",
+          "Compré pan, leche, y huevos",
+           "compre pan, leche y huevos",
+  "compre pan, leche, y huevos",
+   "compre pan, leche y huevos.",
+  "Compré pan, leche y huevos.",
+  "compre pan, leche y huevos ",
+  "compre pan , leche y huevos"
+        ]
       },
       {
-        text: "Realiza un informe sobre los resultados de una encuesta de hábitos de estudio.",
-        question: "Estructura: introducción, datos de encuesta (porcentajes), breve análisis y conclusión.",
-        validAnswers: ["La evaluación para este tipo de respuesta es manual. Se espera un informe con la estructura y datos solicitados."],
-        keyWords: [],
-        minKeyWords: 0 // Requires manual evaluation
+        text: "El perro corrió por el parque luego regresó a casa",
+        question: "Añade el punto donde sea necesario.",
+        validAnswers: [
+          "El perro corrió por el parque. Luego regresó a casa.",
+          "El perro corrió por el parque. Luego regresó a casa",
+          "El perro corrió por el parque. Luego regresó a casa.",
+  "El perro corrió por el parque. Luego regresó a casa",
+  "el perro corrió por el parque. luego regresó a casa",
+  "el perro corrio por el parque. luego regreso a casa",
+  "el perro corrió por el parque. luego regresó a casa.",
+   "el perro corrio por el parque. luego regreso a casa"
+        ]
+      },
+      {
+        text: "Qué hora es",
+        question: "Añade los signos de interrogación.",
+        validAnswers: [
+          "¿Qué hora es?",
+          "¿Que hora es?",
+           "¿Qué hora es?",
+  "¿Que hora es?",
+  "¿qué hora es?",
+  "¿que hora es?",
+        ]
+      },
+      {
+        text: "Qué alegría verte",
+        question: "Añade los signos de exclamación.",
+        validAnswers: [
+          "¡Qué alegría verte!",
+          "¡Que alegría verte!",
+           "¡Qué alegría verte!",
+  "¡Que alegría verte!",
+  "¡qué alegría verte!",
+  "¡que alegria verte!",
+  "¡que alegría verte!",
+  "¡que alegria verte !"
+        ]
       }
     ]
-  }
+  },
 ];
 
-// 3. FUNCIÓN DE EVALUACIÓN MEJORADA
+// FUNCIÓN DE EVALUACIÓN MEJORADA (ESTRICTA)
+// NOTA: El synonymsDictionary ha sido ELIMINADO completamente, ya no es necesario.
 function evaluateAnswer(userAnswer, exampleData) {
   if (!userAnswer || !userAnswer.trim()) {
     return {
@@ -543,19 +1470,27 @@ function evaluateAnswer(userAnswer, exampleData) {
     };
   }
 
- const userAnswerLower = userAnswer.toLowerCase().trim();
+  const userAnswerLower = userAnswer.toLowerCase().trim();
 
-  // Esta es la validación de 12 caracteres que debería estar así:
-  if (exampleData.minKeyWords !== 0 && userAnswerLower.length < 12) { // <-- ¡VERIFICA QUE ESTÉ EN 12!
+  // Validación de longitud mínima (12 caracteres, según tu preferencia)
+  // Esta validación se aplica a todas las preguntas que NO son de evaluación manual (minKeyWords === 0).
+  // Si exampleData.minKeyWords no existe o es 0, esta validación no se aplica.
+  // Para las nuevas lecciones, minKeyWords no está definido, por lo que se asume 0 y no aplica esta validación.
+  // Sin embargo, para las lecciones que SÍ tienen minKeyWords definido (las antiguas que conservamos),
+  // esta validación de longitud mínima sí se aplica.
+  if (exampleData.minKeyWords !== 0 && userAnswerLower.length < 5) {
       return {
           isCorrect: false,
           score: 0,
-          feedback: "Tu respuesta es demasiado corta. Por favor, sé más específico y elabora tu idea (mínimo 12 caracteres)." // <-- Mensaje de feedback claro
+          feedback: "Tu respuesta es demasiado corta. Por favor, sé más específico y elabora tu idea (mínimo 5 o 12 caracteres)."
       };
   }
 
-  // Handle manual evaluation cases (esta parte se mantiene igual)
-  if (exampleData.minKeyWords === 0 && (exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cuento con inicio, nudo y desenlace.") ||
+  // Manejo de casos de evaluación manual (donde minKeyWords es 0)
+  // Estas preguntas no se evalúan automáticamente; el feedback indica que requieren revisión manual.
+  // NOTA: Las nuevas lecciones no tienen minKeyWords, por lo que esta condición no se activará para ellas.
+  // Solo para las lecciones de redacción manual que se conservaron (si las hubiera).
+  if (exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cuento con inicio, nudo y desenlace.") ||
       exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un relato con descripción y diálogo.") ||
       exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un artículo con la estructura solicitada y datos sobre reciclaje.") ||
       exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un texto que defina volcanes, explique sus procesos y mencione ejemplos.") ||
@@ -566,105 +1501,36 @@ function evaluateAnswer(userAnswer, exampleData) {
       exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan argumentos a favor y en contra y una refutación.") ||
       exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan al menos tres argumentos convincentes.") ||
       exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cartel con los elementos clave de promoción.") ||
-      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un informe con la estructura y datos solicitados."))) {
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un informe con la estructura y datos solicitados.")
+  ) {
     return {
-      isCorrect: false,
+      isCorrect: false, // Por defecto es false, ya que requiere revisión manual
       score: 0,
       feedback: exampleData.validAnswers[0] + " Esta respuesta requiere una revisión manual."
     };
   }
-// Método 1: Verificar si coincide exactamente con alguna respuesta válida
-      const exactMatch = exampleData.validAnswers.some(validAnswer =>
-        userAnswerLower === validAnswer.toLowerCase().trim()
-      );
 
-      if (exactMatch) {
-        return {
-          isCorrect: true,
-          score: 100,
-          feedback: "¡Excelente! Respuesta perfecta."
-        };
-      }
+  // ÚNICO MÉTODO DE EVALUACIÓN AUTOMÁTICA: Coincidencia exacta con validAnswers
+  // La respuesta del usuario debe ser EXACTAMENTE igual a una de las respuestas válidas predefinidas.
+  const exactMatch = exampleData.validAnswers.some(validAnswer =>
+    userAnswerLower === validAnswer.toLowerCase().trim()
+  );
 
-      // Método 2: Evaluación por palabras clave con sinónimos
-      const keyWordsFound = [];
-      const expandedKeyWords = [];
-
-      // Expandir palabras clave con sinónimos
-      exampleData.keyWords.forEach(keyWord => {
-        expandedKeyWords.push(keyWord);
-        if (synonymsDictionary[keyWord]) {
-          expandedKeyWords.push(...synonymsDictionary[keyWord]);
-        }
-      });
-
-      // Buscar palabras clave en la respuesta del usuario
-      expandedKeyWords.forEach(keyWord => {
-        if (userAnswerLower.includes(keyWord.toLowerCase())) {
-          keyWordsFound.push(keyWord);
-        }
-      });
-
-      // Remover duplicados
-      const uniqueKeyWordsFound = [...new Set(keyWordsFound)];
-
-      // Calcular puntuación
-      const minRequired = exampleData.minKeyWords || 2;
-      const foundCount = uniqueKeyWordsFound.length;
-      const score = Math.min(100, (foundCount / minRequired) * 100);
-
-      // Determinar si es correcta
-      let isCorrect = foundCount >= minRequired;
-
-      // Método 3: Evaluación por similitud semántica básica
-      if (!isCorrect) {
-        // Verificar si al menos contiene conceptos relacionados
-        const conceptMatch = exampleData.validAnswers.some(validAnswer => {
-          const validWords = validAnswer.toLowerCase().split(/\s+/);
-          const userWords = userAnswerLower.split(/\s+/);
-
-          let matches = 0;
-          validWords.forEach(validWord => {
-            if (validWord.length > 3) { // Solo palabras significativas
-              userWords.forEach(userWord => {
-                if (userWord.includes(validWord) || validWord.includes(userWord)) {
-                  matches++;
-                }
-              });
-            }
-          });
-
-          return matches >= 2; // Al menos 2 coincidencias conceptuales
-        });
-
-        if (conceptMatch) {
-          isCorrect = true; // Mark as correct if conceptual match is found
-          return {
-            isCorrect: true,
-            score: Math.max(score, 70),
-            feedback: "¡Muy bien! Tu respuesta captura la idea principal."
-          };
-        }
-      }
-
-      // Generar feedback
-      let feedback;
-      if (isCorrect) {
-        feedback = score === 100 ? "¡Excelente! Respuesta perfecta." : "¡Muy bien! Has captado la idea principal.";
-      } else if (score >= 50) {
-        feedback = "Vas por buen camino, pero tu respuesta puede ser más completa.";
-      } else {
-        feedback = "Tu respuesta necesita incluir más elementos clave del texto.";
-      }
-
-      return {
-        isCorrect: isCorrect,
-        score: Math.round(score),
-        feedback: feedback,
-        keyWordsFound: uniqueKeyWordsFound,
-        minRequired: minRequired
-      };
-    }
+  if (exactMatch) {
+    return {
+      isCorrect: true,
+      score: 100,
+      feedback: "¡Excelente! Respuesta perfecta."
+    };
+  } else {
+    // Si no hay coincidencia exacta, la respuesta es incorrecta.
+    return {
+      isCorrect: false,
+      score: 0,
+      feedback: "Tu respuesta no coincide con las opciones correctas. Inténtalo de nuevo."
+    };
+  }
+}
  // Lecciones de Matemáticas
 const matematicasLessons = [
   {
@@ -679,9 +1545,9 @@ const matematicasLessons = [
     question: "¿Cuál es el resultado de $-7 + 4$?",
     options: [
       { text: "-3", correct: true },
-      { text: "3", correct: false },
-      { text: "-11", correct: false },
-      { text: "11", correct: false }
+      { text: "-4", correct: false },
+      { text: "-1", correct: false },
+      { text: "2", correct: false }
     ],
     explanation: "Para resolver $-7 + 4$: Restamos los valores absolutos (7 - 4 = 3) y mantenemos el signo del número con mayor valor absoluto (el 7 es negativo), por lo tanto, el resultado es -3."
   },
@@ -698,8 +1564,8 @@ const matematicasLessons = [
     options: [
       { text: "24", correct: false },
       { text: "-24", correct: true },
-      { text: "5", correct: false },
-      { text: "-5", correct: false }
+      { text: "-22", correct: false },
+      { text: "20", correct: false }
     ],
     explanation: "Para resolver $-8 \\times 3$: Multiplicamos los valores absolutos (8 * 3 = 24) y aplicamos la regla de los signos (negativo por positivo da negativo), por lo tanto, el resultado es -24."
   },
@@ -751,9 +1617,9 @@ const matematicasLessons = [
     question: "Si los catetos de un triángulo rectángulo miden 5 cm y 12 cm, ¿cuánto mide la hipotenusa?",
     options: [
       { text: "a) 13 cm", correct: true },
-      { text: "b) 17 cm", correct: false },
-      { text: "c) 7 cm", correct: false },
-      { text: "d) 169 cm", correct: false }
+      { text: "b) 15 cm", correct: false },
+      { text: "c) 10 cm", correct: false },
+      { text: "d) 12 cm", correct: false }
     ],
     explanation: "Aplicando el Teorema de Pitágoras: $5^2 + 12^2 = c^2 \\Rightarrow 25 + 144 = c^2 \\Rightarrow 169 = c^2 \\Rightarrow c = \\sqrt{169} = 13$ cm."
   },
@@ -768,10 +1634,10 @@ const matematicasLessons = [
     ],
     question: "Si 3 obreros construyen una pared en 8 horas, ¿cuántas horas tardarán 6 obreros en construir la misma pared (asumiendo que trabajan al mismo ritmo)?",
     options: [
-      { text: "a) 16 horas", correct: false },
+      { text: "a) 6 horas", correct: false },
       { text: "b) 4 horas", correct: true },
       { text: "c) 8 horas", correct: false },
-      { text: "d) 12 horas", correct: false }
+      { text: "d) 2 horas", correct: false }
     ],
     explanation: "Esta es una regla de tres simple inversa. Si el número de obreros se duplica (de 3 a 6), el tiempo se reduce a la mitad (8 / 2 = 4 horas)."
   },
@@ -822,10 +1688,10 @@ const matematicasLessons = [
     ],
     question: "Calcula el volumen de un prisma rectangular con base de 6 cm de largo y 4 cm de ancho, y una altura de 10 cm.",
     options: [
-      { text: "a) 24 cm³", correct: false },
+      { text: "a) 144 cm³", correct: false },
       { text: "b) 60 cm³", correct: false },
       { text: "c) 240 cm³", correct: true },
-      { text: "d) 100 cm³", correct: false }
+      { text: "d) 120 cm³", correct: false }
     ],
     explanation: "Área de la base = $6 \\times 4 = 24$ cm$^2$. Volumen = $24 \\times 10 = 240$ cm$^3$."
   },
@@ -2356,8 +3222,26 @@ const MathematicsPage = ({
   showCustomModal,
   matematicasLessons, handleMathAnswer,
   setCurrentSection,
-  saveProgress // <-- ¡AÑADIDO ESTO!
+  saveProgress
 }) => {
+  const contentRef = useRef(null); // Referencia para el contenedor donde se renderizará MathJax
+
+  // useEffect para renderizar MathJax cuando el contenido de la lección cambie
+  useEffect(() => {
+    // Asegúrate de que MathJax esté disponible antes de intentar renderizar
+    if (window.MathJax && contentRef.current) {
+      // Limpiar el contenido anterior para evitar duplicados o errores de renderizado
+      // y luego renderizar el nuevo contenido.
+      // MathJax.typesetClear() y MathJax.typesetPromise() son métodos de MathJax v3+
+      window.MathJax.typesetClear([contentRef.current]);
+      window.MathJax.typesetPromise([contentRef.current]).catch(err => console.error("MathJax rendering error:", err));
+    }
+  }, [selectedMathLesson, mathStep]); // Dependencias: re-renderizar cuando la lección o el paso cambien
+
+  const handleOptionClick = (option) => {
+    setSelectedAnswer(option);
+  };
+
   if (selectedMathLesson) {
     const lesson = selectedMathLesson;
 
@@ -2369,77 +3253,48 @@ const MathematicsPage = ({
               <button
                 onClick={() => setSelectedMathLesson(null)}
                 className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                aria-label="Volver a la selección de materias"
               >
                 <ArrowLeft className="text-white" size={24} />
               </button>
-                          <h1 className="text-xl sm:text-2xl font-bold text-white ml-4">{lesson.title}</h1>
-
+              <h1 className="text-xl sm:text-2xl font-bold text-white ml-4">{lesson.title}</h1>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg mb-7">
               <div className="flex items-center mb-5">
                 <Lightbulb className="text-yellow-500 mr-2" size={26} />
                 <h2 className="text-lg font-bold text-gray-800">Teoría</h2>
               </div>
-              <p className="text-gray-700 leading-relaxed whitespace-pre-line mb-5">{lesson.teaching}</p>
+              {/* Contenedor para MathJax en teaching */}
+              <div ref={contentRef}>
+                <p className="text-gray-700 leading-relaxed whitespace-pre-line mb-5" dangerouslySetInnerHTML={{ __html: lesson.teaching }}></p>
 
-              <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
-                <h3 className="font-semibold text-gray-800 mb-2">Ejemplo resuelto:</h3>
-                <p className="text-gray-700 text-sm whitespace-pre-line">{lesson.solution}</p>
+                <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <h3 className="font-semibold text-gray-800 mb-2">Ejemplo resuelto:</h3>
+                  <p className="text-gray-700 text-sm whitespace-pre-line" dangerouslySetInnerHTML={{ __html: lesson.solution }}></p>
+                </div>
               </div>
             </div>
-            <button
-              onClick={() => setMathStep('video')}
-              className="w-full bg-white text-gray-900 font-semibold py-4 rounded-2xl shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300"
-            >
-              Ver video explicativo →
-            </button>
-          </div>
-        </div>
-      );
-    }
-    if (mathStep === 'video') {
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-purple-500 to-pink-500 p-6">
-          <div className="max-w-md mx-auto pt-10">
-            <div className="flex items-center mb-7">
-              <button
-                onClick={() => setMathStep('teaching')}
-                className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
-              >
-                <ArrowLeft className="text-white" size={24} />
-              </button>
-              <h1 className="text-2xl font-bold text-white ml-4">Video Explicativo</h1>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg mb-7">
-              <div className="flex items-center mb-5">
-                <Eye className="text-red-500 mr-2" size={26} />
-                <h2 className="text-lg font-bold text-gray-800">Aprende con este video</h2>
+            {lesson.youtubeLinks && lesson.youtubeLinks.length > 0 && (
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-white mb-3">Videos explicativos:</h3>
+                {lesson.youtubeLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:underline block mb-2"
+                  >
+                    Ver video {index + 1}
+                  </a>
+                ))}
               </div>
-              <div className="bg-red-50 p-4 rounded-lg border border-red-200 mb-5">
-                <p className="text-red-800 text-sm mb-3">
-                  <strong>📺 Video recomendado:</strong> Este video te ayudará a entender mejor el tema {lesson.subject === 'algebra' ? 'de álgebra' : 'de geometría'}.
-                </p>
-                <a
-                  href={lesson.youtubeLinks[mathAttempts > 0 ? 1 : 0]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300 text-sm"
-                >
-                  <span className="mr-2">🎬</span>
-                  Ver en YouTube
-                </a>
-              </div>
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                <p className="text-blue-800 text-sm">
-                  💡 <strong>Consejo:</strong> Tómate tu tiempo para ver el video completo. Puedes pausarlo y repetir las partes que necesites.
-                </p>
-              </div>
-            </div>
+            )}
             <button
               onClick={() => setMathStep('practice')}
-              className="w-full bg-white text-gray-900 font-semibold py-4 rounded-2xl shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-300"
+              className="w-full bg-white text-gray-900 font-semibold py-4 rounded-2xl shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300 mt-6"
             >
-              Continuar al ejercicio →
+              Ir a la Práctica <ArrowRight className="inline-block ml-2" size={20} />
             </button>
           </div>
         </div>
@@ -2451,8 +3306,9 @@ const MathematicsPage = ({
           <div className="max-w-md mx-auto pt-10">
             <div className="flex items-center mb-7">
               <button
-                onClick={() => setMathStep('video')}
+                onClick={() => setMathStep('teaching')}
                 className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                aria-label="Volver a la teoría"
               >
                 <ArrowLeft className="text-white" size={24} />
               </button>
@@ -2463,21 +3319,23 @@ const MathematicsPage = ({
                 <Calculator className="text-blue-500 mr-2" size={26} />
                 <h2 className="text-lg font-bold text-gray-800">Resuelve el problema</h2>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg mb-5 border border-gray-200">
-                <p className="text-gray-700 font-medium text-lg">{lesson.question}</p>
+              {/* Contenedor para MathJax en practice */}
+              <div ref={contentRef} className="bg-gray-50 p-4 rounded-lg mb-5 border border-gray-200">
+                <p className="text-gray-700 font-medium text-lg" dangerouslySetInnerHTML={{ __html: lesson.question }}></p>
               </div>
               <div className="space-y-3">
                 {lesson.options.map((option, index) => (
                   <button
                     key={index}
-                    onClick={() => setSelectedAnswer(option)}
+                    onClick={() => handleOptionClick(option)}
                     className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
                       selectedAnswer === option
                         ? 'border-blue-500 bg-blue-50'
                         : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                     }`}
                   >
-                    <span className="font-medium text-gray-800">{option.text}</span>
+                    {/* Renderizar option.text con MathJax */}
+                    <span className="font-medium text-gray-800" dangerouslySetInnerHTML={{ __html: option.text }}></span>
                   </button>
                 ))}
               </div>
@@ -2487,41 +3345,38 @@ const MathematicsPage = ({
                 if (selectedAnswer) {
                   const result = handleMathAnswer(selectedAnswer, lesson);
                   if (result.isCorrect) {
-  // Completar lección y mostrar éxito
-  const newProgress = { ...userProgress };
-  const currentLessonIndex = matematicasLessons.findIndex(l => l.title === lesson.title);
+                    const newProgress = { ...userProgress };
+                    const currentLessonIndex = matematicasLessons.findIndex(l => l.title === lesson.title);
 
-  if (!newProgress.matematicas.completedLessons.includes(currentLessonIndex)) {
-    newProgress.matematicas.completedLessons.push(currentLessonIndex);
-  }
+                    if (!newProgress.matematicas.completedLessons.includes(currentLessonIndex)) {
+                      newProgress.matematicas.completedLessons.push(currentLessonIndex);
+                    }
 
-  if (currentLessonIndex + 1 < matematicasLessons.length) {
-    newProgress.matematicas.currentLesson = currentLessonIndex + 1;
-  }
+                    if (currentLessonIndex + 1 < matematicasLessons.length) {
+                      newProgress.matematicas.currentLesson = currentLessonIndex + 1;
+                    }
 
-  setUserProgress(newProgress);
-  saveProgress(newProgress); // <-- ¡AÑADIDO ESTA LÍNEA CLAVE!
-  setShowAnimation(true);
-  setTimeout(() => setShowAnimation(false), 3000);
+                    setUserProgress(newProgress);
+                    saveProgress(newProgress);
+                    setShowAnimation(true);
+                    setTimeout(() => setShowAnimation(false), 3000);
 
-  // Resetear estados
-  setSelectedMathLesson(null);
-  setMathStep('teaching');
-  setMathAttempts(0);
-  setSelectedAnswer(null);
+                    setSelectedMathLesson(null);
+                    setMathStep('teaching');
+                    setMathAttempts(0);
+                    setSelectedAnswer(null);
                   } else {
-                    // Respuesta incorrecta
                     setMathAttempts(prev => prev + 1);
-                    showCustomModal( // Usar showCustomModal
+                    showCustomModal(
                       `Respuesta incorrecta. ${result.explanation}\n\n` +
                       `La respuesta correcta es: ${result.correctAnswer}\n\n` +
                       `Te recomendamos ver el video nuevamente y repasar la explicación.`
                     );
-                    setMathStep('video');
+                    setMathStep('teaching'); // Volver a la enseñanza para repasar
                     setSelectedAnswer(null);
                   }
                 } else {
-                  showCustomModal('Por favor, selecciona una respuesta'); // Usar showCustomModal
+                  showCustomModal('Por favor, selecciona una respuesta');
                 }
               }}
               disabled={!selectedAnswer}
@@ -2546,11 +3401,11 @@ const MathematicsPage = ({
           <button
             onClick={() => setCurrentSection('home')}
             className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+            aria-label="Volver a la página de inicio"
           >
             <ArrowLeft className="text-white" size={24} />
           </button>
-                    <h1 className="text-2xl sm:text-3xl font-bold text-white ml-4">Matemáticas</h1>
-
+          <h1 className="text-2xl sm:text-3xl font-bold text-white ml-4">Matemáticas</h1>
         </div>
         <div className="space-y-4">
           {matematicasLessons.map((lesson, index) => {
@@ -2608,6 +3463,7 @@ const MathematicsPage = ({
                 newProgress.matematicas.currentLesson = 0;
                 newProgress.matematicas.completedLessons = [];
                 setUserProgress(newProgress);
+                saveProgress(newProgress);
               }}
               className="bg-white text-gray-900 px-5 py-3 rounded-lg font-medium flex items-center space-x-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
             >
@@ -2620,6 +3476,7 @@ const MathematicsPage = ({
     </div>
   );
 };
+
 
 
 
@@ -2716,7 +3573,7 @@ const MathematicsPage = ({
                 </div>
                 <div className="bg-white rounded-2xl p-6 shadow-lg">
                   <h3 className="font-bold text-gray-900 mb-4 text-lg">Reflexiona</h3>
-                  <p className="text-gray-700 mb-5">¿Cómo podemos replantear este pensamiento de manera más equilibrada?</p>
+                  <p className="text-gray-700 mb-5">¿Cómo podemos replantear este pensamiento de manera más equilibrada?, A veces, es necesario que aprendamos a afrontar las dificultades por nosotros mismos y a encontrar las respuestas dentro de nosotros, desarrollando nuestra capacidad de resiliencia y autodependencia</p>
                   <textarea
                     className="w-full p-4 border border-gray-300 rounded-lg h-28 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-300"
                     placeholder="Escribe tu reflexión aquí..."
