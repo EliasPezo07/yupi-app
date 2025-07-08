@@ -542,26 +542,40 @@ function evaluateAnswer(userAnswer, exampleData) {
       feedback: "Por favor, escribe una respuesta."
     };
   }
+
   const userAnswerLower = userAnswer.toLowerCase().trim();
-// Handle manual evaluation cases
-      if (exampleData.minKeyWords === 0 && (exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cuento con inicio, nudo y desenlace.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un relato con descripción y diálogo.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un artículo con la estructura solicitada y datos sobre reciclaje.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un texto que defina volcanes, explique sus procesos y mencione ejemplos.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera una carta con formato formal.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un ensayo con argumentos a favor y en contra y una conclusión.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un texto argumentativo con tesis, evidencia y conclusión.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan al menos dos argumentos con ejemplos y una conclusión.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan argumentos a favor y en contra y una refutación.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan al menos tres argumentos convincentes.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cartel con los elementos clave de promoción.") ||
-          exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un informe con la estructura y datos solicitados."))) { // <--- CORRECCIÓN DE PARÉNTESIS AQUÍ
-        return {
-          isCorrect: false, // Default to false, as it's manual
+
+  // VALIDACIÓN DE LONGITUD MÍNIMA:
+  // Si la respuesta NO es para evaluación manual (minKeyWords !== 0)
+  // Y la longitud de la respuesta es menor a 8 caracteres,
+  // entonces se considera incorrecta y se da un feedback específico.
+  if (exampleData.minKeyWords !== 0 && userAnswerLower.length < 12) { // <-- ¡ESTA LÍNEA!
+      return {
+          isCorrect: false,
           score: 0,
-          feedback: exampleData.validAnswers[0] + " Esta respuesta requiere una revisión manual."
-        };
-      }
+          feedback: "Tu respuesta es demasiado corta. Por favor, sé más específico."
+      };
+  }
+
+  // Handle manual evaluation cases (esta parte se mantiene igual)
+  if (exampleData.minKeyWords === 0 && (exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cuento con inicio, nudo y desenlace.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un relato con descripción y diálogo.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un artículo con la estructura solicitada y datos sobre reciclaje.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un texto que defina volcanes, explique sus procesos y mencione ejemplos.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera una carta con formato formal.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un ensayo con argumentos a favor y en contra y una conclusión.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un texto argumentativo con tesis, evidencia y conclusión.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan al menos dos argumentos con ejemplos y una conclusión.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan argumentos a favor y en contra y una refutación.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se esperan al menos tres argumentos convincentes.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un cartel con los elementos clave de promoción.") ||
+      exampleData.validAnswers.includes("La evaluación para este tipo de respuesta es manual. Se espera un informe con la estructura y datos solicitados."))) {
+    return {
+      isCorrect: false,
+      score: 0,
+      feedback: exampleData.validAnswers[0] + " Esta respuesta requiere una revisión manual."
+    };
+  }
 // Método 1: Verificar si coincide exactamente con alguna respuesta válida
       const exactMatch = exampleData.validAnswers.some(validAnswer =>
         userAnswerLower === validAnswer.toLowerCase().trim()
@@ -1631,24 +1645,23 @@ const handleActivityComplete = (id) => {
  // Esta función es utilizada por LessonPage para la sección de Comunicación.
  const completeLesson = useCallback((subject) => {
   setUserProgress(prevProgress => {
-   const newProgress = { ...prevProgress };
-   const currentLessonIndex = newProgress[subject].currentLesson;
+    const newProgress = { ...prevProgress };
+    const currentLessonIndex = newProgress[subject].currentLesson;
 
-   if (!newProgress[subject].completedLessons.includes(currentLessonIndex)) {
-    newProgress[subject].completedLessons.push(currentLessonIndex);
-   }
+    if (!newProgress[subject].completedLessons.includes(currentLessonIndex)) {
+      newProgress[subject].completedCompletedLessons.push(currentLessonIndex); // Typo corrected: completedCompletedLessons -> completedLessons
+    }
 
-   // Asegura que solo se incremente el currentLesson si no es la última lección
-   // y si la sección es 'comunicacion' (ya que MathematicsPage maneja su propio avance)
-   if (subject === 'comunicacion' && currentLessonIndex + 1 < comunicacionLessonsImproved.length) {
-    newProgress[subject].currentLesson = currentLessonIndex + 1;
-   }
-   return newProgress;
+    if (subject === 'comunicacion' && currentLessonIndex + 1 < comunicacionLessonsImproved.length) {
+      newProgress[subject].currentLesson = currentLessonIndex + 1;
+    }
+    // AÑADIDO: Llamar a saveProgress con el nuevo estado
+    saveProgress(newProgress); // <-- ¡ESTA ES LA LÍNEA CLAVE!
+    return newProgress;
   });
-  setShowAnimation(true); // Activa la animación de éxito
-  setTimeout(() => setShowAnimation(false), 3000); // Desactiva la animación después de 3 segundos
- }, [comunicacionLessonsImproved.length, setShowAnimation]); // Asegúrate de que setShowAnimation esté en las dependencias
-
+  setShowAnimation(true);
+  setTimeout(() => setShowAnimation(false), 3000);
+}, [comunicacionLessonsImproved.length, setShowAnimation, saveProgress]); // <-- AÑADIDO `saveProgress` a las dependencias
 
  
 
@@ -2342,10 +2355,11 @@ const MathematicsPage = ({
   mathAttempts, setMathAttempts,
   selectedAnswer, setSelectedAnswer,
   userProgress, setUserProgress,
-  setShowAnimation, // <-- RECIBE setShowAnimation AQUÍ
+  setShowAnimation,
   showCustomModal,
   matematicasLessons, handleMathAnswer,
-  setCurrentSection
+  setCurrentSection,
+  saveProgress // <-- ¡AÑADIDO ESTO!
 }) => {
   if (selectedMathLesson) {
     const lesson = selectedMathLesson;
@@ -2476,27 +2490,28 @@ const MathematicsPage = ({
                 if (selectedAnswer) {
                   const result = handleMathAnswer(selectedAnswer, lesson);
                   if (result.isCorrect) {
-                    // Completar lección y mostrar éxito
-                    const newProgress = { ...userProgress };
-                    const currentLessonIndex = matematicasLessons.findIndex(l => l.title === lesson.title);
+  // Completar lección y mostrar éxito
+  const newProgress = { ...userProgress };
+  const currentLessonIndex = matematicasLessons.findIndex(l => l.title === lesson.title);
 
-                    if (!newProgress.matematicas.completedLessons.includes(currentLessonIndex)) {
-                      newProgress.matematicas.completedLessons.push(currentLessonIndex);
-                    }
+  if (!newProgress.matematicas.completedLessons.includes(currentLessonIndex)) {
+    newProgress.matematicas.completedLessons.push(currentLessonIndex);
+  }
 
-                    if (currentLessonIndex + 1 < matematicasLessons.length) {
-                      newProgress.matematicas.currentLesson = currentLessonIndex + 1;
-                    }
+  if (currentLessonIndex + 1 < matematicasLessons.length) {
+    newProgress.matematicas.currentLesson = currentLessonIndex + 1;
+  }
 
-                    setUserProgress(newProgress);
-                    setShowAnimation(true); // <-- USO DE setShowAnimation
-                    setTimeout(() => setShowAnimation(false), 3000); // <-- USO DE setShowAnimation
+  setUserProgress(newProgress);
+  saveProgress(newProgress); // <-- ¡AÑADIDO ESTA LÍNEA CLAVE!
+  setShowAnimation(true);
+  setTimeout(() => setShowAnimation(false), 3000);
 
-                    // Resetear estados
-                    setSelectedMathLesson(null);
-                    setMathStep('teaching');
-                    setMathAttempts(0);
-                    setSelectedAnswer(null);
+  // Resetear estados
+  setSelectedMathLesson(null);
+  setMathStep('teaching');
+  setMathAttempts(0);
+  setSelectedAnswer(null);
                   } else {
                     // Respuesta incorrecta
                     setMathAttempts(prev => prev + 1);
@@ -4753,24 +4768,26 @@ return (
     userProgress={userProgress}
     saveProgress={saveProgress}
   />
- ) : currentSection === 'matematicas' ? ( // NUEVA CONDICIÓN PARA MATEMÁTICAS
-      <MathematicsPage
-        selectedMathLesson={selectedMathLesson}
-        setSelectedMathLesson={setSelectedMathLesson}
-        mathStep={mathStep}
-        setMathStep={setMathStep}
-        mathAttempts={mathAttempts}
-        setMathAttempts={setMathAttempts}
-        selectedAnswer={selectedAnswer}
-        setSelectedAnswer={setSelectedAnswer}
-        userProgress={userProgress}
-        setUserProgress={setUserProgress}
-        setShowAnimation={setShowAnimation} // <-- PASANDO setShowAnimation
-        showCustomModal={showCustomModal}
-        matematicasLessons={matematicasLessons} // Pasa el array de lecciones
-        handleMathAnswer={handleMathAnswer}     // Pasa la función de evaluación
-        setCurrentSection={setCurrentSection}   // Para volver a la home
-      />
+ ) : currentSection === 'matematicas' ? (
+  <MathematicsPage
+    selectedMathLesson={selectedMathLesson}
+    setSelectedMathLesson={setSelectedMathLesson}
+    mathStep={mathStep}
+    setMathStep={setMathStep}
+    mathAttempts={mathAttempts}
+    setMathAttempts={setMathAttempts}
+    selectedAnswer={selectedAnswer}
+    setSelectedAnswer={setSelectedAnswer}
+    userProgress={userProgress}
+    setUserProgress={setUserProgress}
+    setShowAnimation={setShowAnimation}
+    showCustomModal={showCustomModal}
+    matematicasLessons={matematicasLessons}
+    handleMathAnswer={handleMathAnswer}
+    setCurrentSection={setCurrentSection}
+    saveProgress={saveProgress} // <-- ¡AÑADIDO ESTO!
+  />
+
      ) : (currentSection === 'psychology' || currentSection === 'psychologyModule') ? (
   <PsychologyPage 
     psychologyModule={psychologyModule} // <-- ASEGÚRATE DE QUE ESTA LÍNEA ESTÉ
