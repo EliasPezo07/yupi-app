@@ -1565,7 +1565,7 @@ const matematicasLessons = [
  ];
 
  
- // MODIFICADO: Lógica de useEffect para dailyMessage más robusta
+ // En YupiApp, busca este useEffect:
 useEffect(() => {
   // Cargar progreso guardado
   const savedProgress = localStorage.getItem('yupi-progress');
@@ -1592,8 +1592,6 @@ useEffect(() => {
   }
 
  }, []); // Dependencias vacías para que se ejecute solo al montar el componente
-
-
 
  const saveProgress = (newProgress) => {
 
@@ -1837,12 +1835,10 @@ const handleActivityComplete = (id) => {
 
 
      <button
+  onClick={() => setCurrentSection('psychology')} // Cambiado a 'psychology' para que coincida con la condición de renderizado
+  className="w-full bg-white rounded-3xl p-6 shadow-2xl transform transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-300"
+>
 
-      onClick={() => setCurrentSection('psicologia')}
-
-      className="w-full bg-white rounded-3xl p-6 shadow-2xl transform transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-300"
-
-     >
 
       <div className="flex items-center space-x-5">
 
@@ -2615,7 +2611,8 @@ const MathematicsPage = ({
 
 
 
-   const PsychologyPage = ({ showCustomModal, journalEntries, setJournalEntries, stressEvents, setStressEvents, relaxActivities, setRelaxActivities, showActivityOptionsModal, setShowActivityOptionsModal, selectedActivityForOptions, setSelectedActivityForOptions }) => {
+  const PsychologyPage = ({ psychologyModule, setPsychologyModule, showCustomModal, journalEntries, setJournalEntries, stressEvents, setStressEvents, relaxActivities, setRelaxActivities, showActivityOptionsModal, setShowActivityOptionsModal, selectedActivityForOptions, setSelectedActivityForOptions }) => {
+
     // NUEVO: Estados locales para los inputs de los módulos
     const [currentJournalEntry, setCurrentJournalEntry] = useState('');
     const [currentStressEvent, setCurrentStressEvent] = useState('');
@@ -4774,20 +4771,22 @@ return (
         handleMathAnswer={handleMathAnswer}     // Pasa la función de evaluación
         setCurrentSection={setCurrentSection}   // Para volver a la home
       />
-      ) : (currentSection === 'psychology' || currentSection === 'psychologyModule') ? ( // <--- CORRECCIÓN DE PARÉNTESIS AQUÍ
-      <PsychologyPage 
-        showCustomModal={showCustomModal}
-        journalEntries={journalEntries}
-        setJournalEntries={saveJournalEntries} // Pasa la función para guardar
-        stressEvents={stressEvents}
-        setStressEvents={saveStressEvents}     // Pasa la función para guardar
-        relaxActivities={relaxActivities}
-        setRelaxActivities={saveRelaxActivities} // Pasa la función para guardar
-        showActivityOptionsModal={showActivityOptionsModal} // Pasa el estado del modal de opciones
-        setShowActivityOptionsModal={setShowActivityOptionsModal} // Pasa la función para controlar el modal de opciones
-        selectedActivityForOptions={selectedActivityForOptions} // Pasa la actividad seleccionada
-        setSelectedActivityForOptions={setSelectedActivityForOptions} // Pasa la función para establecer la actividad seleccionada
-      /> 
+     ) : (currentSection === 'psychology' || currentSection === 'psychologyModule') ? (
+  <PsychologyPage 
+    psychologyModule={psychologyModule} // <-- ASEGÚRATE DE QUE ESTA LÍNEA ESTÉ
+    setPsychologyModule={setPsychologyModule} // <-- ASEGÚRATE DE QUE ESTA LÍNEA ESTÉ
+    showCustomModal={showCustomModal}
+    journalEntries={journalEntries}
+    setJournalEntries={saveJournalEntries}
+    stressEvents={stressEvents}
+    setStressEvents={saveStressEvents}
+    relaxActivities={relaxActivities}
+    setRelaxActivities={saveRelaxActivities}
+    showActivityOptionsModal={showActivityOptionsModal}
+    setShowActivityOptionsModal={setShowActivityOptionsModal}
+    selectedActivityForOptions={selectedActivityForOptions}
+    setSelectedActivityForOptions={setSelectedActivityForOptions}
+  />
 
     ) : currentSection === 'fruitSlash' ? (
       <FruitSlashGame setCurrentSection={setCurrentSection} />
