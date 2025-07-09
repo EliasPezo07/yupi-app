@@ -3228,12 +3228,14 @@ const MathematicsPage = ({
   isMathJaxReady
 }) => {
   const contentRef = useRef(null); // Referencia para el contenedor donde se renderizará MathJax
-
+const handleOptionClick = (option) => {
+    setSelectedAnswer(option);
+  };
+  
   // useEffect para renderizar MathJax cuando el contenido de la lección o el paso cambien
   // Se asegura de que MathJax procese el DOM después de que React lo haya actualizado.
   useEffect(() => {
-    // Asegúrate de que MathJax esté disponible Y que el componente esté listo para renderizar
-    // (es decir, isMathJaxReady sea true y contentRef.current exista)
+ 
     if (isMathJaxReady && window.MathJax && contentRef.current) {
       // Limpiar el contenido anterior para evitar duplicados o errores de renderizado
       window.MathJax.typesetClear([contentRef.current]);
@@ -3243,9 +3245,7 @@ const MathematicsPage = ({
   }, [selectedMathLesson, mathStep, isMathJaxReady]);
 
 
-  const handleOptionClick = (option) => {
-    setSelectedAnswer(option);
-  };
+  
 
   if (!isMathJaxReady) {
     return (
