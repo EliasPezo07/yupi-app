@@ -37,7 +37,6 @@ const YupiApp = () => {
 // ¡¡¡CORRECCIÓN CLAVE AQUÍ: DECLARACIÓN DE showAnimation y setShowAnimation!!!
 const [showAnimation, setShowAnimation] = useState(false); 
 
-// Eliminado: const [cognitiveReflectionText, setCognitiveReflectionText] = useState(''); // Esta sí se puede quedar comentada si no la usas
 
 
 const [selectedLesson, setSelectedLesson] = useState(null);
@@ -88,7 +87,25 @@ const [testVocacional, setTestVocacional] = useState({
   '/19-2000.mp3',
  ];
 
-
+useEffect(() => {
+    console.log("YupiApp: Intentando detectar MathJax...");
+    if (window.MathJax) {
+      console.log("YupiApp: MathJax detectado al inicio!");
+      setIsMathJaxReady(true);
+    } else {
+      console.log("YupiApp: MathJax NO detectado, iniciando intervalo de chequeo...");
+      const checkMathJax = setInterval(() => {
+        if (window.MathJax) {
+          console.log("YupiApp: MathJax detectado por intervalo!");
+          setIsMathJaxReady(true);
+          clearInterval(checkMathJax);
+        } else {
+          console.log("YupiApp: MathJax aún no está listo...");
+        }
+      }, 500);
+      return () => clearInterval(checkMathJax);
+    }
+  }, []);
 
  // EFECTO PARA CONTROLAR EL VOLUMEN DEL AUDIO
  useEffect(() => {
@@ -3246,8 +3263,6 @@ const handleOptionClick = (option) => {
   }, [selectedMathLesson, mathStep, isMathJaxReady]);
 
 
-  
-
   if (!isMathJaxReady) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-500 to-blue-500 p-6 font-inter text-white text-xl">
@@ -3255,7 +3270,6 @@ const handleOptionClick = (option) => {
       </div>
     );
   }
-
   // ESTE ES EL ÚNICO BLOQUE 'if (selectedMathLesson)' QUE DEBE EXISTIR AQUÍ
   if (selectedMathLesson) {
     const lesson = selectedMathLesson;
