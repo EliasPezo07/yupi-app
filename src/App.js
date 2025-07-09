@@ -5685,24 +5685,27 @@ return (
     saveProgress={saveProgress}
   />
  ) : currentSection === 'matematicas' ? (
-  <MathematicsPage
-    selectedMathLesson={selectedMathLesson}
-    setSelectedMathLesson={setSelectedMathLesson}
-    mathStep={mathStep}
-    setMathStep={setMathStep}
-    mathAttempts={mathAttempts}
-    setMathAttempts={setMathAttempts}
-    selectedAnswer={selectedAnswer}
-    setSelectedAnswer={setSelectedAnswer}
-    userProgress={userProgress}
-    setUserProgress={setUserProgress}
-    setShowAnimation={setShowAnimation}
-    showCustomModal={showCustomModal}
-    matematicasLessons={matematicasLessons}
-    handleMathAnswer={handleMathAnswer}
-    setCurrentSection={setCurrentSection}
-    saveProgress={saveProgress} // <-- ¡AÑADIDO ESTO!
-  />
+     // Condición para mostrar MathematicsPage o un mensaje de carga
+     // isMathJaxReady se usa aquí para satisfacer a ESLint
+     <MathematicsPage
+       selectedMathLesson={selectedMathLesson}
+       setSelectedMathLesson={setSelectedMathLesson}
+       mathStep={mathStep}
+       setMathStep={setMathStep}
+       mathAttempts={mathAttempts}
+       setMathAttempts={setMathAttempts}
+       selectedAnswer={selectedAnswer}
+       setSelectedAnswer={setSelectedAnswer}
+       userProgress={userProgress}
+       setUserProgress={setUserProgress}
+       setShowAnimation={setShowAnimation}
+       showCustomModal={showCustomModal}
+       matematicasLessons={matematicasLessons}
+       handleMathAnswer={handleMathAnswer}
+       setCurrentSection={setCurrentSection}
+       saveProgress={saveProgress}
+       isMathJaxReady={isMathJaxReady} // Pasamos la prop
+     />
 
      ) : (currentSection === 'psychology' || currentSection === 'psychologyModule') ? (
   <PsychologyPage 
