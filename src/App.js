@@ -59,7 +59,7 @@ const [selectedMathLesson, setSelectedMathLesson] = useState(null);
 const [mathStep, setMathStep] = useState('teaching'); // teaching, video, practice
 const [mathAttempts, setMathAttempts] = useState(0);
 const [selectedAnswer, setSelectedAnswer] = useState(null);
-
+const [isMathJaxReady, setIsMathJaxReady] = useState(false);
 
 const [testVocacional, setTestVocacional] = useState({
  currentQuestion: 0,
@@ -3224,29 +3224,40 @@ const MathematicsPage = ({
   showCustomModal,
   matematicasLessons, handleMathAnswer,
   setCurrentSection,
-  saveProgress
+  saveProgress, // <-- ¡AQUÍ VA LA COMA!
+  isMathJaxReady
 }) => {
   const contentRef = useRef(null); // Referencia para el contenedor donde se renderizará MathJax
 
   // useEffect para renderizar MathJax cuando el contenido de la lección o el paso cambien
   // Se asegura de que MathJax procese el DOM después de que React lo haya actualizado.
   useEffect(() => {
-    // Asegúrate de que MathJax esté disponible antes de intentar renderizar
-    if (window.MathJax && contentRef.current) {
+    // Asegúrate de que MathJax esté disponible Y que el componente esté listo para renderizar
+    // (es decir, isMathJaxReady sea true y contentRef.current exista)
+    if (isMathJaxReady && window.MathJax && contentRef.current) {
       // Limpiar el contenido anterior para evitar duplicados o errores de renderizado
       window.MathJax.typesetClear([contentRef.current]);
       // Renderizar el nuevo contenido.
       window.MathJax.typesetPromise([contentRef.current]).catch(err => console.error("MathJax rendering error:", err));
     }
-  }, [selectedMathLesson, mathStep]); // Dependencias: re-renderizar cuando la lección o el paso cambien
+  }, [selectedMathLesson, mathStep, isMathJaxReady]);
+
 
   const handleOptionClick = (option) => {
     setSelectedAnswer(option);
   };
 
+  if (!isMathJaxReady) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-500 to-blue-500 p-6 font-inter text-white text-xl">
+        Cargando módulo de matemáticas...
+      </div>
+    );
+  }
+
+  // ESTE ES EL ÚNICO BLOQUE 'if (selectedMathLesson)' QUE DEBE EXISTIR AQUÍ
   if (selectedMathLesson) {
     const lesson = selectedMathLesson;
-
     if (mathStep === 'teaching') {
       return (
         // El contentRef ahora envuelve todo el contenido dinámico de esta sección
