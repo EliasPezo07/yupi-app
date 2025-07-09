@@ -1539,12 +1539,12 @@ const matematicasLessons = [
     title: "Suma y Resta de Enteros",
     subject: "algebra",
     teaching: "Los números enteros incluyen a los naturales, el cero y los negativos. Para sumar o restar, si tienen el mismo signo, se suman los valores absolutos y se mantiene el signo. Si tienen signos diferentes, se restan los valores absolutos y se pone el signo del número con mayor valor absoluto.",
-    solution: "Ejemplo: $5 + (-3) = 2$. Restamos 5 y 3 porque tienen signos diferentes, y el 5 es mayor, así que el resultado es positivo.",
+    solution: "Ejemplo: 5 + (-3) = 2. Restamos 5 y 3 porque tienen signos diferentes, y el 5 es mayor, así que el resultado es positivo.",
     youtubeLinks: [
       "https://www.youtube.com/watch?v=FDsKgfcy5h8", // Matemáticas profe Alex - Suma y Resta de Números Enteros
       "https://www.youtube.com/watch?v=aGJ00fU5Cik"  // julioprofe - Suma y Resta de Números Enteros
     ],
-    question: "¿Cuál es el resultado de $-7 + 4$?",
+    question: "¿Cuál es el resultado de -7 + 4?",
     options: [
       { text: "-3", correct: true },
       { text: "-4", correct: false },
@@ -3229,6 +3229,7 @@ const MathematicsPage = ({
   const contentRef = useRef(null); // Referencia para el contenedor donde se renderizará MathJax
 
   // useEffect para renderizar MathJax cuando el contenido de la lección o el paso cambien
+  // Se asegura de que MathJax procese el DOM después de que React lo haya actualizado.
   useEffect(() => {
     // Asegúrate de que MathJax esté disponible antes de intentar renderizar
     if (window.MathJax && contentRef.current) {
@@ -3248,7 +3249,8 @@ const MathematicsPage = ({
 
     if (mathStep === 'teaching') {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-green-500 to-blue-500 p-6 font-inter">
+        // El contentRef ahora envuelve todo el contenido dinámico de esta sección
+        <div ref={contentRef} className="min-h-screen bg-gradient-to-br from-green-500 to-blue-500 p-6 font-inter">
           <div className="max-w-md mx-auto pt-10">
             <div className="flex items-center mb-7">
               <button
@@ -3265,14 +3267,13 @@ const MathematicsPage = ({
                 <Lightbulb className="text-yellow-500 mr-2" size={26} />
                 <h2 className="text-lg font-bold text-gray-800">Teoría</h2>
               </div>
-              {/* Contenedor para MathJax en teaching */}
-              <div ref={contentRef}>
-                <p className="text-gray-700 leading-relaxed whitespace-pre-line mb-5" dangerouslySetInnerHTML={{ __html: lesson.teaching }}></p>
+              {/* Contenido de la teoría con MathJax */}
+              <p className="text-gray-700 leading-relaxed whitespace-pre-line mb-5" dangerouslySetInnerHTML={{ __html: lesson.teaching }}></p>
 
-                <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="font-semibold text-gray-800 mb-2">Ejemplo resuelto:</h3>
-                  <p className="text-gray-700 text-sm whitespace-pre-line" dangerouslySetInnerHTML={{ __html: lesson.solution }}></p>
-                </div>
+              <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <h3 className="font-semibold text-gray-800 mb-2">Ejemplo resuelto:</h3>
+                {/* Contenido del ejemplo con MathJax */}
+                <p className="text-gray-700 text-sm whitespace-pre-line" dangerouslySetInnerHTML={{ __html: lesson.solution }}></p>
               </div>
             </div>
             {/* Botón para ir al video explicativo */}
@@ -3309,10 +3310,12 @@ const MathematicsPage = ({
                 <p className="text-red-800 text-sm mb-3">
                   <strong>📺 Video recomendado:</strong> Este video te ayudará a entender mejor el tema {lesson.subject === 'algebra' ? 'de álgebra' : 'de geometría'}.
                 </p>
-                {/* Usar el primer link del array youtubeLinks */}
-                {lesson.youtubeLinks && lesson.youtubeLinks[0] && (
+                {/* Lógica para seleccionar el video: 
+                    Si hay más de un video Y ya hubo un intento fallido (mathAttempts > 0), 
+                    usa el segundo video (índice 1). De lo contrario, usa el primer video (índice 0). */}
+                {lesson.youtubeLinks && lesson.youtubeLinks.length > 0 && (
                   <a
-                    href={lesson.youtubeLinks[0]}
+                    href={lesson.youtubeLinks[mathAttempts > 0 && lesson.youtubeLinks.length > 1 ? 1 : 0]}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300 text-sm"
@@ -3341,7 +3344,8 @@ const MathematicsPage = ({
     }
     if (mathStep === 'practice') {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-500 to-red-500 p-6 font-inter">
+        // El contentRef ahora envuelve todo el contenido dinámico de esta sección
+        <div ref={contentRef} className="min-h-screen bg-gradient-to-br from-orange-500 to-red-500 p-6 font-inter">
           <div className="max-w-md mx-auto pt-10">
             <div className="flex items-center mb-7">
               <button
@@ -3358,8 +3362,8 @@ const MathematicsPage = ({
                 <Calculator className="text-blue-500 mr-2" size={26} />
                 <h2 className="text-lg font-bold text-gray-800">Resuelve el problema</h2>
               </div>
-              {/* Contenedor para MathJax en practice */}
-              <div ref={contentRef} className="bg-gray-50 p-4 rounded-lg mb-5 border border-gray-200">
+              {/* Contenedor para la pregunta con MathJax */}
+              <div className="bg-gray-50 p-4 rounded-lg mb-5 border border-gray-200">
                 <p className="text-gray-700 font-medium text-lg" dangerouslySetInnerHTML={{ __html: lesson.question }}></p>
               </div>
               <div className="space-y-3">
@@ -3397,20 +3401,20 @@ const MathematicsPage = ({
                     }
 
                     setUserProgress(newProgress);
-                    saveProgress(newProgress);
+                    saveProgress(newProgress); // Guardar el progreso actualizado
                     setShowAnimation(true);
                     setTimeout(() => setShowAnimation(false), 3000);
 
                     // Volver a la lista de lecciones para que el usuario vea el progreso
                     setSelectedMathLesson(null);
                     setMathStep('teaching'); // Resetear el paso para la próxima vez que entre
-                    setMathAttempts(0);
+                    setMathAttempts(0); // Resetear intentos al acertar
                     setSelectedAnswer(null);
                   } else {
-                    setMathAttempts(prev => prev + 1);
-                    // Si falla, y hay un segundo video, se sugiere verlo
+                    setMathAttempts(prev => prev + 1); // Incrementar intentos ANTES de mostrar el modal
                     let feedbackMessage = `Respuesta incorrecta. ${result.explanation}\n\n`;
-                    if (lesson.youtubeLinks && lesson.youtubeLinks.length > 1 && mathAttempts === 0) { // Si es el primer intento fallido y hay un segundo video
+                    // Si hay un segundo video disponible Y es el primer intento fallido
+                    if (lesson.youtubeLinks && lesson.youtubeLinks.length > 1 && mathAttempts === 0) {
                       feedbackMessage += `Te recomendamos ver el segundo video explicativo para un enfoque diferente.`;
                     } else {
                       feedbackMessage += `La respuesta correcta es: ${result.correctAnswer}\n\nTe recomendamos repasar la explicación y el video.`;
@@ -3466,7 +3470,7 @@ const MathematicsPage = ({
                   if (!isLocked) {
                     setSelectedMathLesson(lesson);
                     setMathStep('teaching');
-                    setMathAttempts(0);
+                    setMathAttempts(0); // Asegurarse de que los intentos se reseteen al iniciar una lección
                     setSelectedAnswer(null);
                   }
                 }}
@@ -3523,6 +3527,7 @@ const MathematicsPage = ({
     </div>
   );
 };
+
 
 
 
