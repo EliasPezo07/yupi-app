@@ -181,9 +181,107 @@ const comunicacionLessonsImproved = [
     examples: [
       {
         text: "El sol brillaba intensamente mientras María caminaba por el parque. Los niños jugaban alegremente y las flores mostraban sus colores vibrantes.",
-        question: "¿Cuál es la idea principal del texto?",
+        question: "¿Cuál es la idea principal del texto?, un ejemplo seria: Describe un buen dia en el parque, recuerda no olvidar las tildes y demás reglas gramaticales",
         validAnswers: [
+
+"El sol brillaba mientras los niños jugaban en el parque",
+
+"Lo que se resalta es cómo el sol ilumina el parque y hace todo más colorido",
+
+"Un día soleado con niños jugando y flores brillando",
+
+"El parque estaba lleno de vida, el sol brillaba y los niños jugaban",
+
+"Lo principal es que el sol hacía brillar todo y los niños se divertían",
+
+"Un ambiente soleado y alegre con juegos de niños y flores coloridas",
+
+"El sol brillaba mientras las flores y los niños llenaban el parque",
+
+"Lo que destaca es el buen clima, con el sol brillante y los niños jugando",
+
+"Un parque lleno de vida, donde el sol y los niños daban color",
+
+"El sol brillaba y todo en el parque se veía vibrante y lleno de actividad",
+
+"Lo más importante es que el sol hacía todo en el parque más alegre",
+
+"Un día lleno de sol, juegos y flores es lo que describe el texto",
+
+"El texto muestra cómo el sol ilumina el parque y los niños disfrutan jugando",
+
+"Lo que se destaca es el brillo del sol y la actividad alegre en el parque",
+
+"Un parque lleno de color, vida y niños jugando bajo el sol",
+
+"El sol brilla y llena de energía el parque donde juegan los niños",
+
+"Lo que se resalta es que el parque estaba lleno de vida por el sol y los niños",
+
+"Un día soleado donde el parque se llena de colores gracias a la luz del sol",
+
+"El sol brilla y el parque se convierte en un lugar lleno de diversión y colores",
+
+"Lo que destaca es cómo el sol crea una atmósfera alegre con los niños jugando",
+
+"Un día brillante en el parque con muchas flores y niños jugando",
+
+"El texto describe cómo el sol y la vida en el parque van de la mano",
+
+"Lo principal es el buen tiempo y la diversión de los niños bajo el sol",
+
+"Un parque lleno de vida y color gracias al sol brillante",
+
+"El sol brilla y el parque está lleno de juegos y flores coloridas",
+
+"Lo que se describe es un parque alegre, lleno de luz y actividad",
+
+"Un día soleado donde los niños disfrutan y las flores se ven más hermosas",
+
+"El texto muestra cómo el sol hace que el parque esté lleno de color",
+
+"Lo más importante es el ambiente cálido y alegre que crea el sol",
+
+"Un parque soleado lleno de niños jugando y flores brillando con colores vibrantes",
+
+
           "Describe un día bonito en el parque",
+          "Describir un bonito dia en el parque",
+          "Lo bonito que estaba el parque",
+"Describe lo bonito que estaba el parque ese dia",
+"Un día con mucho sol y niños jugando en el parque",
+
+"Un paseo en el parque donde todo está muy bonito, con el sol y las flores",
+
+"Un día feliz en el parque con niños y flores",
+
+"Un día de sol, niños jugando y todo se ve bonito",
+
+"Un parque donde hace calor, los niños juegan y las flores se ven de colores",
+"Lo bonito que está el parque con tanto sol y flores",
+
+"Lo alegre que es el día en el parque con los niños jugando",
+
+"Lo que destaca es el sol brillando y el parque lleno de vida",
+
+"Lo tranquilo del paseo de María mientras disfruta del parque",
+
+"Lo colorido y animado que está todo en el parque",
+"Un bonito dia en el parque",
+"Un bello dia en el parque",
+"Un bello día en el parque",
+"Un bonito día en el parque",
+"Bello dia en el parque",
+"Bello día en el parque",
+"Describe un bonito dia en un parque",
+"Describe un bonito día en un parque",
+"Describe un bello dia en el parque",
+"Describe un bello día en el parque",
+"Un dia alegre en un parque",
+"un día alegre en el parque",
+"Bonito dia en un parque",
+"Bonito dia en el parque",
+
   "Cuenta cómo estaba el parque ese día",
   "Relata un momento en el parque",
   "Narra cómo era el ambiente del parque",
@@ -276,13 +374,13 @@ const comunicacionLessonsImproved = [
   "presenta una escena de felicidad simple",
   "relata un paisaje lleno de energia y luz",
   "narra un dia soleado con alegria",
-  "explica como se vive un momento al aire libre",
-  "describe una escena natural con calma",
+  "Explica como se vive un momento al aire libre",
+  "Describe una escena natural con calma",
   "pinta el parque como un lugar hermoso",
   "cuenta como el sol y las flores alegran el parque",
-  "presenta un escenario lleno de emociones suaves",
-  "retrata la tranquilidad de un espacio natural",
-  "muestra una descripcion alegre del parque",
+  "Presenta un escenario lleno de emociones suaves",
+  "Retrata la tranquilidad de un espacio natural",
+  "Muestra una descripcion alegre del parque",
 
 
 
@@ -290,9 +388,96 @@ const comunicacionLessonsImproved = [
       },
       {
         text: "Los océanos cubren el 71% de la superficie terrestre y contienen el 97% del agua del planeta. Son fundamentales para regular el clima global.",
-        question: "¿Cuál es el dato más importante sobre los océanos?",
+        question: "¿Cuál es el dato más importante sobre los océanos?, recuerda no olvidar las tildes, aunque si del punto final, ese si olvidalo",
         validAnswers: [
+
+"El océano cubre una gran parte de la Tierra y regula el clima",
+
+"Lo más importante es que los océanos cubren el 71% de la Tierra",
+
+"Un dato clave es que los océanos tienen el 97% del agua del planeta",
+
+"El texto resalta que los océanos son fundamentales para el clima",
+
+"Lo que destaca es que los océanos ocupan la mayor parte de la superficie terrestre",
+
+"Un dato importante es que el océano tiene la mayor parte del agua del planeta",
+
+"El océano regula el clima y ocupa gran parte de la Tierra",
+
+"Lo esencial es que los océanos son cruciales para el clima y ocupan el 71% del planeta",
+
+"Un dato clave es que los océanos son esenciales para la regulación del clima global",
+
+"El océano cubre la mayor parte de la Tierra y regula el clima global",
+
+"Lo que más destaca es que los océanos contienen casi toda el agua del planeta",
+
+"Un dato importante es que los océanos ocupan el 71% de la superficie de la Tierra",
+
+"El océano es vital para la Tierra, cubriendo gran parte de ella y regulando el clima",
+
+"Lo esencial es que los océanos son vitales para la regulación del clima y el agua",
+
+"Un dato fundamental es que los océanos cubren la mayor parte de la superficie terrestre",
+
+"El océano regula el clima y es responsable de gran parte del agua en la Tierra",
+
+"Lo que se resalta es que los océanos tienen el 97% del agua en el planeta",
+
+"Un dato esencial es que los océanos cubren la mayoría del planeta y son clave para el clima",
+
+"El océano tiene un papel vital en la regulación del clima y ocupa el 71% del planeta",
+
+"Lo principal es que los océanos ocupan una gran parte de la superficie y controlan el clima",
+
+"Un dato importante es que los océanos controlan el clima y tienen la mayor parte del agua",
+
+"El océano cubre la mayor parte de la Tierra y es esencial para el equilibrio climático",
+
+"Lo que se destaca es que los océanos contienen la mayoría del agua en la Tierra",
+
+"Un dato relevante es que los océanos son esenciales para la vida en la Tierra",
+
+"El océano ocupa gran parte de la superficie terrestre y regula el clima",
+
+"Lo esencial es que los océanos son vitales para la vida, regulando el clima y el agua",
+
+"Un dato fundamental es que los océanos controlan el clima global y ocupan la mayor parte del planeta",
+
+"El océano es crucial para la vida en la Tierra, regulando el clima y ocupando el 71% de la superficie",
+
+"Lo más importante es que los océanos contienen casi toda el agua y son esenciales para el clima",
+
+"Un dato clave es que los océanos ocupan el 71% de la superficie terrestre y controlan el clima global",
+
+          "El océano cubre casi todo el planeta y ayuda al clima",
+
+"Lo que más importa es que cubren la mayoría de la Tierra y regulan el clima",
+
+"Lo importante es que los océanos cubren casi todo y controlan el clima",
+
+"Un dato clave es que ocupan mucho espacio en el planeta y afectan el clima",
+
+"Lo que destaca es que cubren casi toda la Tierra y ayudan con el clima",
+
+"El océano es el que más agua tiene y regula el clima",
+
+"Lo más importante es que los océanos cubren una gran parte de la Tierra",
+
+"Un dato importante es que los océanos regulan el clima del planeta",
+
+"Lo que resalta es que los océanos ocupan la mayor parte de la superficie",
+
+"Un dato clave es que los océanos tienen casi toda el agua de la Tierra",
+
+"Lo que destaca es que son esenciales para controlar el clima",
+
+"El océano tiene el 97% del agua del planeta y cubre la mayor parte",
           "cubren la mayor parte del planeta y ayudan al clima",
+          "Que los océanos cubren al planeta ",
+            "Que los océanos cubren gran parte de la tierra ",
+              "Que los océanos cubren gran parte del planeta ",
   "ocupan gran parte de la tierra y regulan el clima",
   "los oceanos tienen casi toda el agua del planeta",
   "los oceanos cubren la mayoria del planeta",
@@ -402,8 +587,92 @@ const comunicacionLessonsImproved = [
     examples: [
       {
         text: "Narrativo: Juan salió de su casa sin saber que aquel día cambiaría su vida para siempre. Descriptivo: La montaña se alzaba imponente con nieve en su cima y pinos verdes a su alrededor. Expositivo: La fotosíntesis es el proceso por el cual las plantas transforman la luz solar en energía.",
-        question: "Identifica la idea principal de cada fragmento, recuerda seguir el ejemplo anterior y no saltarte los 2 puntos : ni el punto al inicio de otra oracion.",
+        question: "Identifica la idea principal de cada fragmento, recuerda seguir el ejemplo anterior y no saltarte las tildes, los 2 puntos suspensivos : ni el punto al final de otra oracion, No, hoy no te lo saltas.",
         validAnswers: [
+
+"Narrativo: Juan sale sin saber que algo importante pasará. Descriptivo: La montaña es grande y tiene nieve. Expositivo: La fotosíntesis es el proceso que usan las plantas.",
+
+"Narrativo: Juan sale de su casa sin imaginar lo que pasará. Descriptivo: La montaña tiene nieve y pinos. Expositivo: La fotosíntesis es cuando las plantas convierten la luz en energía.",
+
+"Narrativo: Juan está a punto de vivir algo importante. Descriptivo: La montaña es alta y cubierta de nieve. Expositivo: Las plantas transforman la luz en energía mediante la fotosíntesis.",
+
+"Narrativo: Juan sale sin saber que su vida cambiará. Descriptivo: La montaña es imponente con nieve. Expositivo: La fotosíntesis es el proceso de transformación de la luz solar en energía.",
+
+"Narrativo: Juan no sabe lo que le espera. Descriptivo: La montaña tiene nieve en su cima. Expositivo: Las plantas producen energía gracias a la fotosíntesis.",
+
+"Narrativo: Juan sale y su vida cambiará. Descriptivo: La montaña tiene una cima nevada. Expositivo: La fotosíntesis es cuando las plantas convierten la luz solar en alimento.",
+
+"Narrativo: Juan inicia su día sin saber lo que pasará. Descriptivo: La montaña tiene nieve y pinos. Expositivo: La fotosíntesis es un proceso que usan las plantas para obtener energía.",
+
+"Narrativo: Juan sale y algo importante va a suceder. Descriptivo: La montaña es grande con nieve en la cima. Expositivo: La fotosíntesis permite a las plantas transformar la luz en energía.",
+
+"Narrativo: Juan sale y todo está por cambiar. Descriptivo: La montaña tiene pinos verdes. Expositivo: La fotosíntesis convierte la luz solar en energía para las plantas.",
+
+"Narrativo: Juan no sabe que está a punto de vivir un cambio. Descriptivo: La montaña se alza con nieve. Expositivo: Las plantas usan la fotosíntesis para transformar la luz en energía.",
+
+"Narrativo: Juan sale y un gran cambio ocurrirá. Descriptivo: La montaña se ve imponente. Expositivo: La fotosíntesis es cuando las plantas convierten luz en energía.",
+
+"Narrativo: Juan comienza su día sin saber lo que viene. Descriptivo: La montaña está cubierta de nieve. Expositivo: La fotosíntesis transforma la luz en energía para las plantas.",
+
+"Narrativo: Juan sale sin saber que su vida cambiará. Descriptivo: La montaña está rodeada de pinos. Expositivo: Las plantas convierten la luz solar en energía mediante la fotosíntesis.",
+
+"Narrativo: Juan no sabe que su vida cambiará ese día. Descriptivo: La montaña es alta y tiene nieve. Expositivo: La fotosíntesis es un proceso de transformación de luz solar en energía.",
+
+"Narrativo: Juan está a punto de vivir una gran aventura. Descriptivo: La montaña tiene nieve y pinos verdes. Expositivo: La fotosíntesis es un proceso esencial para las plantas.",
+
+"Narrativo: Juan sale y no sabe que su vida cambiará. Descriptivo: La montaña tiene nieve en su cima. Expositivo: Las plantas usan la luz para producir su energía.",
+
+"Narrativo: Juan está por vivir algo que cambiará todo. Descriptivo: La montaña se ve imponente con nieve. Expositivo: La fotosíntesis convierte la luz en energía para las plantas.",
+
+"Narrativo: Juan sale sin saber que ese día cambiará su vida. Descriptivo: La montaña tiene pinos y nieve. Expositivo: Las plantas convierten la luz en energía mediante la fotosíntesis.",
+
+"Narrativo: Juan sale de su casa sin imaginar lo que vendrá. Descriptivo: La montaña tiene una gran cima nevada. Expositivo: La fotosíntesis es la transformación de la luz en energía para las plantas.",
+
+"Narrativo: Juan sale sin saber que algo importante sucederá. Descriptivo: La montaña tiene nieve y está rodeada de pinos. Expositivo: La fotosíntesis permite a las plantas producir energía.",
+
+"Narrativo: Juan no sabe lo que pasará ese día. Descriptivo: La montaña se ve majestuosa y nevada. Expositivo: La fotosíntesis transforma la luz solar en energía para las plantas.",
+
+"Narrativo: Juan comienza su día sin saber que su vida cambiará. Descriptivo: La montaña es grande, con nieve en la cima. Expositivo: Las plantas transforman la luz solar en energía con la fotosíntesis.",
+
+"Narrativo: Juan sale y su vida va a cambiar. Descriptivo: La montaña es majestuosa y cubierta de nieve. Expositivo: La fotosíntesis es la forma en que las plantas convierten la luz en energía.",
+
+"Narrativo: Juan sale sin saber que algo importante pasará. Descriptivo: La montaña se ve impresionante con nieve. Expositivo: La fotosíntesis es cuando las plantas usan la luz para producir energía.",
+
+"Narrativo: Juan comienza su día sin saber lo que está por venir. Descriptivo: La montaña es grande y tiene nieve en la cima. Expositivo: Las plantas usan la fotosíntesis para generar su energía.",
+
+"Narrativo: Juan sale sin saber que todo cambiará. Descriptivo: La montaña tiene nieve y está rodeada de pinos. Expositivo: La fotosíntesis convierte la luz solar en energía para las plantas.",
+
+"Narrativo: Juan sale y no sabe lo que le depara el día. Descriptivo: La montaña se alza con nieve en la cima. Expositivo: La fotosíntesis es el proceso por el cual las plantas convierten la luz en energía.",
+
+"Narrativo: Juan no sabe que su vida cambiará ese día. Descriptivo: La montaña tiene pinos verdes y nieve. Expositivo: La fotosíntesis es cuando las plantas usan la luz solar para producir energía.",
+
+"Narrativo: Juan está por enfrentar un gran cambio. Descriptivo: La montaña se ve impresionante con nieve. Expositivo: La fotosíntesis permite a las plantas transformar la luz en energía.",
+
+"Narrativo: Juan sale sin saber que algo importante está por suceder. Descriptivo: La montaña es imponente, con nieve en la cima. Expositivo: La fotosíntesis es el proceso que permite a las plantas generar su energía.",
+
+          "El narrativo: Juan tiene un día que cambia su vida. Lo descriptivo: La montaña está llena de nieve. Un expositivo: La fotosíntesis convierte la luz en energía.",
+
+"El narrativo: Juan vive un gran cambio. Lo descriptivo: La montaña es enorme y tiene nieve. Un expositivo: La fotosíntesis es cómo las plantas hacen su comida.",
+
+"El narrativo: Juan tiene un día que lo cambia todo. Lo descriptivo: La montaña tiene nieve y pinos. Un expositivo: Las plantas usan la luz para vivir.",
+
+"El narrativo: Juan pasa un día importante. Lo descriptivo: La montaña está cubierta de nieve. Un expositivo: Las plantas producen energía usando la luz.",
+
+"El narrativo: Juan vive un día único. Lo descriptivo: La montaña tiene pinos y nieve. Un expositivo: Las plantas hacen comida con luz.",
+
+"El narrativo: Juan cambia su vida en un día. Lo descriptivo: La montaña es gigante y fría. Un expositivo: La fotosíntesis ayuda a las plantas a crecer.",
+
+"El narrativo: Juan tiene un día que lo marca. Lo descriptivo: La montaña está llena de nieve. Un expositivo: Las plantas usan luz para crecer.",
+
+"El narrativo: Juan experimenta un cambio en su vida. Lo descriptivo: La montaña tiene nieve y pinos. Un expositivo: La fotosíntesis convierte la luz en comida.",
+
+"El narrativo: Juan pasa un día que le cambia. Lo descriptivo: La montaña es impresionante. Un expositivo: Las plantas usan luz para hacer energía.",
+
+"El narrativo: Juan vive algo que cambia su vida. Lo descriptivo: La montaña tiene nieve y árboles. Un expositivo: Las plantas crean energía con la luz.",
+
+"El narrativo: Juan vive un cambio en su vida. Lo descriptivo: La montaña es fría y tiene nieve. Un expositivo: La fotosíntesis es como las plantas se alimentan.",
+
+"El narrativo: Juan tiene un día inolvidable. Lo descriptivo: La montaña está cubierta de nieve. Un expositivo: La fotosíntesis convierte luz en energía para las plantas.",
     "narrativo: juan vive un dia que cambia su vida. descriptivo: como es la montaña. expositivo: que es la fotosintesis.",
   "narrativo: un dia importante para juan. descriptivo: descripcion de la montaña. expositivo: explicacion de la fotosintesis.",
   "narrativo: el cambio en la vida de juan. descriptivo: detalles sobre la montaña. expositivo: como funciona la fotosintesis.",
@@ -489,10 +758,73 @@ const comunicacionLessonsImproved = [
       },
       {
         text: "El mercado de frutas estaba lleno de colores vivos y aromas frescos.",
-        question: "¿Qué idea principal tiene el fragmento descriptivo?, Puedes agregar el inicio palabras como Mostrar o Presentar para una respuesta mas acertada, ",
+        question: "¿Qué idea principal tiene el fragmento descriptivo?, Puedes agregar el inicio palabras como Mostrar o Presentar para una respuesta mas acertada, recuerda no olvidar las tildes, aunque ahora puedes saltarte el punto al final",
         validAnswers: [
+          "El fragmento muestra un mercado lleno de frutas y colores",
+          "El mercado está lleno de frutas y colores vibrantes",
+
+"Lo importante es que el mercado tiene muchos colores y olores frescos",
+
+"Un mercado colorido y con frutas frescas es lo que describe",
+
+"El texto muestra un mercado con frutas y colores brillantes",
+
+"Lo que se destaca es la variedad de frutas y colores del mercado",
+
+"Un mercado lleno de frutas y colores intensos es lo que se describe",
+
+"El mercado está lleno de colores vivos y frutas frescas",
+
+"Lo que se muestra es un mercado lleno de vida y colores",
+
+"Un mercado lleno de aromas y colores intensos es lo que se describe",
+
+"El mercado tiene una gran variedad de colores y frutas",
+
+"Lo principal es que el mercado se describe como lleno de frutas frescas",
+
+"Un mercado vibrante con muchos colores y frutas frescas",
+
+"El mercado tiene una atmósfera llena de colores y olores frescos",
+
+"Lo que se destaca es la abundancia de frutas y colores del mercado",
+
+"Un mercado lleno de colores vibrantes y frutas frescas es lo que describe",
+
+"El texto muestra un mercado lleno de frutas y colores",
+
+"El texto describe un mercado lleno de frutas y colores",
+"Lo principal es presentar un mercado con muchos colores y aromas frescos",
+
+"Un dato clave es describir el mercado lleno de frutas y colores vivos",
+
+"El fragmento presenta el mercado lleno de colores y frutas frescas",
+
+"Lo que destaca es mostrar un mercado lleno de vida, frutas y colores",
+
+"Un fragmento que describe un mercado lleno de frutas y colores vibrantes",
+
+"El fragmento presenta un mercado con frutas frescas y colores vivos",
+
+"Lo que se muestra es un mercado lleno de frutas de colores y aromas",
+
+"Un mercado colorido y lleno de frutas es lo que se describe",
+
+"El texto describe un mercado con frutas y colores brillantes",
+
+"Lo que se muestra es el mercado lleno de frutas frescas y colores",
+
+"Un mercado lleno de frutas, colores y aromas es lo que se describe",
+
           "describir el mercado lleno de frutas y colores",
           "Describir el mercado lleno de frutas y colores",
+          "Describe un mercado lleno de colores y aromas",
+          "Un mercado con colores y aromas",
+          "Un mercado unico",
+          "Un mercado con colores y aromas",
+          "Un mercado con colores y aromas frescos",
+          "Describe como es el mercado",
+          "Describe el mercado",
           "como es el mercado de frutas",
   "mostrar como es el mercado de frutas",
   "presentar el ambiente del mercado",
@@ -663,64 +995,140 @@ const comunicacionLessonsImproved = [
     examples: [
       {
         text: "Introducción: El cambio climático es un desafío global. Desarrollo: El aumento de gases de efecto invernadero provoca el derretimiento de glaciares y fenómenos meteorológicos extremos. Conclusión: Para mitigar sus efectos, necesitamos energías renovables y reducir la huella de carbono.",
-        question: "Señala la introducción, el desarrollo y la conclusión,  tal y como en el ejmplo de arriba.",
+        question: "Señala la introducción, el desarrollo y la conclusión,  tal y como en el ejmplo de arriba, ahora si no te saltes el punto al final y no olvides la tilde.",
         validAnswers: [
+          "Introducción: Presentación del cambio climático. Desarrollo: Explicación de sus causas y efectos. Conclusión: Propuesta de soluciones.",
+
+"Introducción: Se menciona el cambio climático. Desarrollo: Se detallan sus efectos y causas. Conclusión: Se ofrecen soluciones para el futuro.",
+
+"Introducción: El cambio climático es un problema global. Desarrollo: Se explica cómo los gases afectan al planeta. Conclusión: Se dan soluciones para mitigar el impacto.",
+
+"Introducción: El cambio climático es un desafío urgente. Desarrollo: Se describen los efectos del calentamiento global. Conclusión: La solución está en energías renovables.",
+
+"Introducción: El cambio climático está afectando al planeta. Desarrollo: Se detallan sus causas y consecuencias. Conclusión: Se deben tomar medidas inmediatas para frenar el daño.",
+
+"Introducción: El cambio climático es una crisis mundial. Desarrollo: Los gases de efecto invernadero y su impacto. Conclusión: Necesitamos reducir las emisiones y usar energías limpias.",
+
+"Introducción: El cambio climático es real y urgente. Desarrollo: Los efectos incluyen desastres naturales. Conclusión: Hay que cambiar nuestros hábitos y usar energía renovable.",
+
+"Introducción: Se presenta el problema del cambio climático. Desarrollo: Se explican sus causas y consecuencias. Conclusión: La solución es adoptar energías renovables.",
+
+"Introducción: El cambio climático es un desafío global. Desarrollo: Se detallan los efectos como el derretimiento de los glaciares. Conclusión: Se proponen soluciones a nivel global.",
+
+"Introducción: El cambio climático está afectando al planeta. Desarrollo: Los glaciares se están derritiendo. Conclusión: Se deben buscar fuentes de energía más sostenibles.",
+
+"Introducción: El cambio climático es una amenaza mundial. Desarrollo: El aumento de gases está acelerando el calentamiento global. Conclusión: Hay que tomar medidas urgentes para reducir las emisiones.",
+
+"Introducción: El cambio climático es un tema importante. Desarrollo: Los gases de efecto invernadero están causando desastres. Conclusión: Se proponen alternativas como energías renovables.",
           "Introducción: Presentación del cambio climático. Desarrollo: Explicación de sus causas y efectos. Conclusión: Propuesta de soluciones.",
           "Introducción: Introducción al cambio climático. Desarrollo: Causas y consecuencias. Conclusión: Soluciones propuestas.",
           "Introducción: Planteamiento del problema. Desarrollo: Análisis de efectos. Conclusión: Medidas sugeridas.",
           "Introducción: Tema del cambio climático. Desarrollo: Efectos y causas. Conclusión: Alternativas de solución.",
           "Introducción: Problema climático. Desarrollo: Consecuencias del problema. Conclusión: Propuestas para solucionarlo.",
-          "introduccion: presenta el cambio climatico. desarrollo: explica causas y efectos. conclusion: propone soluciones posibles",
-  "introduccion: plantea el tema del cambio climatico. desarrollo: describe sus consecuencias. conclusion: sugiere acciones",
-  "introduccion: introduce el problema ambiental. desarrollo: detalla los impactos. conclusion: muestra posibles salidas",
-  "introduccion: muestra el problema del clima. desarrollo: analiza las causas. conclusion: indica como actuar",
-  "introduccion: relata que el clima esta cambiando. desarrollo: expone los efectos. conclusion: da medidas concretas",
-  "introduccion: da una idea general del tema. desarrollo: desarrolla causas y consecuencias. conclusion: da recomendaciones",
-  "introduccion: menciona el cambio climatico. desarrollo: profundiza en los daños. conclusion: plantea alternativas",
-  "introduccion: presenta el desafio ambiental. desarrollo: analiza el aumento de gases. conclusion: propone energias limpias",
-  "introduccion: describe un problema global. desarrollo: cuenta como afecta al planeta. conclusion: recomienda soluciones",
-  "introduccion: muestra la problematica. desarrollo: detalla los fenomenos que produce. conclusion: ofrece acciones concretas",
-  "introduccion: plantea el tema. desarrollo: desarrolla los efectos negativos. conclusion: da posibles respuestas",
-  "introduccion: introduce el desafio. desarrollo: explica lo que lo causa. conclusion: propone usar energias limpias",
-  "introduccion: resume el problema. desarrollo: muestra sus consecuencias. conclusion: da formas de mitigar el impacto",
-  "introduccion: inicia con el cambio climatico. desarrollo: desarrolla lo que ocurre. conclusion: concluye con ideas de solucion",
-  "introduccion: abre el tema global. desarrollo: expone la situacion actual. conclusion: concluye con medidas necesarias",
-  "introduccion: presenta un problema ambiental. desarrollo: explica sus consecuencias. conclusion: propone actuar",
-  "introduccion: introduce el tema. desarrollo: explica el calentamiento. conclusion: propone cambios energeticos",
-  "introduccion: menciona el reto global. desarrollo: explica el origen. conclusion: da ideas para mejorar",
-  "introduccion: señala el tema. desarrollo: muestra lo que esta pasando. conclusion: recomienda cambiar habitos",
-  "introduccion: plantea una preocupacion. desarrollo: relata efectos graves. conclusion: impulsa soluciones",
-  "introduccion: explica el tema a tratar. desarrollo: desarrolla causas y efectos. conclusion: propone reducir huella",
-  "introduccion: informa del cambio climatico. desarrollo: describe su avance. conclusion: sugiere reducir contaminacion",
-  "introduccion: abre con el tema ambiental. desarrollo: muestra consecuencias reales. conclusion: impulsa energias limpias",
-  "introduccion: habla sobre el cambio del clima. desarrollo: analiza por que pasa. conclusion: propone soluciones claras",
-  "introduccion: presenta el topico. desarrollo: desarrolla la idea central. conclusion: sugiere acciones humanas",
-  "introduccion: plantea el fenomeno. desarrollo: explica como nos afecta. conclusion: propone actuar desde ahora",
-  "introduccion: relata que hay un problema. desarrollo: lo detalla. conclusion: recomienda energia renovable",
-  "introduccion: describe un tema global. desarrollo: da detalles cientificos. conclusion: indica que hacer",
-  "introduccion: plantea el problema del clima. desarrollo: detalla sus consecuencias. conclusion: menciona acciones",
-  "introduccion: muestra la preocupacion mundial. desarrollo: explica los fenomenos. conclusion: propone cambiar habitos",
-  "introduccion: introduce el tema del clima. desarrollo: muestra como afecta. conclusion: presenta alternativas",
-  "introduccion: habla del cambio. desarrollo: detalla lo que provoca. conclusion: sugiere actuar juntos",
-  "introduccion: senala un reto actual. desarrollo: analiza el problema. conclusion: sugiere soluciones practicas",
-  "introduccion: explica la situacion global. desarrollo: menciona lo que provoca. conclusion: da ideas utiles",
-  "introduccion: comienza con el tema. desarrollo: desarrolla el contenido. conclusion: da recomendaciones directas",
-  "introduccion: abre con una alerta climatica. desarrollo: describe el impacto. conclusion: concluye con medidas",
-  "introduccion: presenta el problema. desarrollo: lo desarrolla con ejemplos. conclusion: propone formas de actuar",
-  "introduccion: menciona el cambio. desarrollo: describe causas y efectos. conclusion: sugiere reducir emisiones",
-  "introduccion: indica el topico principal. desarrollo: narra los efectos. conclusion: propone alternativas",
-  "introduccion: presenta la situacion global. desarrollo: profundiza en el tema. conclusion: concluye con acciones"
+          "introduccion: presenta el cambio climatico. desarrollo: explica causas y efectos. conclusion: propone soluciones posibles.",
+  "introduccion: plantea el tema del cambio climatico. desarrollo: describe sus consecuencias. conclusion: sugiere acciones.",
+  "introduccion: introduce el problema ambiental. desarrollo: detalla los impactos. conclusion: muestra posibles salidas.",
+  "introduccion: muestra el problema del clima. desarrollo: analiza las causas. conclusion: indica como actuar.",
+  "introduccion: relata que el clima esta cambiando. desarrollo: expone los efectos. conclusion: da medidas concretas.",
+  "introduccion: da una idea general del tema. desarrollo: desarrolla causas y consecuencias. conclusion: da recomendaciones.",
+  "introduccion: menciona el cambio climatico. desarrollo: profundiza en los daños. conclusion: plantea alternativas.",
+  "introduccion: presenta el desafio ambiental. desarrollo: analiza el aumento de gases. conclusion: propone energias limpias.",
+  "introduccion: describe un problema global. desarrollo: cuenta como afecta al planeta. conclusion: recomienda soluciones.",
+  "introduccion: muestra la problematica. desarrollo: detalla los fenomenos que produce. conclusion: ofrece acciones concretas.",
+  "introduccion: plantea el tema. desarrollo: desarrolla los efectos negativos. conclusion: da posibles respuestas.",
+  "introduccion: introduce el desafio. desarrollo: explica lo que lo causa. conclusion: propone usar energias limpias.",
+  "introduccion: resume el problema. desarrollo: muestra sus consecuencias. conclusion: da formas de mitigar el impacto.",
+  "introduccion: inicia con el cambio climatico. desarrollo: desarrolla lo que ocurre. conclusion: concluye con ideas de solucion.",
+  "introduccion: abre el tema global. desarrollo: expone la situacion actual. conclusion: concluye con medidas necesarias.",
+  "introduccion: presenta un problema ambiental. desarrollo: explica sus consecuencias. conclusion: propone actuar.",
+  "introduccion: introduce el tema. desarrollo: explica el calentamiento. conclusion: propone cambios energeticos.",
+  "introduccion: menciona el reto global. desarrollo: explica el origen. conclusion: da ideas para mejorar.",
+  "introduccion: señala el tema. desarrollo: muestra lo que esta pasando. conclusion: recomienda cambiar habitos.",
+  "introduccion: plantea una preocupacion. desarrollo: relata efectos graves. conclusion: impulsa soluciones.",
+  "introduccion: explica el tema a tratar. desarrollo: desarrolla causas y efectos. conclusion: propone reducir huella.",
+  "introduccion: informa del cambio climatico. desarrollo: describe su avance. conclusion: sugiere reducir contaminacion.",
+  "introduccion: abre con el tema ambiental. desarrollo: muestra consecuencias reales. conclusion: impulsa energias limpias.",
+  "introduccion: habla sobre el cambio del clima. desarrollo: analiza por que pasa. conclusion: propone soluciones claras.",
+  "introduccion: presenta el topico. desarrollo: desarrolla la idea central. conclusion: sugiere acciones humanas.",
+  "introduccion: plantea el fenomeno. desarrollo: explica como nos afecta. conclusion: propone actuar desde ahora.",
+  "introduccion: relata que hay un problema. desarrollo: lo detalla. conclusion: recomienda energia renovable.",
+  "introduccion: describe un tema global. desarrollo: da detalles cientificos. conclusion: indica que hacer.",
+  "introduccion: plantea el problema del clima. desarrollo: detalla sus consecuencias. conclusion: menciona acciones.",
+  "introduccion: muestra la preocupacion mundial. desarrollo: explica los fenomenos. conclusion: propone cambiar habitos.",
+  "introduccion: introduce el tema del clima. desarrollo: muestra como afecta. conclusion: presenta alternativas.",
+  "introduccion: habla del cambio. desarrollo: detalla lo que provoca. conclusion: sugiere actuar juntos.",
+  "introduccion: senala un reto actual. desarrollo: analiza el problema. conclusion: sugiere soluciones practicas.",
+  "introduccion: explica la situacion global. desarrollo: menciona lo que provoca. conclusion: da ideas utiles.",
+  "introduccion: comienza con el tema. desarrollo: desarrolla el contenido. conclusion: da recomendaciones directas.",
+  "introduccion: abre con una alerta climatica. desarrollo: describe el impacto. conclusion: concluye con medidas.",
+  "introduccion: presenta el problema. desarrollo: lo desarrolla con ejemplos. conclusion: propone formas de actuar.",
+  "introduccion: menciona el cambio. desarrollo: describe causas y efectos. conclusion: sugiere reducir emisiones.",
+  "introduccion: indica el topico principal. desarrollo: narra los efectos. conclusion: propone alternativas.",
+  "introduccion: presenta la situacion global. desarrollo: profundiza en el tema. conclusion: concluye con acciones."
         ]
       },
       {
         text: "Introducción: La lectura diaria mejora la concentración. Desarrollo: Estudios muestran que leer antes de dormir ayuda a reducir el estrés y fortalecer la memoria. Conclusión: Incorporar la lectura en la rutina diaria trae múltiples beneficios.",
-        question: "¿Dónde termina el desarrollo y empieza la conclusión?, tu respuesta debe iniciar con la palabra: El desarrollo termina, El desarrollo finaliza... etc",
+        question: "¿Dónde termina el desarrollo y empieza la conclusión?, puedes seguir este ejemplo de respuesta: El desarrollo termina...,concluye con... etc, tambien saltarte el punto final xD, pero No las tildes",
         validAnswers: [
-          "El desarrollo termina al mencionar los beneficios, y la conclusión comienza al sugerir incorporar la lectura en la rutina.",
-          "El desarrollo finaliza con los beneficios, la conclusión inicia con la sugerencia de leer diariamente.",
-          "El desarrollo concluye con las ventajas, la conclusión empieza con la recomendación de leer.",
-          "El desarrollo acaba con los efectos positivos, la conclusión arranca con la propuesta de rutina.",
-          "El desarrollo se cierra con los beneficios, la conclusión se abre con la idea de leer habitualmente.",
+          "El desarrollo termina al mencionar los beneficios, y la conclusión comienza al sugerir incorporar la lectura en la rutina",
+          "El desarrollo termina al mencionar los beneficios, y la conclusión comienza al sugerir incorporar la lectura en la rutina",
+          "El desarrollo termina al explicar los beneficios, y la conclusión comienza al proponer incorporarla a la rutina",
+
+"Lo que termina el desarrollo es la explicación de los beneficios, y la conclusión empieza con la recomendación de hacerlo parte del día a día",
+
+"Un dato importante es que el desarrollo finaliza al hablar de los beneficios, y la conclusión comienza con la sugerencia de incluir la lectura",
+
+"El desarrollo finaliza al detallar los beneficios de la lectura, y la conclusión empieza al sugerir hacerla parte de la rutina",
+
+"Lo que termina el desarrollo es el análisis de los beneficios de la lectura, y la conclusión empieza al proponerla como hábito diario",
+
+"Un momento clave es cuando el desarrollo explica los efectos, y la conclusión comienza con la recomendación de la lectura diaria",
+
+"El desarrollo finaliza al detallar los beneficios, y la conclusión empieza al sugerir incorporar la lectura al día a día",
+
+"Lo que marca el fin del desarrollo es la explicación de los beneficios, y la conclusión empieza al aconsejar la lectura en la rutina diaria",
+
+"Un cambio ocurre cuando el desarrollo describe los efectos, y la conclusión comienza con la propuesta de incorporar la lectura",
+
+"El desarrollo termina cuando se habla de cómo la lectura ayuda a reducir el estrés, y la conclusión empieza con la sugerencia de integrarla en la rutina",
+
+"Lo que marca el fin del desarrollo es la explicación de los beneficios, y la conclusión comienza con la recomendación de hacerla parte de la rutina",
+
+"Un punto clave es cuando el desarrollo menciona los beneficios de la lectura, y la conclusión comienza al proponerla como hábito diario",
+
+"El desarrollo finaliza con la mención de los beneficios de leer, y la conclusión empieza con la sugerencia de incluir la lectura diaria",
+
+"Lo que termina el desarrollo es la mención de cómo la lectura ayuda a mejorar la concentración, y la conclusión empieza al recomendarla como hábito",
+
+"Un dato importante es que el desarrollo termina al detallar los beneficios, y la conclusión empieza con la propuesta de hacer la lectura diaria",
+
+
+"El desarrollo finaliza cuando se mencionan los beneficios de la lectura, y la conclusión empieza con la sugerencia de hacerla parte de la rutina",
+
+"El desarrollo termina cuando se habla de los efectos positivos de leer, y la conclusión empieza cuando se recomienda incluir la lectura en la rutina diaria",
+
+"El desarrollo concluye al explicar los beneficios de leer antes de dormir, y la conclusión empieza cuando se aconseja hacerlo parte de la rutina",
+
+"El desarrollo finaliza cuando se mencionan los beneficios de la lectura, y la conclusión comienza con la propuesta de incorporarla a la rutina",
+
+"El desarrollo termina al describir los efectos beneficiosos de leer, y la conclusión empieza con la sugerencia de hacer de la lectura un hábito",
+
+"El desarrollo finaliza cuando se habla de cómo mejora la memoria y reduce el estrés, y la conclusión empieza al sugerir incluirla en la rutina diaria",
+
+"El desarrollo termina cuando se mencionan los beneficios, y la conclusión empieza con la recomendación de incluir la lectura diaria",
+
+"El desarrollo concluye con los beneficios de la lectura, y la conclusión comienza cuando se sugiere integrar la lectura al día a día",
+
+"El desarrollo termina cuando se explica cómo la lectura fortalece la memoria, y la conclusión empieza con la propuesta de incorporar la lectura en la rutina",
+
+"El desarrollo finaliza cuando se describen los efectos de leer antes de dormir, y la conclusión comienza con la recomendación de incluir la lectura en la rutina diaria",
+
+"El desarrollo termina cuando se detallan los beneficios de la lectura, y la conclusión empieza cuando se propone incorporarla a la rutina cotidiana",
+          "El desarrollo finaliza con los beneficios, la conclusión inicia con la sugerencia de leer diariamente",
+          "El desarrollo concluye con las ventajas, la conclusión empieza con la recomendación de leer",
+          "El desarrollo acaba con los efectos positivos, la conclusión arranca con la propuesta de rutina",
+          "El desarrollo se cierra con los beneficios, la conclusión se abre con la idea de leer habitualmente",
           "el desarrollo termina al mencionar los beneficios, la conclusion empieza cuando se recomienda leer diariamente",
   "el desarrollo acaba cuando se habla del estres y la memoria, la conclusion inicia al hablar de habitos",
   "el desarrollo finaliza al mostrar los efectos, la conclusion arranca con la propuesta de rutina",
@@ -772,7 +1180,7 @@ const comunicacionLessonsImproved = [
     examples: [
       {
         text: "Escribe un sinónimo de brillante y un antónimo de triste.",
-        question: "Sinónimo de brillante: resplandeciente. Antónimo de triste: feliz, coloca tu respues de la esta forma: Resplandeciente / Feliz",
+        question: "Sinónimo de brillante: resplandeciente. Antónimo de triste: feliz, coloca tu respues de esta forma: Resplandeciente / Feliz, recuerda escribir las respuestas sin errores ortograficos",
         validAnswers: [
 
           "Luminoso / Alegre",
@@ -861,8 +1269,97 @@ const comunicacionLessonsImproved = [
     examples: [
       {
         text: "Laura llegó empapada a clase, con paraguas roto. No dijo nada sobre la lluvia, pero su ropa y cabello mojados lo indican.",
-        question: "¿Qué podemos inferir sobre lo que sucedió antes?",
+        question: "¿Qué podemos inferir sobre lo que sucedió antes?, recuerda no olvidar las tildes",
         validAnswers: [
+          "Que Laura estuvo bajo la lluvia y su paraguas se rompió.",
+          "El texto sugiere que Laura se mojó debido a la lluvia y su paraguas no la ayudó.",
+          "El fragmento sugiere que Laura no estaba preparada para la lluvia.",
+
+"Lo que se infiere es que Laura no esperaba la lluvia y su paraguas no funcionó.",
+
+"Un posible mensaje es que Laura llegó tarde y empapada por culpa de la lluvia.",
+
+"El texto indica que Laura no estaba lista para la lluvia y eso la sorprendió.",
+
+"Lo que se muestra es que Laura se mojó porque su paraguas no la protegió.",
+
+"Un fragmento que nos muestra que Laura estaba desprevenida para la lluvia.",
+
+"El texto nos hace pensar que Laura no pudo cubrirse bien de la lluvia.",
+
+"Lo que infiere es que Laura llegó empapada debido a que su paraguas se rompió.",
+
+"Un posible mensaje es que Laura no anticipó la lluvia y se mojó completamente.",
+
+"El fragmento nos muestra que Laura estaba muy mojada porque su paraguas no sirvió.",
+
+"Lo que se indica es que Laura se empapó porque no estaba lista para la lluvia.",
+
+"Un detalle es que Laura llegó empapada porque su paraguas no la protegió.",
+
+"El texto sugiere que Laura no pudo evitar mojarse por culpa de la lluvia.",
+
+"Lo que se infiere es que Laura estaba nerviosa por la lluvia y su paraguas roto.",
+
+"Un posible mensaje es que la lluvia la sorprendió y no pudo protegerse.",
+
+"Lo que podemos inferir es que Laura llegó empapada porque su paraguas se rompió.",
+
+"Un dato importante es que Laura no estaba preparada para la lluvia.",
+
+"El fragmento sugiere que Laura no logró protegerse de la lluvia.",
+
+"Lo que se indica es que la lluvia la sorprendió y su paraguas no la cubrió.",
+
+"Un detalle importante es que Laura no comentó nada sobre la lluvia.",
+
+"El texto nos da a entender que Laura se mojó y su paraguas falló.",
+
+"Lo que podemos inferir es que la lluvia la caló hasta los huesos.",
+
+"Un punto clave es que Laura no pudo protegerse de la lluvia por el paraguas roto.",
+
+"El fragmento sugiere que Laura no anticipó la lluvia y se mojó.",
+
+"Lo que se indica es que Laura llegó empapada debido a la lluvia y su paraguas no sirvió.",
+
+"Un detalle importante es que Laura reaccionó rápidamente, pero no pudo evitar mojarse.",
+
+"El texto sugiere que Laura no estaba preparada para la lluvia y se mojó.",
+
+"Lo que podemos inferir es que Laura se mojó por no tener un paraguas adecuado.",
+
+"Un dato clave es que Laura llegó mojada porque el paraguas no cumplió su función.",
+
+
+
+"Que Laura probablemente se mojó debido a la lluvia y su paraguas ya no sirvió.",
+
+"Que la lluvia fue fuerte y dañó el paraguas de Laura.",
+
+"Que Laura no pudo protegerse de la lluvia porque su paraguas se rompió.",
+
+"Que Laura se olvidó de su paraguas o no estaba funcionando bien.",
+
+"Que la lluvia era muy intensa y el paraguas de Laura no la cubrió.",
+
+"Que Laura no comentó nada, pero claramente se mojó por la lluvia.",
+
+"Que Laura salió sin paraguas o el suyo falló durante la lluvia.",
+
+"Que la lluvia fue tan fuerte que su paraguas no resistió.",
+
+"Que Laura probablemente tuvo un accidente con su paraguas en medio de la lluvia.",
+
+"Que la lluvia la sorprendió y su paraguas no la protegió.",
+
+"Que Laura llegó tarde por culpa de la lluvia y su paraguas roto.",
+
+"Que Laura intentó protegerse de la lluvia, pero su paraguas no funcionó.",
+
+"Que la lluvia la caló hasta los huesos y el paraguas no resistió.",
+
+"Que Laura estaba muy mojada porque no pudo usar bien su paraguas debido a la lluvia.",
           "Que Laura estuvo bajo la lluvia y su paraguas se rompió.",
           "Laura se mojó por la lluvia porque se le dañó el paraguas.",
           "Se empapó porque el paraguas no funcionó bajo la lluvia.",
@@ -900,6 +1397,35 @@ const comunicacionLessonsImproved = [
         text: "Al oír el timbre, Marcos guardó rápidamente su cuaderno en la mochila y adoptó una postura seria. La profesora acababa de anunciar la visita sorpresa.",
         question: "¿Qué infieres sobre la actitud de Marcos?",
         validAnswers: [
+          "Que estaba nervioso o no preparado para la visita sorpresa.",
+
+"Que Marcos se sorprendió y no estaba listo para la visita.",
+
+"Que Marcos reaccionó rápidamente porque no esperaba la visita.",
+
+"Que Marcos se puso nervioso al oír el timbre y se preparó rápidamente.",
+
+"Que Marcos adoptó una actitud seria porque no estaba preparado para la visita.",
+
+"Que Marcos se sintió inseguro al escuchar el timbre y reaccionó rápidamente.",
+
+"Que Marcos estaba preocupado por la visita sorpresa y por eso se puso serio.",
+
+"Que al oír el timbre, Marcos se sintió presionado por la visita que no esperaba.",
+
+"Que Marcos se sorprendió tanto que intentó ocultar su nerviosismo guardando su cuaderno.",
+
+"Que Marcos no estaba listo para la visita, por eso se mostró serio y guardó su cuaderno rápidamente.",
+
+"Que al oír el timbre, Marcos sintió que debía estar más serio ante la visita.",
+
+"Que Marcos se puso serio porque no estaba preparado para la sorpresa de la profesora.",
+
+"Que Marcos se sintió incómodo con la visita sorpresa y reaccionó guardando sus cosas rápidamente.",
+
+"Que la visita sorpresa lo tomó desprevenido y por eso mostró una actitud seria.",
+
+"Que Marcos guardó su cuaderno y adoptó una postura seria porque se sintió sorprendido y no preparado.",
           "Que estaba nervioso o no preparado para la visita sorpresa.",
           "Estaba inquieto porque no esperaba la visita.",
           "Se puso ansioso por la visita inesperada.",
@@ -1293,9 +1819,39 @@ const comunicacionLessonsImproved = [
     examples: [
       {
         text: "Fragmento: \"María sintió el corazón latir con fuerza cuando se acercó a la puerta. El silencio era abrumador. Abrió y encontró una carta que cambiaba su destino.\"",
-        question: "¿Quién es protagonista, cuál es el conflicto y qué tipo de narrador se usa?",
+        question: "¿Quién es protagonista, cuál es el conflicto y qué tipo de narrador se usa?, recuerda que el nombre María lleva tilde, escribe tu respuesta siguiendo este modelo: Protagonista: Pepito. Conflicto: Se cayo de su bicicleta. Narrador: \"Tendras que Inferirlo por tu cuenta\"",
         validAnswers: [
-          "Protagonista: María. Conflicto: Descubrir el contenido de la carta misteriosa. Narrador: Tercera persona limitada (describe solo lo que siente María).",
+          "Protagonista: María. Conflicto: Descubrir el contenido de la carta misteriosa. Narrador: Tercera persona limitada, describe solo lo que siente María.",
+          "Protagonista: María. Conflicto: Descubrir el contenido de la carta. Narrador: Tercera persona limitada, describe solo lo que siente María.",
+          "Protagonista: María. Conflicto: Descubre el contenido de la carta misteriosa. Narrador: Tercera persona limitada, describe solo lo que siente María.",
+
+"Protagonista: María. Conflicto: El misterio de la carta. Narrador: Tercera persona.",
+
+"Protagonista: María. Conflicto: Desvelar lo que está en la carta. Narrador: Tercera persona limitada.",
+
+"Protagonista: María. Conflicto: El destino de la carta misteriosa. Narrador: Tercera persona.",
+
+"Protagonista: María. Conflicto: El miedo a lo que puede descubrir. Narrador: Tercera persona.",
+
+"Protagonista: María. Conflicto: Lo que puede cambiar en su vida al leer la carta. Narrador: Tercera persona limitada.",
+
+"Protagonista: María. Conflicto: El impacto de la carta en su vida. Narrador: Tercera persona.",
+
+"Protagonista: María. Conflicto: El temor a lo desconocido de la carta. Narrador: Tercera persona limitada.",
+
+"Protagonista: María. Conflicto: Lo que la carta revelará. Narrador: Tercera persona.",
+
+"Protagonista: María. Conflicto: El impacto emocional de la carta. Narrador: Tercera persona.",
+
+"Protagonista: María. Conflicto: La incertidumbre sobre el contenido de la carta. Narrador: Tercera persona limitada.",
+
+"Protagonista: María. Conflicto: El miedo a lo que cambiará su vida. Narrador: Tercera persona.",
+
+"Protagonista: María. Conflicto: La ansiedad de abrir la carta. Narrador: Tercera persona limitada.",
+
+"Protagonista: María. Conflicto: El enfrentamiento con su destino a través de la carta. Narrador: Tercera persona.",
+
+"Protagonista: María. Conflicto: El miedo a lo que descubrirá en la carta. Narrador: Tercera persona.",
           "Protagonista: María. Conflicto: El misterio de la carta. Narrador: Tercera persona.",
           "Personaje principal: María. Problema: La carta desconocida. Narrador: Externa limitada.",
           "Protagonista: María. Conflicto: La carta enigmática. Narrador: Tercera persona que conoce los sentimientos de María.",
