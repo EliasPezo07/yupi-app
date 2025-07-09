@@ -27,6 +27,19 @@
     <title>React App</title>
     <!-- Agrega esta línea para importar la fuente Pacifico -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- Configuración explícita de MathJax para reconocer los delimitadores de TeX -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']], // Delimitadores para matemáticas en línea
+          displayMath: [['$$', '$$'], ['\\[', '\\]']] // Delimitadores para bloques de matemáticas
+        },
+        svg: {
+          fontCache: 'global' // Optimización para el caché de fuentes SVG
+        }
+      };
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
