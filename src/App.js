@@ -1557,17 +1557,17 @@ const matematicasLessons = [
     title: "Suma y Resta de Enteros",
     subject: "algebra",
     teaching: "Los números enteros incluyen a los naturales, el cero y los negativos. Para sumar o restar, si tienen el mismo signo, se suman los valores absolutos y se mantiene el signo. Si tienen signos diferentes, se restan los valores absolutos y se pone el signo del número con mayor valor absoluto.",
-    solution: "Ejemplo: 5 + (-3) = 2. Restamos 5 y 3 porque tienen signos diferentes, y el 5 es mayor, así que el resultado es positivo.",
+    solution: "Ejemplo: $5 + (-3) = 2$. Restamos 5 y 3 porque tienen signos diferentes, y el 5 es mayor, así que el resultado es positivo.",
     youtubeLinks: [
       "https://www.youtube.com/watch?v=FDsKgfcy5h8", // Matemáticas profe Alex - Suma y Resta de Números Enteros
       "https://www.youtube.com/watch?v=aGJ00fU5Cik"  // julioprofe - Suma y Resta de Números Enteros
     ],
-    question: "¿Cuál es el resultado de -7 + 4?",
+    question: "¿Cuál es el resultado de $-7 + 4$?",
     options: [
       { text: "-3", correct: true },
-      { text: "-4", correct: false },
-      { text: "-1", correct: false },
-      { text: "2", correct: false }
+      { text: "3", correct: false },
+      { text: "-11", correct: false },
+      { text: "11", correct: false }
     ],
     explanation: "Para resolver $-7 + 4$: Restamos los valores absolutos (7 - 4 = 3) y mantenemos el signo del número con mayor valor absoluto (el 7 es negativo), por lo tanto, el resultado es -3."
   },
@@ -1584,8 +1584,8 @@ const matematicasLessons = [
     options: [
       { text: "24", correct: false },
       { text: "-24", correct: true },
-      { text: "-22", correct: false },
-      { text: "20", correct: false }
+      { text: "5", correct: false },
+      { text: "-5", correct: false }
     ],
     explanation: "Para resolver $-8 \\times 3$: Multiplicamos los valores absolutos (8 * 3 = 24) y aplicamos la regla de los signos (negativo por positivo da negativo), por lo tanto, el resultado es -24."
   },
@@ -1644,22 +1644,22 @@ const matematicasLessons = [
     explanation: "Aplicando el Teorema de Pitágoras: $5^2 + 12^2 = c^2 \\Rightarrow 25 + 144 = c^2 \\Rightarrow 169 = c^2 \\Rightarrow c = \\sqrt{169} = 13$ cm."
   },
   {
-    title: "Regla de Tres Simple Directa",
+    title: "Regla de Tres Simple Inversa", // CAMBIADO DE "Directa" a "Inversa"
     subject: "aritmetica",
-    teaching: "La regla de tres simple directa se utiliza cuando dos magnitudes son directamente proporcionales. Es decir, si una aumenta, la otra también aumenta en la misma proporción, y si una disminuye, la otra disminuye. Se resuelve multiplicando en cruz y dividiendo.",
-    solution: "Ejemplo: Si 2 kg de manzanas cuestan $4, ¿cuánto cuestan 6 kg? (2 kg -> $4, 6 kg -> x). $x = (6 \\times 4) \\div 2 = 12$. Cuestan $12.",
+    teaching: "La regla de tres simple inversa se utiliza cuando dos magnitudes son inversamente proporcionales. Es decir, si una aumenta, la otra disminuye en la misma proporción, y viceversa. Se resuelve multiplicando en línea recta y dividiendo.",
+    solution: "Ejemplo: Si 3 obreros tardan 8 horas en construir una pared, ¿cuántas horas tardarán 6 obreros? (3 obreros -> 8 horas, 6 obreros -> x horas). $x = (3 \\times 8) \\div 6 = 24 \\div 6 = 4$. Tardarán 4 horas.",
     youtubeLinks: [
       "https://www.youtube.com/watch?v=uQO_oBKqypQ", // Matemáticas profe Alex (incluye directa e inversa)
-      "https://www.youtube.com/watch?v=Xphb-tzJj24"  // julioprofe (directa)
+      "https://www.youtube.com/watch?v=Xphb-tzJj24"  // julioprofe (directa, pero el ejemplo lo hemos hecho inverso)
     ],
-    question: "Si 3 obreros construyen una pared en 8 horas, ¿cuántas horas tardarán 6 obreros en construir la misma pared (asumiendo que trabajan al mismo ritmo)?",
+    question: "Si 4 pintores tardan 6 días en pintar una casa, ¿cuántos días tardarán 8 pintores en pintar la misma casa?",
     options: [
-      { text: "a) 6 horas", correct: false },
-      { text: "b) 4 horas", correct: true },
-      { text: "c) 8 horas", correct: false },
-      { text: "d) 2 horas", correct: false }
+      { text: "a) 12 días", correct: false },
+      { text: "b) 3 días", correct: true },
+      { text: "c) 6 días", correct: false },
+      { text: "d) 4 días", correct: false }
     ],
-    explanation: "Esta es una regla de tres simple inversa. Si el número de obreros se duplica (de 3 a 6), el tiempo se reduce a la mitad (8 / 2 = 4 horas)."
+    explanation: "Esta es una regla de tres simple inversa. Si el número de pintores se duplica (de 4 a 8), el tiempo se reduce a la mitad (6 / 2 = 3 días)."
   },
   {
     title: "Cálculo de Porcentajes",
@@ -1770,8 +1770,6 @@ const matematicasLessons = [
     explanation: "Primero, en el numerador, $x^4 \\cdot x^2 = x^{(4+2)} = x^6$. Luego, dividimos: $x^6 / x^3 = x^{(6-3)} = x^3$."
   }
 ];
-
-
  
  // Preguntas del test vocacional
 
