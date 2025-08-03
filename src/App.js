@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */ 
+   /* eslint-disable no-unused-vars */ 
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import {
  Heart,
@@ -83,8 +83,13 @@ const [testVocacional, setTestVocacional] = useState({
   '/home-town-easy.mp3',
   '/no-smoking.mp3',
   '/tarantula.mp3',
-  '/dirty-harry-no-rap.mp3',
-  '/19-2000.mp3',
+  '/aries-ft-peter-hook--georgia.mp3',
+   '/Gorillaz - Silent Running ft. Adeleye Omotayo (Official Audio).mp3',
+      '/Its A Party Vibe.mp3',
+            '/Re-Hash.mp3',
+             '/Sokie - New Love.mp3',
+              '/Shes My Collar (feat. Kali Uchis).mp3'
+  
  ];
 
 useEffect(() => {
@@ -6333,3 +6338,7 @@ return (
 };
 
 export default YupiApp;
+
+
+
+
